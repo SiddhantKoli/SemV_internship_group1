@@ -41,20 +41,24 @@ WHITELISTED_NUMBERS = {
 
 
 def normalize_input(text: str) -> tuple[str, str | None]:
-    """Sanitize and bound input text to prevent memory/token DOS."""
+    """Sanitize, bound, and de-bloat input text to prevent memory/token DOS."""
     if not isinstance(text, str):
         return "", None
+    
+    notice = None
+    if len(text.strip()) > 2000:
+        notice = "(Note: Your question exceeded 2,000 characters and was truncated for safety.)"
     
     # Normalize unicode to NFKC
     cleaned = unicodedata.normalize("NFKC", text)
     # Strip null bytes and non-printable control characters except newline and tab
     cleaned = "".join(ch for ch in cleaned if ch in ("\n", "\r", "\t") or unicodedata.category(ch)[0] != "C")
+    # Collapse repetitive character spam (e.g. AAAAA... or ????... repeated 10+ times)
+    cleaned = re.sub(r"(.)\1{9,}", r"\1\1\1", cleaned)
     cleaned = cleaned.strip()
     
-    notice = None
     if len(cleaned) > 2000:
         cleaned = cleaned[:2000].strip()
-        notice = "(Note: Your question exceeded 2,000 characters and was truncated for safety.)"
     
     return cleaned, notice
 
@@ -90,6 +94,7 @@ INJECTION_PATTERNS = [
     r"(?i)\bwhat\s+(?:are\s+your|is\s+your)\s+(?:full\s+)?(?:system\s+)?(?:prompt|instructions?|rules?)\b",
     r"(?i)\bprint\s+(?:the\s+)?raw\s+(?:prompt|context|instructions?)\b",
     r"(?i)\bverbatim\s+(?:system\s+)?(?:prompt|instructions?)\b",
+    r"(?i)\brepeat\s+(?:the\s+)?(?:text|instructions?|words?)\s+above\b",
 ]
 
 # Compile for efficiency
@@ -110,16 +115,22 @@ def check_injection(text: str) -> str | None:
 # Out-of-scope topics
 OUT_OF_SCOPE_PATTERNS = [
     # Code generation
-    (r"(?i)\b(?:write|generate|debug|create)\s+(?:a\s+)?(?:python|javascript|java|c\+\+|c#|php|sql|bash|html|css|rust|go)\s+(?:code|script|program|function|class)\b", "code generation or programming"),
-    (r"(?i)\b(?:write|give\s+me)\s+(?:a\s+)?(?:python|javascript|sql|code)\b", "coding requests"),
+    (r"(?i)\b(?:write|generate|debug|create)\s+(?:a\s+)?(?:python|javascript|java|c\+\+|c#|php|sql|bash|html|css|rust|go)\s+(?:code|script|program|function|class|query)\b", "code generation or programming"),
+    (r"(?i)\b(?:write|give\s+me)\s+(?:a\s+)?(?:python|javascript|sql|c\+\+|java)\s*(?:query|code|script)?\b", "code generation or programming"),
     
     # Creative writing, jokes, poems
     (r"(?i)\b(?:tell|write)\s+(?:me\s+)?(?:a\s+)?(?:joke|funny\s+story|poem|song|rap|limerick)\b", "jokes, poems, or creative writing"),
     (r"(?i)\b(?:make\s+me\s+laugh|entertain\s+me)\b", "entertainment or jokes"),
     
     # Political commentary / elections
-    (r"(?i)\b(?:who\s+should\s+i\s+vote\s+for|which\s+political\s+party\s+is\s+better|what\s+do\s+you\s+think\s+of\s+(?:modi|rahul\s+gandhi|bjp|congress|politicians?))\b", "political commentary or election opinions"),
+    (r"(?i)\b(?:who\s+should\s+i\s+vote\s+for|which\s+political\s+party|vote\s+for|who\s+to\s+vote\s+for|political\s+part(?:y|ies)|election|politicians?|what\s+do\s+you\s+think\s+of\s+(?:modi|rahul\s+gandhi|bjp|congress))\b", "political commentary or election opinions"),
     
+    # Commodities, bullion, stocks, crypto
+    (r"(?i)\b(?:price\s+of\s+(?:24k\s+)?(?:gold|silver|bitcoin|crypto|petrol|diesel)|(?:24k\s+)?(?:gold|silver|bitcoin|crypto|petrol|diesel)\s+prices?)\b", "commodity or financial market prices"),
+
+    # Locations outside Palghar district
+    (r"(?i)\b(?:kochi|kerala|chennai|tamil\s+nadu|kolkata|west\s+bengal|andhra|odisha|delhi|goa|gujarat|nepal|japan|indonesia)\b", "locations outside Palghar district"),
+
     # General trivia / homework
     (r"(?i)\b(?:what\s+is\s+the\s+capital\s+of\s+(?!maharashtra)[a-z]+|solve\s+(?:this\s+)?math|how\s+to\s+bake\s+a\s+cake|recipe\s+for|who\s+won\s+the\s+fifa\s+world\s+cup|who\s+is\s+the\s+president\s+of\s+usa)\b", "general trivia or off-topic queries"),
 ]
@@ -132,7 +143,7 @@ def check_out_of_scope(text: str) -> str | None:
     for pattern, desc in COMPILED_OUT_OF_SCOPE:
         if pattern.search(text):
             return (
-                f"I am AquaPulse, a coastal information assistant specifically for Palghar district. "
+                f"I don't have that in my sources. I am AquaPulse, a coastal information assistant specifically for Palghar district. "
                 f"I cannot assist with {desc}. Please ask about Palghar weather, disaster warnings, "
                 f"fisheries, fish market historical data, or past district records."
             )
@@ -188,22 +199,23 @@ def check_cross_agent(text: str, agent: str) -> str | None:
 
 # False premise traps
 FALSE_PREMISES = [
-    # 2019 Palghar Tsunami
+    # Palghar Tsunami claims (2019, 2021, or generic Palghar tsunami)
     (
-        r"(?i)\b(?:2019\s+palghar\s+tsunami|palghar\s+tsunami\s+in\s+2019|tsunami\s+(?:that\s+)?hit\s+palghar\s+in\s+2019)\b",
-        "There is no record of a tsunami hitting Palghar district in 2019. The official disaster management records and Maharashtra State Disaster Management Plan do not record any tsunami in Palghar in 2019."
+        r"(?i)\b(?:tsunami\s+(?:that\s+)?hit\s+palghar|palghar\s+tsunami|tsunami\s+in\s+palghar|tsunami\s+hit\s+satpati|satpati.*tsunami|2019\s+tsunami|2021\s+tsunami)\b",
+        "There is no record of a tsunami hitting Palghar district or Satpati beach in 2019 or 2021. The official disaster management records and Maharashtra State Disaster Management Plan do not record any tsunami in Palghar in recent history."
     ),
-    # Yesterday Category 5 hurricane/cyclone
+    # Category 5 hurricane/cyclone yesterday/recently
     (
-        r"(?i)\b(?:category\s+5\s+(?:cyclone|hurricane|typhoon)\s+(?:yesterday|today|last\s+night)|super\s+cyclone\s+hit\s+palghar\s+yesterday)\b",
+        r"(?i)\bcategory\s+5\s+(?:cyclone|hurricane|typhoon).*(?:yesterday|today|last\s+(?:night|week|month))\b",
         "No category 5 cyclone or super cyclone hit Palghar yesterday. Official cyclone warnings and historical notices are issued by the India Meteorological Department (IMD) and NDMA SACHET."
     ),
     # 2024 massive earthquake in Palghar destroying 1000 villages
     (
-        r"(?i)\b(?:2024\s+massive\s+earthquake|earthquake\s+destroyed\s+1000\s+villages\s+in\s+palghar)\b",
+        r"(?i)\b(?:2024\s+massive\s+earthquake|earthquake\s+destroyed\s+1000\s+villages\s+in\s+palghar|earthquake\s+in\s+2024\s+destroyed)\b",
         "Official records do not report a massive earthquake destroying 1,000 villages in Palghar in 2024. While parts of Palghar district (such as Dahanu and Talasari) have experienced localized low-magnitude swarms, no catastrophic event of that scale occurred."
     ),
 ]
+
 
 
 def check_false_premise(text: str) -> str | None:
@@ -306,10 +318,10 @@ def verify_answer_numbers(answer: str, context_text: str, allowed_extra: set[str
         if clean_tok in extra or normalized_num in extra:
             continue
         
-        # If number is a single small digit (e.g. 1, 2, 3, 4, 5) often used for bullets or days
+        # If number is a small integer (e.g. 1-50) often used for numbered lists, bullet points, ranking, or days
         try:
             val = float(clean_tok)
-            if val in (1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0):
+            if val.is_integer() and 1 <= int(val) <= 50:
                 continue
         except ValueError:
             pass

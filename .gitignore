@@ -12,3 +12,5 @@ models/**/.cache/
 models/**/__pycache__/
 models/
 ras/
+.venv/
+

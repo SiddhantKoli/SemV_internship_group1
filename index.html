@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0d14" />
+  <title>Palghar Disaster Desk</title>
+  <meta name="description" content="A local disaster information assistant for Palghar with sourced guidance, forecast context, and official alert links." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Palghar Disaster Desk home">
+        <span class="brand-mark" aria-hidden="true">PD</span>
+        <span class="brand-name">PALGHAR <b>DISASTER DESK</b></span>
+      </a>
+      <nav class="section-nav" role="tablist" aria-label="Main sections">
+        <a id="tabLinkAsk" href="#assistant" class="active" role="tab" aria-controls="tab-ask" aria-selected="true" tabindex="0"><span class="nav-index">01</span> Ask</a>
+        <a id="tabLinkWeather" href="#weatherPanel" role="tab" aria-controls="tab-weather" aria-selected="false" tabindex="-1"><span class="nav-index">02</span> Weather</a>
+        <a id="tabLinkAlerts" href="#alertsPanel" role="tab" aria-controls="tab-alerts" aria-selected="false" tabindex="-1"><span class="nav-index">03</span> Official alerts</a>
+        <a id="tabLinkHistory" href="#historyPanel" role="tab" aria-controls="tab-history" aria-selected="false" tabindex="-1"><span class="nav-index">04</span> Past records</a>
+        <a id="tabLinkSources" href="#libraryPanel" role="tab" aria-controls="tab-sources" aria-selected="false" tabindex="-1"><span class="nav-index">05</span> Sources</a>
+      </nav>
+      <div class="top-meta"><span class="local-tag"><i></i> LOCAL SERVICE</span><span class="top-separator"></span><span>Palghar district · Maharashtra</span></div>
+      <div class="top-actions"><button class="refresh-button" id="refreshData" type="button"><span aria-hidden="true">↻</span> Refresh data</button></div>
+    </header>
+
+    <main>
+      <section class="intro-row">
+        <div><p class="eyebrow">DISTRICT INFORMATION · WEATHER · OFFICIAL ALERTS</p><h1>Palghar disaster desk</h1><p class="intro-copy">Local questions, sourced guidance, and current forecast context across Palghar district.</p></div>
+        <div class="assistant-status" id="assistantStatus" role="status"><span class="status-dot"></span><span>Checking assistant…</span></div>
+      </section>
+
+      <div class="tab-stage">
+        <section class="tab-view" id="tab-ask" role="tabpanel" aria-labelledby="tabLinkAsk">
+        <section class="chat-panel panel" id="assistant" aria-labelledby="chatTitle">
+          <div class="panel-head chat-head"><div><p class="eyebrow">ASK THE DISTRICT DESK</p><h2 id="chatTitle">What would you like to know?</h2></div><span class="model-chip" id="modelChip">Llama · local</span></div>
+          <section class="place-picker" aria-label="Choose a Palghar locality">
+            <div class="place-picker-copy"><label for="placeSearch">FOCUS AREA</label><span id="placeCoverage">Palghar district · all 1,009 listed revenue villages</span></div>
+            <div class="place-autocomplete">
+              <form id="placeSearchForm" class="place-search"><input id="placeSearch" type="search" autocomplete="off" placeholder="Type a town or village…" aria-label="Search Palghar towns and villages" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-expanded="false" aria-controls="placeResults"><button type="submit">Find</button></form>
+              <div id="placeResults" class="place-results" role="listbox" aria-label="Suggested Palghar locations" hidden></div>
+            </div>
+            <span id="placeSearchStatus" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></span>
+            <button type="button" id="clearPlace" class="clear-place" hidden>Use district overview</button>
+            <p class="place-note"><a href="https://mahavillages.mahabhumi.gov.in/" target="_blank" rel="noreferrer">Maharashtra official village directory ↗</a> · Forecast points are approximate settlements; hamlets/padas and village-level hazard evidence may not be available.</p>
+          </section>
+          <div class="welcome-block" id="welcomeBlock">
+            <div class="welcome-index">01 <span>PALGHAR RISK DESK</span></div>
+            <h3>Get sourced answers about local hazards, weather, and preparedness.</h3>
+            <p>Choose a town or village, or mention it in your question. The assistant checks a forecast point for that settlement and searches district references. Village-level hazard evidence is shown only when a source supports it.</p>
+            <div class="suggestion-list" aria-label="Suggested questions">
+              <button class="suggestion" data-question="What kinds of disasters does Palghar need to prepare for?">What hazards affect Palghar?</button>
+              <button class="suggestion" data-question="Summarize the next 3 days of forecast for Palghar. Is the forecast an official warning?">What is the 3-day weather outlook?</button>
+              <button class="suggestion" data-question="What should people do during severe rainfall or flooding? Cite local guidance and give the official district contact.">What should I do during flooding?</button>
+              <button class="suggestion" data-question="What information does this assistant use, and what are its limits?">What can this assistant tell me?</button>
+            </div>
+          </div>
+          <div class="conversation" id="conversation" aria-live="polite" aria-label="Assistant conversation"></div>
+          <form class="composer" id="chatForm">
+            <label for="questionInput" class="visually-hidden">Ask a question about disaster information in Palghar</label>
+            <textarea id="questionInput" rows="2" maxlength="2000" placeholder="Ask about hazards, the forecast, or what to do…"></textarea>
+            <div class="composer-foot"><span>Information tool only · official agencies issue warnings and emergency response.</span><button id="sendButton" type="submit"><span>Ask</span><span aria-hidden="true">↗</span></button></div>
+          </form>
+          <div class="chat-foot"><span id="runtimeLabel"><i class="local-led"></i> Runs on this computer · Llama 3.2</span><span>Responses can be wrong. Follow official instructions.</span></div>
+        </section>
+        </section>
+
+        <section class="tab-view" id="tab-weather" role="tabpanel" aria-labelledby="tabLinkWeather" hidden>
+          <section class="location-prompt" id="locationPrompt" aria-labelledby="locationPromptTitle">
+            <div class="location-prompt-copy"><span class="location-icon" aria-hidden="true">⌖</span><div><h2 id="locationPromptTitle">Show weather near you?</h2><p id="locationPromptMessage">If you choose this, your browser sends coordinates to Open‑Meteo for a nearby forecast. The site keeps them in memory for this session only.</p></div></div>
+            <div class="location-prompt-actions"><button class="location-use" id="useCurrentLocation" type="button">Use my location</button><button class="location-skip" id="skipCurrentLocation" type="button">Continue with Palghar</button></div>
+          </section>
+          <section class="panel weather-panel" id="weatherPanel" aria-labelledby="weatherTitle">
+            <div class="panel-head"><div><p class="eyebrow">WEATHER MODEL</p><h2 id="weatherTitle">Palghar conditions</h2></div><span class="source-mark">OPEN‑METEO</span></div>
+            <div class="weather-error" id="weatherError" hidden></div>
+            <div id="weatherContent" class="weather-content" hidden>
+              <div class="current-weather"><div><span class="metric-label">AIR TEMPERATURE</span><div class="temperature"><span id="temperature">—</span><sup>°C</sup></div></div><div class="current-details"><span><b id="humidity">—</b><small>Humidity</small></span><span><b id="wind">—</b><small>Wind</small></span><span><b id="rainNow">—</b><small>Recent rain</small></span></div></div>
+              <div class="forecast-heading"><span>7‑DAY FORECAST</span><span class="unit-label">Daily rain · mm</span></div>
+              <div id="forecastRows" class="forecast-rows"></div>
+              <div class="weather-stamp" id="weatherStamp">Loading update time…</div>
+              <p class="source-note">Forecast guidance, not an official warning or a flood prediction. <a href="https://open-meteo.com/en/docs" target="_blank" rel="noreferrer">About this data ↗</a></p>
+            </div>
+          </section>
+        </section>
+
+        <section class="tab-view" id="tab-alerts" role="tabpanel" aria-labelledby="tabLinkAlerts" hidden>
+          <section class="panel alerts-panel" id="alertsPanel" aria-labelledby="alertsTitle">
+            <div class="panel-head"><div><p class="eyebrow">OFFICIAL WARNING CHECK</p><h2 id="alertsTitle">Government alert feed</h2></div><span class="alert-symbol" aria-hidden="true">!</span></div>
+            <div class="alert-state" id="alertState" role="status">Checking public IMD alert feed…</div>
+            <div id="alertItems" class="alert-items"></div>
+            <div class="alert-demo-tools">
+              <button class="demo-toggle" id="demoAlertToggle" type="button" aria-expanded="false" aria-controls="demoAlertCard">Preview sample warning · demo</button>
+              <span>Fictional display example; separate from the live feed.</span>
+            </div>
+            <article class="simulated-alert" id="demoAlertCard" aria-labelledby="demoAlertTitle" hidden>
+              <div class="simulated-alert-banner"><span>SIMULATED · NOT AN OFFICIAL WARNING</span><span>DEMO DATA</span></div>
+              <div class="simulated-alert-body">
+                <div class="simulated-alert-heading"><div><p class="eyebrow">EXAMPLE ALERT · FICTIONAL</p><h3 id="demoAlertTitle">Heavy rainfall watch</h3></div><span class="demo-severity">WATCH · DEMO</span></div>
+                <p class="simulated-alert-summary">This is fabricated sample text to show how an alert could be presented. It does not describe current or expected conditions.</p>
+                <dl class="demo-alert-facts"><div><dt>Example area</dt><dd>Boisar coastal belt · illustrative only</dd></div><div><dt>Example period</dt><dd>Next 6 hours · fictional</dd></div><div><dt>Example source</dt><dd>No agency issued this sample</dd></div></dl>
+                <p class="demo-alert-guidance"><strong>Example guidance:</strong> A real alert would show the issuing authority's advice and link to its official notice here.</p>
+              </div>
+            </article>
+            <div class="official-links"><a href="https://sachet.ndma.gov.in/" target="_blank" rel="noreferrer">NDMA SACHET ↗</a><a href="https://mausam.imd.gov.in/" target="_blank" rel="noreferrer">IMD Mausam ↗</a></div>
+          </section>
+        </section>
+
+        <section class="tab-view" id="tab-history" role="tabpanel" aria-labelledby="tabLinkHistory" hidden>
+          <section class="panel history-panel" id="historyPanel" aria-labelledby="historyTitle">
+            <div class="panel-head"><div><p class="eyebrow">ARCHIVE · SOURCE-CHECKED</p><h2 id="historyTitle">Past records</h2></div><span class="doc-count" id="historyCount">—</span></div>
+            <p class="library-copy">Search dated rainfall observations and official notices by place, date, or event.</p>
+            <form class="history-search" id="historySearchForm"><label class="visually-hidden" for="historyQuery">Search past records</label><input id="historyQuery" type="search" placeholder="Try Vasai, 2025, cyclone…"><select id="historyType" aria-label="Filter record type"><option value="">All records</option><option value="Rainfall observation">Rainfall</option><option value="Cyclone notice">Cyclone notices</option></select><button type="submit">Search</button></form>
+            <div id="historyResults" class="history-results" aria-live="polite"><span class="muted">Loading records…</span></div>
+            <p class="history-disclaimer">Historical reports are not current warnings. Rainfall at a reporting station does not confirm flooding or danger in nearby villages.</p>
+          </section>
+        </section>
+
+        <section class="tab-view" id="tab-sources" role="tabpanel" aria-labelledby="tabLinkSources" hidden>
+          <section class="panel library-panel" id="libraryPanel" aria-labelledby="libraryTitle">
+            <div class="panel-head"><div><p class="eyebrow">RETRIEVAL LIBRARY</p><h2 id="libraryTitle">Reference sources</h2></div><span class="doc-count" id="docCount">—</span></div>
+            <p class="library-copy">The assistant searches these official documents and pages before it answers.</p>
+            <div id="sourceList" class="source-list"><span class="muted">Loading sources…</span></div>
+            <button id="reindexButton" class="reindex-button" type="button">Refresh document index</button>
+            <div class="library-meta" id="indexStatus">Local document retrieval · source links included in answers</div>
+          </section>
+        </section>
+      </div>
+      <footer><span>PALGHAR DISASTER DESK <i>/</i> LOCAL INFORMATION TOOL</span><span>Forecasts and reference material support awareness; official agencies issue warnings.</span></footer>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

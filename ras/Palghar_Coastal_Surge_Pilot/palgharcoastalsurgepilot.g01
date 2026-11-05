@@ -1,0 +1,15 @@
+Geom Title=Vadhavan Coastal 2D
+Program Version=7.02
+Viewing Rectangle= 1.79769313486232E+308 ,-1.79769313486232E+308 ,-1.79769313486232E+308 , 1.79769313486232E+308 
+
+LCMann Time=Dec-30-1899 00:00:00
+LCMann Region Time=Dec-30-1899 00:00:00
+LCMann Table=0
+Chan Stop Cuts=-1 
+
+
+
+Use User Specified Reach Order=0
+GIS Ratio Cuts To Invert=-1
+GIS Limit At Bridges=0
+Composite Channel Slope=5

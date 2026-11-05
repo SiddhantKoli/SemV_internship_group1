@@ -1,0 +1,7065 @@
+[
+  {
+    "name": "Vevaji",
+    "localName": "वेवजी",
+    "code": "551555",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sagarshet",
+    "localName": "सागरशेत",
+    "code": "551576",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sambha",
+    "localName": "संभा",
+    "code": "551531",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Varvada",
+    "localName": "वरवाडा",
+    "code": "551547",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ghimaniya",
+    "localName": "घिमाणीया",
+    "code": "551542",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kawada",
+    "localName": "कवाडा",
+    "code": "551568",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Zai",
+    "localName": "झाई",
+    "code": "551558",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sawane",
+    "localName": "सवने",
+    "code": "551569",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sawroli",
+    "localName": "सावरोली",
+    "code": "551548",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Anvir",
+    "localName": "अणवीर",
+    "code": "551549",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bramhangaon",
+    "localName": "ब्राम्हणगांव",
+    "code": "551559",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bormal",
+    "localName": "बोरमाळ",
+    "code": "551535",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Manpada",
+    "localName": "माणपाडा",
+    "code": "551563",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Patilpada (Karajgaon)",
+    "localName": "पाटीलपाडा (करजगाव )",
+    "code": "551561",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kodad",
+    "localName": "कोदाड",
+    "code": "551574",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vasa",
+    "localName": "वसा",
+    "code": "551564",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Masangaon",
+    "localName": "मसानगांव",
+    "code": "551536",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gandhinagar",
+    "localName": "गांधीनगर",
+    "code": "551573",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Patilpada (Talasari)",
+    "localName": "पाटीलपाडा ( तलासरी )",
+    "code": "551553",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ebhadpada",
+    "localName": "ईभाडपाडा",
+    "code": "551551",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Amagaon",
+    "localName": "आमगांव",
+    "code": "551540",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kajali",
+    "localName": "काजळी",
+    "code": "551533",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vilatgaon",
+    "localName": "विलातगांव",
+    "code": "551546",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vadavali",
+    "localName": "वडवली",
+    "code": "551570",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Zari",
+    "localName": "झरी",
+    "code": "551554",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Awarpada",
+    "localName": "आवारपाडा",
+    "code": "551565",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kharadpada",
+    "localName": "खराडपाडा",
+    "code": "551545",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Borigaon",
+    "localName": "बोरीगाव",
+    "code": "551557",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Karajgaon",
+    "localName": "करजगाव",
+    "code": "551562",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sutarpada",
+    "localName": "सुतारपाडा",
+    "code": "551552",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dongari",
+    "localName": "डोंगारी",
+    "code": "551541",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sutrakar",
+    "localName": "सुत्रकार",
+    "code": "551550",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambeshetgaon",
+    "localName": "आंबेशेतगाव",
+    "code": "551537",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Talasari",
+    "localName": "तलासरी",
+    "code": "551566",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Thakarpada (Talasari)",
+    "localName": "ठाकरपाडा(तलासरी)",
+    "code": "551567",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kochai",
+    "localName": "कोचाई",
+    "code": "551538",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dolharpada",
+    "localName": "डोल्हारपाडा",
+    "code": "551544",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Achchhad",
+    "localName": "अच्छाड",
+    "code": "551532",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Upalat",
+    "localName": "उपलाट",
+    "code": "551534",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kurze",
+    "localName": "कुर्झे",
+    "code": "551572",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Udhawa",
+    "localName": "उधवा",
+    "code": "551575",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Girgaon",
+    "localName": "गिरगांव",
+    "code": "551543",
+    "taluka": "Talasari",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bahare",
+    "localName": "बहारे",
+    "code": "551643",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vadade",
+    "localName": "वडदे",
+    "code": "551726",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Urse",
+    "localName": "उर्से",
+    "code": "551704",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bandhan Pada",
+    "localName": "बांधन पाडा",
+    "code": "943964",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bandhghar",
+    "localName": "बांधघर",
+    "code": "551662",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bapugaon",
+    "localName": "बापुगांव",
+    "code": "551666",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tornipada",
+    "localName": "तोरणीपाडा",
+    "code": "551624",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gungwada",
+    "localName": "गुंगवाडा",
+    "code": "551718",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Haladpada",
+    "localName": "हळदपाडा",
+    "code": "551639",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khubale",
+    "localName": "खुबाळे",
+    "code": "551623",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khaniv",
+    "localName": "खानीव",
+    "code": "551680",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambesari",
+    "localName": "आंबेसरी",
+    "code": "551594",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khambale",
+    "localName": "खंबाळे",
+    "code": "551738",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jalwai",
+    "localName": "जळवाई",
+    "code": "551578",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jambugaon",
+    "localName": "जांबुगांव",
+    "code": "551579",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambewadi",
+    "localName": "आंबेवाडी",
+    "code": "551588",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jamshet",
+    "localName": "जामशेत",
+    "code": "551609",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Varoti",
+    "localName": "वरोती",
+    "code": "551695",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jitgaon",
+    "localName": "जितगाव",
+    "code": "551645",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kasara",
+    "localName": "कसारा",
+    "code": "551598",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambiste",
+    "localName": "आबिंस्ते",
+    "code": "551702",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Junnarpada",
+    "localName": "जुन्नरपाडा",
+    "code": "551602",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Varor",
+    "localName": "वरोर",
+    "code": "551723",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kasa",
+    "localName": "कासा",
+    "code": "551696",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kainad",
+    "localName": "कैनाड",
+    "code": "551593",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Karanjvira",
+    "localName": "करंजविरा",
+    "code": "551655",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kankradi",
+    "localName": "कंक्राडी",
+    "code": "551600",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kalamdevi",
+    "localName": "कळमदेवी",
+    "code": "551626",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kapshi",
+    "localName": "कापशी",
+    "code": "551733",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kandarwadi",
+    "localName": "कांदरवाडी",
+    "code": "551678",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Varkhande",
+    "localName": "वरखंडे",
+    "code": "551622",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambistewadi",
+    "localName": "आंबिष्टेवाडी",
+    "code": "551721",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambivali",
+    "localName": "आंबिवली",
+    "code": "551706",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vankas",
+    "localName": "वंकास",
+    "code": "551620",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Amboli",
+    "localName": "आंबोली",
+    "code": "909231",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vangarje",
+    "localName": "वांगरर्जे",
+    "code": "551748",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vangaon",
+    "localName": "वाणगाव",
+    "code": "551739",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vanai",
+    "localName": "वणई",
+    "code": "551742",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Asangaon",
+    "localName": "आसनगाव",
+    "code": "551732",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Asangaon Bk",
+    "localName": "आसनगांव बुद्रुक",
+    "code": "551731",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Asave",
+    "localName": "आसवे",
+    "code": "551607",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vadkun",
+    "localName": "वडकुन",
+    "code": "943972",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ashagad",
+    "localName": "आशागड",
+    "code": "551608",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vadhvan",
+    "localName": "वाढवण",
+    "code": "551722",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ashte",
+    "localName": "आष्टे",
+    "code": "551657",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vadhane",
+    "localName": "वधने",
+    "code": "551690",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Aswali",
+    "localName": "अस्वाली",
+    "code": "551580",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Awadhani",
+    "localName": "आवढाणी",
+    "code": "551683",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Badapokhran",
+    "localName": "बाडापोखरण",
+    "code": "551719",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Zarali",
+    "localName": "झारली",
+    "code": "551592",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chikhale",
+    "localName": "चिखले",
+    "code": "551585",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sasvand",
+    "localName": "सासवंद",
+    "code": "551651",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chimbave",
+    "localName": "चिंबावे",
+    "code": "551587",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chinchale",
+    "localName": "चिंचले",
+    "code": "551652",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chinchani",
+    "localName": "चिंचणी",
+    "code": "551750",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Saravali",
+    "localName": "सरावली",
+    "code": "551610",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sarani",
+    "localName": "सारणी",
+    "code": "551698",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dabhadi",
+    "localName": "दाभाडी",
+    "code": "551631",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dabhale",
+    "localName": "दाभले",
+    "code": "551737",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Aine",
+    "localName": "ऐने",
+    "code": "551735",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dabhon",
+    "localName": "दाभोण",
+    "code": "551701",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sakhare",
+    "localName": "साखरे",
+    "code": "551734",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vire",
+    "localName": "विरे",
+    "code": "551741",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dahanu",
+    "localName": "डहाणू",
+    "code": "943956",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dahigaon",
+    "localName": "दहीगाव",
+    "code": "551674",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Saiwan",
+    "localName": "सायवान",
+    "code": "551659",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ranshet",
+    "localName": "रानशेत",
+    "code": "551691",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Rankol",
+    "localName": "रणकोळ",
+    "code": "551700",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Rampur (Bordi)",
+    "localName": "रामपूर (बोर्डी)",
+    "code": "551582",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dahyale",
+    "localName": "दहयाळे",
+    "code": "551679",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Rampur",
+    "localName": "रामपूर",
+    "code": "551636",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Raitali",
+    "localName": "रायतळी",
+    "code": "551687",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Raipur",
+    "localName": "रायपूर",
+    "code": "551637",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Rai",
+    "localName": "राई",
+    "code": "551601",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Punjave",
+    "localName": "पुंजावे",
+    "code": "551650",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dapchari",
+    "localName": "दापचरी",
+    "code": "551621",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pokharan",
+    "localName": "पोखरण",
+    "code": "551717",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dedale",
+    "localName": "देदाळे",
+    "code": "551729",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dehane",
+    "localName": "डेहणे",
+    "code": "551617",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vikasnagar",
+    "localName": "विकासनगर",
+    "code": "551584",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pimpalshet Kh.",
+    "localName": "पिंपळशेत खुर्द",
+    "code": "551689",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pimpalshet Bk.",
+    "localName": "पिंपळशेत बुद्रुक",
+    "code": "551749",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Deur",
+    "localName": "देऊर",
+    "code": "551675",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Phanaswadi",
+    "localName": "फणसवाडी",
+    "code": "551664",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Peth",
+    "localName": "पेठ",
+    "code": "551713",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pavan",
+    "localName": "पावन",
+    "code": "551667",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Devgaon",
+    "localName": "देवगांव",
+    "code": "551671",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Alkapur",
+    "localName": "अलकापूर",
+    "code": "551633",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Patilpada (Saiwan)",
+    "localName": "पाटीलपाडा (सायवन)",
+    "code": "551628",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Patilpada",
+    "localName": "पाटीलपाडा",
+    "code": "551603",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhakti Dahanu",
+    "localName": "धाकटी डहाणू",
+    "code": "551714",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhamangaon",
+    "localName": "धामणगाव",
+    "code": "551618",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pardi",
+    "localName": "पारडी",
+    "code": "551641",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Paraswadi",
+    "localName": "पारसवाडी",
+    "code": "551604",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhamatane",
+    "localName": "धामटणे",
+    "code": "551712",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pandhartara",
+    "localName": "पांढरतारा",
+    "code": "551654",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhaniwari",
+    "localName": "धानिवरी",
+    "code": "551676",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pale",
+    "localName": "पळे",
+    "code": "551615",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Osarwadi",
+    "localName": "ओसारवाडी",
+    "code": "551727",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dharampur",
+    "localName": "धरमपुर",
+    "code": "551669",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Veti",
+    "localName": "वेती",
+    "code": "551746",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Osarvira",
+    "localName": "ओसरविरा",
+    "code": "551677",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nimbapur",
+    "localName": "निंबापूर",
+    "code": "551663",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nikavali",
+    "localName": "निकावली",
+    "code": "551707",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhumket",
+    "localName": "धुमकेत",
+    "code": "551716",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhundalwadi",
+    "localName": "धुंदलवाडी",
+    "code": "551640",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Divshi",
+    "localName": "दिवशी",
+    "code": "551630",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nikane",
+    "localName": "निकणे",
+    "code": "551699",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Navnath",
+    "localName": "नवनाथ",
+    "code": "551684",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Narpad",
+    "localName": "नरपड",
+    "code": "551589",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Naroli",
+    "localName": "नरोली",
+    "code": "551658",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Naraliwadi",
+    "localName": "नारळीवाडी",
+    "code": "551586",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nandare",
+    "localName": "नंदारे",
+    "code": "551597",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nagzari",
+    "localName": "नागझरी",
+    "code": "551648",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Murbad",
+    "localName": "मुरबाड",
+    "code": "551747",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Motapada",
+    "localName": "मोठापाडा",
+    "code": "551614",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gadchinchale",
+    "localName": "गडचिंचले",
+    "code": "551629",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Modgaon",
+    "localName": "मोडगाव",
+    "code": "551638",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ganeshbag",
+    "localName": "गणेशबाग",
+    "code": "551673",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gangangaon",
+    "localName": "गांगणगाव",
+    "code": "551646",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gangodi",
+    "localName": "गांगोडी",
+    "code": "551661",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ganjad",
+    "localName": "गंजाड",
+    "code": "551685",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mhasad",
+    "localName": "म्हसाड",
+    "code": "551705",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vasgaon",
+    "localName": "वासगाव",
+    "code": "551724",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Matgaon",
+    "localName": "माटगांव",
+    "code": "551725",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Masoli",
+    "localName": "मसोली",
+    "code": "943966",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ghadane",
+    "localName": "घाडणे",
+    "code": "551644",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Manipur",
+    "localName": "मणिपूर",
+    "code": "551670",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Manfod Pada",
+    "localName": "मानफ़ोड पाडा",
+    "code": "943968",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vasantwadi",
+    "localName": "वसंतवाडी",
+    "code": "551605",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ghol",
+    "localName": "घोळ",
+    "code": "551709",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Malyan",
+    "localName": "मल्याण",
+    "code": "943965",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gholwad",
+    "localName": "घोलवड",
+    "code": "551583",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Lonipada",
+    "localName": "लोणीपाडा",
+    "code": "943970",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Lashkari",
+    "localName": "लष्करी",
+    "code": "551599",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kosesari",
+    "localName": "कोसेसरी",
+    "code": "551745",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kosbad",
+    "localName": "कोसबाड",
+    "code": "551596",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Komgaon",
+    "localName": "कोमगांव",
+    "code": "551619",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gorwadi",
+    "localName": "गोरवाडी",
+    "code": "551606",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kolhan",
+    "localName": "कोल्हाण",
+    "code": "551711",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Govane",
+    "localName": "गोवणे",
+    "code": "551736",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kolavali",
+    "localName": "कोलवली",
+    "code": "551740",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kinhvali",
+    "localName": "किन्हवली",
+    "code": "551632",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khunavade",
+    "localName": "खूनवडे",
+    "code": "551581",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kotabi",
+    "localName": "कोटबी",
+    "code": "551616",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bavade",
+    "localName": "बावडे",
+    "code": "551730",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Torani",
+    "localName": "तोरणी",
+    "code": "945069",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bendgaon",
+    "localName": "बेंडगाव",
+    "code": "551625",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Thakurwadi",
+    "localName": "ठाकूरवाडी",
+    "code": "551590",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bharad",
+    "localName": "भराड",
+    "code": "551708",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tawa",
+    "localName": "तवा",
+    "code": "551710",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tanashi",
+    "localName": "तणाशी",
+    "code": "551728",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhavadi",
+    "localName": "भवाडी",
+    "code": "551744",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Talothe",
+    "localName": "तलोठे",
+    "code": "551649",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhisenagar",
+    "localName": "भिसेनगर",
+    "code": "551697",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tadiyale",
+    "localName": "तडियाळे",
+    "code": "551715",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Suryanagar",
+    "localName": "सुर्यानगर",
+    "code": "551694",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bodgaon",
+    "localName": "बोडगाव",
+    "code": "551647",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sukhadamba",
+    "localName": "सुकडआंबा",
+    "code": "551634",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sonale",
+    "localName": "सोनाळे",
+    "code": "551681",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Waki",
+    "localName": "वाकी",
+    "code": "551591",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Agar Ambemora",
+    "localName": "आगर आंबेमोरा",
+    "code": "945070",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Somnath",
+    "localName": "सोमनाथ",
+    "code": "551672",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bordi",
+    "localName": "बोर्डी",
+    "code": "551577",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sogave",
+    "localName": "सोगवे",
+    "code": "551595",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shisane",
+    "localName": "शिसणे",
+    "code": "551656",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shilonda",
+    "localName": "शिलोंडा",
+    "code": "551627",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bramhanwadi",
+    "localName": "ब्राम्हणवाडी",
+    "code": "551642",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chalani",
+    "localName": "चळणी",
+    "code": "551660",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shensari",
+    "localName": "शेणसरी",
+    "code": "551665",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Waghadi",
+    "localName": "वाघाडी",
+    "code": "551693",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shelti",
+    "localName": "शेल्टी",
+    "code": "551688",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chandigaon",
+    "localName": "चंडीगाव",
+    "code": "551720",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vyahali",
+    "localName": "व्याहाळी",
+    "code": "551635",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vivalvedhe",
+    "localName": "विवळवेढे",
+    "code": "551682",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chandranagar",
+    "localName": "चंद्रनगर",
+    "code": "551743",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Saye",
+    "localName": "साये",
+    "code": "551703",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Agwan",
+    "localName": "आगवन",
+    "code": "551613",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chandwad",
+    "localName": "चांदवड",
+    "code": "551686",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chari Tarfe Kotabi",
+    "localName": "चरी तर्फे कोटबी",
+    "code": "551612",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chari Tarfe Pavan",
+    "localName": "चरी तर्फे पावन",
+    "code": "551668",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Charoti",
+    "localName": "चारोटी",
+    "code": "551692",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Savata",
+    "localName": "सावटा",
+    "code": "551611",
+    "taluka": "Dahanu",
+    "district": "Palghar"
+  },
+  {
+    "name": "Zadapoli",
+    "localName": "झडपोली",
+    "code": "551817",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Baste",
+    "localName": "बास्ते",
+    "code": "551837",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khuded",
+    "localName": "खुडेद",
+    "code": "551795",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dadade",
+    "localName": "दादडे",
+    "code": "551772",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vilshet",
+    "localName": "विळशेत",
+    "code": "551777",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bangarchole",
+    "localName": "बांगरचोळे",
+    "code": "551813",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vedhe",
+    "localName": "वेढे",
+    "code": "551780",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Theronda",
+    "localName": "थेरोंडे",
+    "code": "551751",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sajan",
+    "localName": "सजन",
+    "code": "551818",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bandhan",
+    "localName": "बांधण",
+    "code": "551807",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tetawali",
+    "localName": "टेटवाली",
+    "code": "551806",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Yashwantnagar",
+    "localName": "यशवंतनगर",
+    "code": "551791",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tembholi",
+    "localName": "टेंभोली",
+    "code": "551799",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhanapur",
+    "localName": "भानपुर",
+    "code": "551836",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khoste",
+    "localName": "खोस्ते",
+    "code": "551821",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Wehelpada",
+    "localName": "वेहेलपाडा",
+    "code": "551765",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vasuri",
+    "localName": "वसुरी",
+    "code": "551834",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambivali",
+    "localName": "आंबिवली",
+    "code": "551831",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kondgaon",
+    "localName": "कोंडगांव",
+    "code": "551778",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Talwada",
+    "localName": "तलवाडा",
+    "code": "551757",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Onde",
+    "localName": "ओंदे",
+    "code": "551803",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Malwada",
+    "localName": "मलवाडा",
+    "code": "551820",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Talavali Tarf Satkor",
+    "localName": "तलावली तर्फे सातकोर",
+    "code": "551779",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhopoli",
+    "localName": "भोपोली",
+    "code": "551810",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Talavali Tarf Dengachimet",
+    "localName": "तलावली तर्फे डेंगाचीमेट",
+    "code": "551760",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Uparale",
+    "localName": "उपराळे",
+    "code": "551785",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Waki",
+    "localName": "वाकी",
+    "code": "551801",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Karhe",
+    "localName": "क-हे",
+    "code": "551761",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Utavali",
+    "localName": "उटावली",
+    "code": "551835",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Balapur",
+    "localName": "बालापूर",
+    "code": "551768",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Male",
+    "localName": "माळे",
+    "code": "551841",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Suksale",
+    "localName": "सुकसाळे",
+    "code": "551793",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Madachapada",
+    "localName": "माडाचापाडा",
+    "code": "551762",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Rampur",
+    "localName": "रामपूर",
+    "code": "551819",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Medhi",
+    "localName": "मेढी",
+    "code": "551769",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Hatane",
+    "localName": "हातणे",
+    "code": "551815",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambeghar Tarfe Balapur",
+    "localName": "आंबेघर तर्फे बालापुर",
+    "code": "551767",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Boranda",
+    "localName": "बोरांडे",
+    "code": "551812",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Indgaon",
+    "localName": "इंदगांव",
+    "code": "551833",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dolhari Bk.",
+    "localName": "डोल्हारी बुद्रूक",
+    "code": "551775",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vadapoli",
+    "localName": "वडपोली",
+    "code": "551830",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Apti Kh.",
+    "localName": "आपटी खुर्दे",
+    "code": "551842",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Potkhal",
+    "localName": "पोटखळ",
+    "code": "551839",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dolhari Kh.",
+    "localName": "डोल्हारी खुर्द",
+    "code": "551787",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shilshet",
+    "localName": "शिळशेत",
+    "code": "551827",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Apti Bk.",
+    "localName": "आपटी बुद्रूक",
+    "code": "551784",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Karsud",
+    "localName": "करसूड",
+    "code": "551781",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shil (Najik Bhopoli)",
+    "localName": "शिळ (नजिक भोपोली)",
+    "code": "551814",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pochade",
+    "localName": "पोचाडे",
+    "code": "551800",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shil (Alonda Najik)",
+    "localName": "शिळ (आलोंडा नजिक)",
+    "code": "551816",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shevate",
+    "localName": "शेवते",
+    "code": "551766",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kawale",
+    "localName": "कावळे",
+    "code": "551840",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khand",
+    "localName": "खांड",
+    "code": "551802",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vikramgad",
+    "localName": "विक्रमगड",
+    "code": "551844",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Deharje",
+    "localName": "देहेर्जे",
+    "code": "551805",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Hanumannagar",
+    "localName": "हनुमाननगर",
+    "code": "551796",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shelpada",
+    "localName": "शेलपाडा",
+    "code": "551838",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jambha",
+    "localName": "जांभा",
+    "code": "551794",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kegawa",
+    "localName": "केगवा",
+    "code": "551771",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ghanede",
+    "localName": "घाणेडे",
+    "code": "551782",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chandranagar",
+    "localName": "चंद्रनगर",
+    "code": "551776",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ghaneghar",
+    "localName": "घाणेघर",
+    "code": "551811",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nalshet",
+    "localName": "नाळशेत",
+    "code": "551828",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Devapur",
+    "localName": "देवपूर",
+    "code": "551773",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Andheri",
+    "localName": "अंधारी",
+    "code": "551798",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Charanwadi",
+    "localName": "चारणवाडी",
+    "code": "551763",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chari Bk.",
+    "localName": "चरी बुद्रुक",
+    "code": "551783",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sawarai",
+    "localName": "सावराई",
+    "code": "551770",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nagzari",
+    "localName": "नागझरी",
+    "code": "551790",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kasa Bk",
+    "localName": "कासा बुद्रुक",
+    "code": "551755",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kev",
+    "localName": "केव",
+    "code": "551829",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Anantpur",
+    "localName": "अनंतपूर",
+    "code": "551774",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khandeghar",
+    "localName": "खांडेघर",
+    "code": "551808",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kurnze",
+    "localName": "कुंर्झे",
+    "code": "551825",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Savaroli",
+    "localName": "सावरोली",
+    "code": "551832",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Savade",
+    "localName": "सवादे",
+    "code": "551788",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kashivali",
+    "localName": "कशिवली",
+    "code": "551843",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Satkor",
+    "localName": "सातकोर",
+    "code": "551786",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambeghar Tarfe Dharampur",
+    "localName": "आंबेघर तर्फ धरमपुर",
+    "code": "551753",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sarshi",
+    "localName": "सारशी",
+    "code": "551756",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kawadas",
+    "localName": "कवडास",
+    "code": "551752",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Moh Kh.",
+    "localName": "मोह खुर्द",
+    "code": "551823",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gadade",
+    "localName": "गडदे",
+    "code": "551789",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhamani",
+    "localName": "धामणी",
+    "code": "551754",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chinchghar",
+    "localName": "चिंचघर",
+    "code": "551809",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Man",
+    "localName": "माण",
+    "code": "551804",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sangamnagar",
+    "localName": "संगमनगर",
+    "code": "551792",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Varanwadi",
+    "localName": "वरणवाडी",
+    "code": "945134",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sakhare",
+    "localName": "साखरे",
+    "code": "551797",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Moh Bk.",
+    "localName": "मोह बुद्रूक",
+    "code": "551824",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kunj",
+    "localName": "कुंज",
+    "code": "551759",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mhasaroli",
+    "localName": "म्हसरोली",
+    "code": "551826",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vitthalnagar",
+    "localName": "विठ्ठलनगर",
+    "code": "551764",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khadaki",
+    "localName": "खडकी",
+    "code": "551758",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Alonda",
+    "localName": "आलोंडा",
+    "code": "551822",
+    "taluka": "Vikramgad",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bopdari",
+    "localName": "बोपदरी",
+    "code": "551846",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Aakare",
+    "localName": "आकरे",
+    "code": "551893",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Aalemet",
+    "localName": "आलेमेट",
+    "code": "551889",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Aaptale",
+    "localName": "आपटाळे",
+    "code": "551927",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Aayare",
+    "localName": "आयरे",
+    "code": "551894",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Aine",
+    "localName": "ऐने",
+    "code": "551951",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Akhar",
+    "localName": "आखर",
+    "code": "551938",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Anantanagar",
+    "localName": "अनंतनगर",
+    "code": "551892",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Barwadpada",
+    "localName": "बरवाडपाडा",
+    "code": "551854",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Behedpada",
+    "localName": "बेहेडपाडा",
+    "code": "551848",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhagada",
+    "localName": "भागडा",
+    "code": "551871",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bharasatmet",
+    "localName": "भरसटमेट",
+    "code": "551905",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhuritek",
+    "localName": "भुरीटेक",
+    "code": "551953",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Aadkhadak",
+    "localName": "आडखडक",
+    "code": "551907",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Borale",
+    "localName": "बोराळे",
+    "code": "551900",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chambharshet",
+    "localName": "चांभारशेत",
+    "code": "551874",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chandragaon",
+    "localName": "चंद्रगाव",
+    "code": "551891",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chandranagar",
+    "localName": "चंद्रनगर",
+    "code": "551898",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chandrapur",
+    "localName": "चंद्रपूर",
+    "code": "551928",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chauk",
+    "localName": "चौक",
+    "code": "551948",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dabhalon",
+    "localName": "दाभलोन",
+    "code": "551852",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dabheri",
+    "localName": "दाभेरी",
+    "code": "551850",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dabhose",
+    "localName": "दाभोसे",
+    "code": "551880",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dadarkopara",
+    "localName": "दादरकोपरा",
+    "code": "551864",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dahul",
+    "localName": "डाहूळ",
+    "code": "551849",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Daskod",
+    "localName": "दसकोड",
+    "code": "551869",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dehare",
+    "localName": "देहरे",
+    "code": "551878",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dengachi Met",
+    "localName": "डेंगाची मेट",
+    "code": "551911",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Devgaon",
+    "localName": "देवगांव",
+    "code": "551877",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhadhari",
+    "localName": "ढाढरी",
+    "code": "551860",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhanoshi",
+    "localName": "धानोशी",
+    "code": "551930",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dharampur",
+    "localName": "धरमपूर",
+    "code": "551903",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dongarwadi",
+    "localName": "डोंगरवाडी",
+    "code": "551946",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ganeshnagar",
+    "localName": "गणेशनगर",
+    "code": "551918",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gangapur",
+    "localName": "गंगापूर",
+    "code": "551929",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Garadwadi",
+    "localName": "गरदवाडी",
+    "code": "551916",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ghivanda",
+    "localName": "घिवंडा",
+    "code": "551886",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gorthan",
+    "localName": "गोरठण",
+    "code": "551896",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Hade",
+    "localName": "हाडे",
+    "code": "551908",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Hateri",
+    "localName": "हातेरी",
+    "code": "551885",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Hiradpada",
+    "localName": "हिरडपाडा",
+    "code": "551882",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jambhulmatha",
+    "localName": "जांभुळमाथा",
+    "code": "551861",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jamsar",
+    "localName": "जामसर",
+    "code": "551897",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jawhar",
+    "localName": "जव्हार",
+    "code": "551917",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jayeshwar",
+    "localName": "जयेश्वर",
+    "code": "551914",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Junijawhar",
+    "localName": "जुनीजव्हार",
+    "code": "551931",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kadachimet",
+    "localName": "कडाचीमेट",
+    "code": "551936",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kalamvira",
+    "localName": "कळमविरा",
+    "code": "551912",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kanadhatti",
+    "localName": "कानडहट्टी",
+    "code": "551901",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kardhan",
+    "localName": "करढण",
+    "code": "551909",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kasatwadi",
+    "localName": "कासटवाडी",
+    "code": "551913",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kashivali",
+    "localName": "कशिवली",
+    "code": "551932",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kaulale",
+    "localName": "कौलाळे",
+    "code": "551939",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kayari",
+    "localName": "कायरी",
+    "code": "551851",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kelghar",
+    "localName": "केळघर",
+    "code": "551924",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khadkhad",
+    "localName": "खडखड",
+    "code": "551904",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khambala",
+    "localName": "खंबाळा",
+    "code": "551858",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kharonda",
+    "localName": "खरोंडा",
+    "code": "551872",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khidse",
+    "localName": "खिडसे",
+    "code": "551950",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kirmira",
+    "localName": "किरमीरा",
+    "code": "551853",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kogada",
+    "localName": "कोगदे",
+    "code": "551890",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kortad",
+    "localName": "कोरतड",
+    "code": "551868",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kuturvihir",
+    "localName": "कुतुरविहीर",
+    "code": "551906",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Malghar",
+    "localName": "माळघर",
+    "code": "551863",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Manmohadi",
+    "localName": "मनमोहाडी",
+    "code": "551952",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Medhe",
+    "localName": "मेढे",
+    "code": "551949",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Medha",
+    "localName": "मेढा",
+    "code": "551856",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Morchachapada",
+    "localName": "मोर्च्याचापाडा",
+    "code": "551870",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nandgaon",
+    "localName": "नांदगाव",
+    "code": "551942",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nandnmal",
+    "localName": "नंदनमाळ",
+    "code": "551919",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nyahale Bk.",
+    "localName": "न्याहाळे बुद्रुक",
+    "code": "551921",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nyahale Kh",
+    "localName": "न्याहाळे खुर्द",
+    "code": "551925",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ozar",
+    "localName": "ओझर",
+    "code": "551855",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Palshin",
+    "localName": "पळशीण",
+    "code": "551876",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pathardi",
+    "localName": "पाथर्डी",
+    "code": "551947",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pimpalgaon",
+    "localName": "पिंपळगांव",
+    "code": "551902",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pimpalshet",
+    "localName": "पिंपळशेत",
+    "code": "551875",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pimpurna",
+    "localName": "पिंपरुणा",
+    "code": "551879",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Poyshet",
+    "localName": "पोयशेत",
+    "code": "551888",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Radhanagari",
+    "localName": "राधानगरी",
+    "code": "551922",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Rajewadi",
+    "localName": "राजेवाडी",
+    "code": "551943",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ramnagar (Kasatwadi)",
+    "localName": "रामनगर (कासटवाडी)",
+    "code": "551915",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ramnagar (Savarpada)",
+    "localName": "रामनगर (सावरपाडा)",
+    "code": "551867",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Raytale",
+    "localName": "रायतळे",
+    "code": "551920",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ruighar",
+    "localName": "रुईघर",
+    "code": "551845",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sakharshet",
+    "localName": "साखरशेत",
+    "code": "551859",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sakur",
+    "localName": "साकूर",
+    "code": "551937",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sarsun",
+    "localName": "सारसुन",
+    "code": "551883",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Savarpada",
+    "localName": "सावरपाडा",
+    "code": "551866",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shirasgaon",
+    "localName": "शिरसगाव",
+    "code": "551940",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shiroshi",
+    "localName": "शिरोसी",
+    "code": "551933",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shivajinagar (Gorthan)",
+    "localName": "शिवाजीनगर (गोरठण)",
+    "code": "551895",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shivajinagar (Zap)",
+    "localName": "शिवाजीनगर (झाप)",
+    "code": "551945",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shrirampur",
+    "localName": "श्रीरामपूर",
+    "code": "551926",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shrirampur (Kaulale)",
+    "localName": "श्रीरामपूर (कौलाळे)",
+    "code": "551941",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shrirampur (Nyahale Bk)",
+    "localName": "श्रीरामपूर (न्याहाळे बुद्रुक)",
+    "code": "551923",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Suryanagar",
+    "localName": "सुर्यानगर",
+    "code": "551899",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Suryanagar (Sarsun)",
+    "localName": "सुर्यानगर (सारसुन)",
+    "code": "551884",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Talasari",
+    "localName": "तलासरी",
+    "code": "551857",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tilonda",
+    "localName": "तिलोंडा",
+    "code": "551873",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tuljapur",
+    "localName": "तुळजापूर",
+    "code": "551910",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Umbarkheda",
+    "localName": "उंबरखेडा",
+    "code": "551865",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vangani",
+    "localName": "वांगणी",
+    "code": "551862",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vavar",
+    "localName": "वावर",
+    "code": "551847",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vijaynagar",
+    "localName": "विजयनगर",
+    "code": "551934",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Wadoli",
+    "localName": "वडोली",
+    "code": "551881",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Walwande",
+    "localName": "वाळवंडे",
+    "code": "551935",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Winwal",
+    "localName": "विनवळ",
+    "code": "551887",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Zap",
+    "localName": "झाप",
+    "code": "551944",
+    "taluka": "Jawhar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sayade",
+    "localName": "सायदे",
+    "code": "552000",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dudhgaon",
+    "localName": "दुधगाव",
+    "code": "551996",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jogalwadi",
+    "localName": "जोगलवाडी",
+    "code": "551999",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhamani",
+    "localName": "धामणी",
+    "code": "551954",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shastrinagar",
+    "localName": "शास्त्रीनगर",
+    "code": "551957",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Washala",
+    "localName": "वाशाळा",
+    "code": "551982",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Beriste",
+    "localName": "बेरिस्ते",
+    "code": "551965",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Hirve",
+    "localName": "हिरवे",
+    "code": "551964",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Rajivnagar",
+    "localName": "राजीवनगर",
+    "code": "551970",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Poshera",
+    "localName": "पोशेरा",
+    "code": "551972",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gomghar",
+    "localName": "गोमघर",
+    "code": "551997",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kashti",
+    "localName": "काष्टी",
+    "code": "552006",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pimpalgaon",
+    "localName": "पिंपळगाव",
+    "code": "551983",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Suryamal",
+    "localName": "सुर्यमाळ",
+    "code": "551995",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Amale",
+    "localName": "आमले",
+    "code": "552004",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Morhanda",
+    "localName": "मोरहांडे",
+    "code": "551968",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nashera",
+    "localName": "नाशेरा",
+    "code": "551988",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Swaminagar",
+    "localName": "स्वामीनगर",
+    "code": "551956",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bramhangaon",
+    "localName": "ब्राम्हणगाव",
+    "code": "551958",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kurlod",
+    "localName": "कुर्लोद",
+    "code": "551993",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dolhare",
+    "localName": "डोल्हारे",
+    "code": "551987",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ghosali",
+    "localName": "घोसाळी",
+    "code": "551967",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ghanval",
+    "localName": "घानवळ",
+    "code": "551961",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Karol",
+    "localName": "करोळ",
+    "code": "552012",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khoch",
+    "localName": "खोच",
+    "code": "551977",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Botoshi",
+    "localName": "बोटोशी",
+    "code": "551992",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dandwal",
+    "localName": "दांडवळ",
+    "code": "551962",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shirasgaon",
+    "localName": "शिरसगाव",
+    "code": "551989",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Adoshi",
+    "localName": "आडोशी",
+    "code": "551990",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Saturly",
+    "localName": "सातुर्ली",
+    "code": "551981",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kiniste",
+    "localName": "किनिस्ते",
+    "code": "552007",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Karegaon",
+    "localName": "कारेगाव",
+    "code": "552010",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shivali",
+    "localName": "शिवली",
+    "code": "551984",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kevanale",
+    "localName": "केवनाळे",
+    "code": "551994",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kochale",
+    "localName": "कोचाळे",
+    "code": "552008",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shirson",
+    "localName": "शिरसोन",
+    "code": "551978",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nilmati",
+    "localName": "निळमाती",
+    "code": "551963",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vashind",
+    "localName": "वाशिंद",
+    "code": "552003",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pathardi",
+    "localName": "पाथर्डी",
+    "code": "551991",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Wakadpada",
+    "localName": "वाकडपाडा",
+    "code": "552001",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhamanshet",
+    "localName": "धामणशेत",
+    "code": "551986",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chas",
+    "localName": "चास",
+    "code": "551966",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Udhale",
+    "localName": "उधळे",
+    "code": "552002",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kalamgaon",
+    "localName": "कळमगाव",
+    "code": "551960",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhondmaryachimet",
+    "localName": "धोंडमार्याचीमेट",
+    "code": "551979",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Laxminagar",
+    "localName": "लक्ष्मीनगर",
+    "code": "551973",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Osarvira",
+    "localName": "ओसरविरा",
+    "code": "551959",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sawarde",
+    "localName": "सावर्डे",
+    "code": "552005",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ase",
+    "localName": "आसे",
+    "code": "551955",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gonde Kh.",
+    "localName": "गोंदे खुर्द",
+    "code": "551971",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pachghar",
+    "localName": "पाचघर",
+    "code": "552011",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gonde Bk.",
+    "localName": "गोंदे बुद्रुक",
+    "code": "551974",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kaduchiwadi",
+    "localName": "कडूचीवाडी",
+    "code": "552009",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sakhari",
+    "localName": "साखरी",
+    "code": "551976",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Koshimshet",
+    "localName": "कोशिमशेत",
+    "code": "551985",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khodala",
+    "localName": "खोडाळा",
+    "code": "551998",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mokhada",
+    "localName": "मोखाडा",
+    "code": "551969",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Charangaon",
+    "localName": "चारणगाव",
+    "code": "551975",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Palsunda",
+    "localName": "पळसुंडे",
+    "code": "551980",
+    "taluka": "Mokhada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gates Kh.",
+    "localName": "गातेस खुर्द",
+    "code": "552166",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vaveghar",
+    "localName": "वावेघर",
+    "code": "552023",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tilmal",
+    "localName": "तिळमाळ",
+    "code": "552139",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tilgaon",
+    "localName": "तिळगाव",
+    "code": "552170",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dahe",
+    "localName": "डाहे",
+    "code": "552133",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gates Bk.",
+    "localName": "गातेस बुद्रुक",
+    "code": "552165",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dabhon",
+    "localName": "दाभोण",
+    "code": "552112",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tilase",
+    "localName": "तिळसे",
+    "code": "552148",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Thunave",
+    "localName": "ठूणावे",
+    "code": "552129",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kasghar",
+    "localName": "कासघर",
+    "code": "552146",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bersheti",
+    "localName": "बेरशेती",
+    "code": "552174",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kolim Sarovar",
+    "localName": "कोलीम सरोवर",
+    "code": "552141",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhavehar",
+    "localName": "भावेघर",
+    "code": "552049",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhopivali",
+    "localName": "भोपीवली",
+    "code": "552035",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bilavali",
+    "localName": "बिलावली",
+    "code": "552089",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sange",
+    "localName": "सांगे",
+    "code": "552041",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sapane Bk.",
+    "localName": "सापने बुद्रुक",
+    "code": "552061",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sapane Kh.",
+    "localName": "सापने खुर्द",
+    "code": "552060",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Saparonde",
+    "localName": "सापरोंडे",
+    "code": "552101",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gorhe",
+    "localName": "गोऱ्हे",
+    "code": "552040",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chinchghar",
+    "localName": "चिंचघर",
+    "code": "552086",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sarasohol",
+    "localName": "सरसओहोळ",
+    "code": "552078",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gargaon",
+    "localName": "गारगांव",
+    "code": "552122",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gorad",
+    "localName": "गोराड",
+    "code": "552096",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bilghar",
+    "localName": "बिलघर",
+    "code": "552155",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sarshi",
+    "localName": "सारशी",
+    "code": "552072",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Met",
+    "localName": "मेट",
+    "code": "552108",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kondhale",
+    "localName": "कोंढले",
+    "code": "552104",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sasane",
+    "localName": "सासणे",
+    "code": "552126",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Biloshi",
+    "localName": "बिलोशी",
+    "code": "552056",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gandhare",
+    "localName": "गांधरे",
+    "code": "552074",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mhaswal",
+    "localName": "म्हसवळ",
+    "code": "552173",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chikhale",
+    "localName": "चिखले",
+    "code": "552167",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Suponde",
+    "localName": "सुपोंडे",
+    "code": "552019",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Satronde",
+    "localName": "सातरोंडे",
+    "code": "552119",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sonshiv",
+    "localName": "सोनशिव",
+    "code": "552067",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Savarkhand",
+    "localName": "सावरखांड",
+    "code": "552161",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chendavali",
+    "localName": "चेंदवली",
+    "code": "552179",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Galtare",
+    "localName": "गालतरे",
+    "code": "552030",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gale",
+    "localName": "गाळे",
+    "code": "552066",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kalamkhand",
+    "localName": "कळमखांड",
+    "code": "552020",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Moj",
+    "localName": "मोज",
+    "code": "552156",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kone",
+    "localName": "कोने",
+    "code": "552163",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sonale Kh.",
+    "localName": "सोनाळे खुर्द",
+    "code": "552151",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shele",
+    "localName": "शेले",
+    "code": "552142",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sonale Bk.",
+    "localName": "सोनाळे बुद्रुक",
+    "code": "552154",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shelte",
+    "localName": "शेल्टे",
+    "code": "552032",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Borande",
+    "localName": "बोरांडे",
+    "code": "552044",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kanchad",
+    "localName": "कंचाड",
+    "code": "552024",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chambale",
+    "localName": "चांबळे",
+    "code": "552111",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Konsai",
+    "localName": "कोनसई",
+    "code": "552081",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shil",
+    "localName": "शीळ",
+    "code": "552080",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Budhavali",
+    "localName": "बुधावली",
+    "code": "552090",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bramhangaon",
+    "localName": "ब्राम्हणगाव",
+    "code": "552018",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Aapati (Tarfe Kohoj)",
+    "localName": "आपटी तर्फे कोहोज",
+    "code": "552039",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shilottar",
+    "localName": "शिलोत्तर",
+    "code": "552123",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vasuri Bk",
+    "localName": "वसुरी बुद्रुक",
+    "code": "552043",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shivneri",
+    "localName": "शिवनेरी",
+    "code": "944345",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kambare",
+    "localName": "कांबारे",
+    "code": "552159",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shirsad",
+    "localName": "शिरसाड",
+    "code": "552147",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambarbhui",
+    "localName": "अंबरभुई",
+    "code": "552094",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kadivali",
+    "localName": "कादिवली",
+    "code": "552063",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Munguste",
+    "localName": "मुंगुस्ते",
+    "code": "552033",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kati",
+    "localName": "काटी",
+    "code": "552092",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vijaygad",
+    "localName": "विजयगड",
+    "code": "552087",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Musarne",
+    "localName": "मुसारणे",
+    "code": "552099",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khodade",
+    "localName": "खोडदे",
+    "code": "552138",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambhai",
+    "localName": "अंभई",
+    "code": "552015",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Hamarapur",
+    "localName": "हमरापुर",
+    "code": "552026",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Varsale",
+    "localName": "वरसाळे",
+    "code": "552121",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambiste Bk.",
+    "localName": "आंबिस्ते बुद्रुक",
+    "code": "552046",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nandani Gaigotha",
+    "localName": "नांदणी गायगोठा",
+    "code": "552093",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Varnol",
+    "localName": "वारनोळ",
+    "code": "552175",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kudus",
+    "localName": "कुडूस",
+    "code": "552181",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khaire Tarf Wada",
+    "localName": "खैरे तर्फे वाडा",
+    "code": "552127",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gunj",
+    "localName": "गुंज",
+    "code": "552091",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vilkos Tarf Konpati",
+    "localName": "विलकोस तर्फे कोनपट्टी",
+    "code": "552069",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kumdal",
+    "localName": "कुमदळ",
+    "code": "552016",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nane",
+    "localName": "नाणे",
+    "code": "552031",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dongaste",
+    "localName": "डोंगस्ते",
+    "code": "552088",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nare",
+    "localName": "नारे",
+    "code": "552107",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambiste Kh.",
+    "localName": "आंबिस्ते खुर्द",
+    "code": "552045",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vardha",
+    "localName": "वर्धा",
+    "code": "552105",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Varale",
+    "localName": "वरले",
+    "code": "552076",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kurle",
+    "localName": "कुर्ले",
+    "code": "552029",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Varai Kh.",
+    "localName": "वरई खुर्द",
+    "code": "552158",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Goleghar",
+    "localName": "गोळेघर",
+    "code": "552168",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kusavade",
+    "localName": "कुसवडे",
+    "code": "944346",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Abitghar",
+    "localName": "अबिटघर",
+    "code": "552160",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Varai Bk.",
+    "localName": "वरई बुद्रुक",
+    "code": "552157",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kuyalu",
+    "localName": "कुयलू",
+    "code": "552180",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Neharoli",
+    "localName": "नेहरोली",
+    "code": "552083",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Lakhamapur",
+    "localName": "लखमापुर",
+    "code": "552084",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khupari",
+    "localName": "खुपरी",
+    "code": "552085",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nichole",
+    "localName": "निचोळे",
+    "code": "552048",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khutal",
+    "localName": "खुटल",
+    "code": "552013",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Abje",
+    "localName": "आब्जे",
+    "code": "552047",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vaitarnanagar",
+    "localName": "वैतरणानगर",
+    "code": "552036",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nimbavali",
+    "localName": "निंबवली",
+    "code": "552095",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vaghote",
+    "localName": "वाघोटे",
+    "code": "552025",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nishet",
+    "localName": "निशेत",
+    "code": "552153",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vilkos Tarf Vada",
+    "localName": "विलकोस तर्फे वाडा",
+    "code": "552077",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Akhada",
+    "localName": "आखाडा",
+    "code": "552118",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ogada",
+    "localName": "ओगदे",
+    "code": "552136",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhapad",
+    "localName": "धापड",
+    "code": "552143",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pachghar",
+    "localName": "पाचघर",
+    "code": "552120",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Lohape",
+    "localName": "लोहपे",
+    "code": "552098",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kharivali Tarf Kohoj",
+    "localName": "खरिवली तर्फे कोहोज",
+    "code": "552038",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kharivali Tarf Poulbar",
+    "localName": "खरिवली तर्फे पौलबार",
+    "code": "552058",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Asnas",
+    "localName": "असनस",
+    "code": "552053",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pali",
+    "localName": "पाली",
+    "code": "552059",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Palsai",
+    "localName": "पालसई",
+    "code": "552052",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kalambhai",
+    "localName": "कळंभई",
+    "code": "552054",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Amgaon",
+    "localName": "आमगाव",
+    "code": "552014",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Harosale",
+    "localName": "हरोसाळे",
+    "code": "552064",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kiravali",
+    "localName": "किरवली",
+    "code": "552075",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vadavali Tarf Sonale",
+    "localName": "वडवली तर्फे सोनाळे",
+    "code": "552150",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vadavali Tarf Poulbar",
+    "localName": "वडवली तर्फे पौलबार",
+    "code": "552100",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Parali",
+    "localName": "परळी",
+    "code": "552135",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vadavali Tarf Gargaon",
+    "localName": "वडवली तर्फे गारगांव",
+    "code": "552117",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Paste",
+    "localName": "पास्ते",
+    "code": "552125",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Alman",
+    "localName": "आलमान",
+    "code": "552079",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jamghar",
+    "localName": "जामघर",
+    "code": "552082",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vasuri Kh.",
+    "localName": "वसुरी खुर्द",
+    "code": "552057",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Avandhe",
+    "localName": "आवंढे",
+    "code": "552042",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhadhare",
+    "localName": "ढाढरे",
+    "code": "552140",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Devghar",
+    "localName": "देवघर",
+    "code": "552055",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Devgaon",
+    "localName": "देवगांव",
+    "code": "552171",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Balivali",
+    "localName": "बालीवली",
+    "code": "552145",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Usar",
+    "localName": "उसर",
+    "code": "552103",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vijaypur",
+    "localName": "विजयपूर",
+    "code": "552162",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Devali Tarf Kohaj",
+    "localName": "देवळी तर्फे कोहोज",
+    "code": "552034",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pethranjani",
+    "localName": "पेठरांजणी",
+    "code": "552068",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Phanasgaon",
+    "localName": "फणसगाव",
+    "code": "552137",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Devali Tarfe Wada",
+    "localName": "देवळी तर्फे वाडा",
+    "code": "552130",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pik",
+    "localName": "पिक",
+    "code": "552124",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pimpalas",
+    "localName": "पिंपळास",
+    "code": "552037",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Malonda",
+    "localName": "मालोंडा",
+    "code": "552164",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Virhe",
+    "localName": "विऱ्हे",
+    "code": "552115",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Desai",
+    "localName": "देसई",
+    "code": "552065",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Umrothe",
+    "localName": "उमरोठे",
+    "code": "552128",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pimparoli",
+    "localName": "पिंपरोळी",
+    "code": "552070",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ainshet",
+    "localName": "ऐनशेत",
+    "code": "552073",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pinjal",
+    "localName": "पिंजाळ",
+    "code": "552113",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kalambhe",
+    "localName": "कळंभे",
+    "code": "552152",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ghonsai",
+    "localName": "घोणसई",
+    "code": "552109",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Guhir",
+    "localName": "गुहिर",
+    "code": "552028",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ujjaini",
+    "localName": "उज्जैनी",
+    "code": "552116",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Zadkhaire",
+    "localName": "झाडखैरे",
+    "code": "552172",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Posheri",
+    "localName": "पोशेरी",
+    "code": "552021",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mandava",
+    "localName": "मांडवा",
+    "code": "552134",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jale",
+    "localName": "जाळे",
+    "code": "552176",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mande",
+    "localName": "मांडे",
+    "code": "552022",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Karanjpada",
+    "localName": "करंजपाडा",
+    "code": "552027",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khaire Ambivali",
+    "localName": "खैरे आंबिवली",
+    "code": "552177",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mangathane",
+    "localName": "मांगाठणे",
+    "code": "552102",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Uchat",
+    "localName": "उचाट",
+    "code": "552106",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tuse",
+    "localName": "तुसे",
+    "code": "552071",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mangrul",
+    "localName": "मांगरुळ",
+    "code": "552114",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Karanje",
+    "localName": "करांजे",
+    "code": "552062",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Wada",
+    "localName": "वाडा",
+    "code": "552182",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dakivali",
+    "localName": "डाकीवली",
+    "code": "552110",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Manivali",
+    "localName": "मानीवली",
+    "code": "552131",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bavali",
+    "localName": "बावली",
+    "code": "552169",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khanivali",
+    "localName": "खानिवली",
+    "code": "552050",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dahivali Kumbhiste",
+    "localName": "दहिवली कुंभिस्ते",
+    "code": "552132",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Torane",
+    "localName": "तोरणे",
+    "code": "552178",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kelthan",
+    "localName": "केळठण",
+    "code": "552097",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Raysalgaon",
+    "localName": "रायसळगाव",
+    "code": "552017",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gaurapur",
+    "localName": "गौरापुर",
+    "code": "552051",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kalambholi",
+    "localName": "कळंभोली",
+    "code": "552144",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kapari",
+    "localName": "कापरी",
+    "code": "552149",
+    "taluka": "Wada",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khadkoli",
+    "localName": "खडकोली",
+    "code": "552277",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khaira (Boisar)",
+    "localName": "खैरा बोईसर",
+    "code": "552390",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khaire",
+    "localName": "खैरे",
+    "code": "552378",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Velgaon",
+    "localName": "वेळगांव",
+    "code": "552336",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khamloli",
+    "localName": "खामलोली",
+    "code": "552365",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Haranwadi",
+    "localName": "हरणवाडी",
+    "code": "552260",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khanivade",
+    "localName": "खानिवडे",
+    "code": "552233",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Hanumannagar",
+    "localName": "हनुमाननगर",
+    "code": "552221",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khardi",
+    "localName": "खार्डी",
+    "code": "552322",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kharekuran",
+    "localName": "खारेकुरण",
+    "code": "552214",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kharmendri",
+    "localName": "खारमेंद्री",
+    "code": "552330",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vengani",
+    "localName": "वेंगणी",
+    "code": "552197",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kharshet",
+    "localName": "खरशेत",
+    "code": "552359",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kharwadashri",
+    "localName": "खारवडश्री",
+    "code": "552329",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khatali",
+    "localName": "खटाळी",
+    "code": "552282",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Alyali",
+    "localName": "अल्याळी",
+    "code": "943973",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Haloli",
+    "localName": "हालोली",
+    "code": "552367",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gundave",
+    "localName": "गुंदावे",
+    "code": "552374",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khutad",
+    "localName": "खुताड",
+    "code": "552235",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khutal",
+    "localName": "खुटल",
+    "code": "552339",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gundavali",
+    "localName": "गुंदवली",
+    "code": "552241",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kirat",
+    "localName": "किराट",
+    "code": "552240",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gundale",
+    "localName": "गुंदले",
+    "code": "552206",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vevur",
+    "localName": "वेवूर",
+    "code": "943977",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kokner",
+    "localName": "कोकणेर",
+    "code": "552274",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gowade",
+    "localName": "गोवाडे",
+    "code": "552362",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kolawade",
+    "localName": "कोलवडे",
+    "code": "552204",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kolgaon",
+    "localName": "कोळगांव",
+    "code": "552212",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gothanpur",
+    "localName": "गोठणपुर",
+    "code": "945073",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kondhan",
+    "localName": "कोंढाण‍",
+    "code": "552341",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kore",
+    "localName": "कोरे",
+    "code": "552321",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kosbad",
+    "localName": "कोसबाड",
+    "code": "552343",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kudan",
+    "localName": "कुडण",
+    "code": "552186",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kude",
+    "localName": "कुडे",
+    "code": "552369",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kukade",
+    "localName": "कुकडे",
+    "code": "552237",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kumbhavali",
+    "localName": "कुंभवली",
+    "code": "552205",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kurgaon",
+    "localName": "कुरगांव",
+    "code": "552198",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Lalonde",
+    "localName": "लालोंडे",
+    "code": "552239",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Lalthane",
+    "localName": "लालठाणे",
+    "code": "552271",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Girnoli",
+    "localName": "गिरनोळी",
+    "code": "552272",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Lokmanya Nagar",
+    "localName": "लोकमान्य नगर",
+    "code": "945071",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Loware",
+    "localName": "लोवरे",
+    "code": "552347",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Girale",
+    "localName": "गिराळे",
+    "code": "552383",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Madhukarnagar",
+    "localName": "मधुकरनगर",
+    "code": "552285",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mahagaon",
+    "localName": "महागांव",
+    "code": "552242",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mahim",
+    "localName": "माहिम",
+    "code": "552262",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Makane",
+    "localName": "माकणे",
+    "code": "552295",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Makunsar",
+    "localName": "माकुणसार",
+    "code": "552280",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gholvira",
+    "localName": "घोलवीरा",
+    "code": "945072",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ghivali",
+    "localName": "घिवली",
+    "code": "552183",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Man",
+    "localName": "मान",
+    "code": "552245",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mande",
+    "localName": "मांडे",
+    "code": "552310",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ghatim",
+    "localName": "घाटीम",
+    "code": "552316",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Manjurli",
+    "localName": "मांजुर्ली",
+    "code": "552304",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Alewadi",
+    "localName": "आलेवाडी",
+    "code": "552207",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Manor",
+    "localName": "मनोर",
+    "code": "552392",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vikaswadi",
+    "localName": "विकासवाडी",
+    "code": "552216",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Maswan",
+    "localName": "मासवण",
+    "code": "552361",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gargaon",
+    "localName": "गारगांव",
+    "code": "552223",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mathane",
+    "localName": "मथाणे",
+    "code": "552301",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Akoli",
+    "localName": "आकोली",
+    "code": "552231",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mendhwan",
+    "localName": "मेंढवण",
+    "code": "552230",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ganje",
+    "localName": "गांजे",
+    "code": "552384",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mithagar",
+    "localName": "मिठागर",
+    "code": "552319",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vilangi",
+    "localName": "विळंगी",
+    "code": "552281",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Morekuran",
+    "localName": "मोरेकुरण",
+    "code": "552217",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mundwali",
+    "localName": "मुंडवाळी",
+    "code": "552189",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Embur Airambi",
+    "localName": "ऐंबुर एरेंबी",
+    "code": "552368",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Murbe",
+    "localName": "मुरबे",
+    "code": "552215",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mykhop",
+    "localName": "मायखोप",
+    "code": "552269",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nagave",
+    "localName": "नगांवे",
+    "code": "552298",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nagavepada",
+    "localName": "नगांवेपाडा",
+    "code": "552297",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nagave Tarfe Manor",
+    "localName": "नगांवे तर्फे मनोर",
+    "code": "552382",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nagzari",
+    "localName": "नागझरी",
+    "code": "552247",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Edwan",
+    "localName": "एडवण",
+    "code": "552311",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Durves",
+    "localName": "दुर्वेस",
+    "code": "552355",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Akkarpatti",
+    "localName": "अक्करपट्टी",
+    "code": "552193",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nandgaon Tarfe Manor",
+    "localName": "नांदगांव तर्फे मनोर",
+    "code": "552344",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nandgaon Tarfe Tarapur",
+    "localName": "नांदगांव तर्फे तारापूर",
+    "code": "552208",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nandore",
+    "localName": "नंडोरे",
+    "code": "552255",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nanivali",
+    "localName": "नानिवली",
+    "code": "552226",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dongare",
+    "localName": "डोंगरे",
+    "code": "552312",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Navali",
+    "localName": "नवली",
+    "code": "943975",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Navaze",
+    "localName": "नावझे",
+    "code": "552373",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Navghar",
+    "localName": "नवघर",
+    "code": "552327",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Navi Akkarpatti",
+    "localName": "नवी अक्करपट्टी",
+    "code": "945080",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Navi Delwadi",
+    "localName": "नवी देलवाडी",
+    "code": "552192",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Navi Popharan",
+    "localName": "नवी पोफरण",
+    "code": "945081",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nawapur",
+    "localName": "नवापूर",
+    "code": "552201",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Netali",
+    "localName": "नेटाळी",
+    "code": "552358",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Newale",
+    "localName": "नेवाळे",
+    "code": "552219",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nihe",
+    "localName": "निहे",
+    "code": "552248",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhuktan",
+    "localName": "धुकटण",
+    "code": "552364",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhekale",
+    "localName": "ढेकाळे",
+    "code": "552380",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Padghe",
+    "localName": "पडघे",
+    "code": "552250",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhansar",
+    "localName": "धनसार",
+    "code": "552253",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Palghar",
+    "localName": "पालघर",
+    "code": "943976",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Virathan Budruk",
+    "localName": "विराथन बुद्रुक",
+    "code": "552313",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pam",
+    "localName": "पाम",
+    "code": "552203",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pamtembhi",
+    "localName": "पामटेंभी",
+    "code": "552202",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Panchali",
+    "localName": "पंचाळी",
+    "code": "552210",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pargaon",
+    "localName": "पारगांव",
+    "code": "552290",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Parnali",
+    "localName": "परनाळी",
+    "code": "552191",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pasthal",
+    "localName": "पास्थळ",
+    "code": "552396",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Virathan Khurd",
+    "localName": "विराथन खुर्द",
+    "code": "552296",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pathrali",
+    "localName": "पथराळी",
+    "code": "552196",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Devkhope",
+    "localName": "देवखोप",
+    "code": "552254",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Penand",
+    "localName": "पेणंद",
+    "code": "552307",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Akegavhan",
+    "localName": "आकेगव्हाण",
+    "code": "552225",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Datiware",
+    "localName": "दातिवरे",
+    "code": "552331",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pochade",
+    "localName": "पोचाडे",
+    "code": "552363",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Darshet",
+    "localName": "दारशेत",
+    "code": "552314",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pole",
+    "localName": "पोळे",
+    "code": "552338",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Popharan",
+    "localName": "पोफरण",
+    "code": "552195",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dapoli",
+    "localName": "दापोली",
+    "code": "552213",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vitthalwadi",
+    "localName": "विठ्ठलवाडी",
+    "code": "552305",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Agawan",
+    "localName": "आगवण",
+    "code": "552209",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dandi (Boisar)",
+    "localName": "दांडी बोईसर",
+    "code": "552389",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dandi",
+    "localName": "दांडी",
+    "code": "552199",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Danda (Usarani)",
+    "localName": "दांडा उसरणी",
+    "code": "552283",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Rambag",
+    "localName": "रामबाग",
+    "code": "552279",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Wada",
+    "localName": "वाडा",
+    "code": "552334",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Damkhind",
+    "localName": "दामखिंड",
+    "code": "552340",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dahiwale",
+    "localName": "दहिवाले",
+    "code": "552315",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Rani Shigaon",
+    "localName": "राणी शिगांव",
+    "code": "552220",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dahisar Tarfe Tarapur",
+    "localName": "दहिसर तर्फे तारापुर",
+    "code": "552187",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ravate",
+    "localName": "रावते",
+    "code": "552232",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Agarwadi",
+    "localName": "आगरवाडी",
+    "code": "552288",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Rothe",
+    "localName": "रोठे",
+    "code": "552270",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Zanzroli",
+    "localName": "झांझरोळी",
+    "code": "552265",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dahisar Tarfe Manor",
+    "localName": "दहिसर तर्फे मनोर",
+    "code": "552371",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sagave",
+    "localName": "सागावे",
+    "code": "552273",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sakhare",
+    "localName": "साखरे",
+    "code": "552372",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Wadrai",
+    "localName": "वडराई",
+    "code": "552261",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Salgaon",
+    "localName": "सालगांव",
+    "code": "552190",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Salwad",
+    "localName": "सालवड",
+    "code": "552388",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Saphale",
+    "localName": "सफाळे",
+    "code": "552293",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chinchare",
+    "localName": "चिंचारे",
+    "code": "552224",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Saravali (Boisar)",
+    "localName": "सरावली (बोईसर)",
+    "code": "552391",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Saravali (Safale)",
+    "localName": "सरावली (सफाळे)",
+    "code": "552325",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Wakadi",
+    "localName": "वाकडी",
+    "code": "552350",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sartodi",
+    "localName": "सरतोडी",
+    "code": "552308",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chilhar",
+    "localName": "चिल्हार",
+    "code": "552337",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Satiwali",
+    "localName": "सातिवली",
+    "code": "552375",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Satpati",
+    "localName": "सातपाटी",
+    "code": "552252",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chatale",
+    "localName": "चटाळे",
+    "code": "552299",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chari Khurd",
+    "localName": "चरी खुर्द",
+    "code": "552335",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sawarai (Tarapur)",
+    "localName": "सावराई तारापुर",
+    "code": "552184",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Saware",
+    "localName": "सावरे",
+    "code": "552377",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sawarkhand",
+    "localName": "सावरखंड",
+    "code": "552352",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Saye",
+    "localName": "साये",
+    "code": "552356",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shelwali",
+    "localName": "शेलवाली",
+    "code": "552256",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chahade",
+    "localName": "चहाडे",
+    "code": "552275",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shigaon",
+    "localName": "शिगांव",
+    "code": "552234",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shilte",
+    "localName": "शिल्टे",
+    "code": "552303",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shirgaon",
+    "localName": "शिरगांव",
+    "code": "552393",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bot",
+    "localName": "बोट",
+    "code": "552370",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Walve",
+    "localName": "वाळवे",
+    "code": "552236",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Wandivali",
+    "localName": "वांदिवली",
+    "code": "552360",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Warai",
+    "localName": "वरई",
+    "code": "552381",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Borsheti",
+    "localName": "बोरशेती",
+    "code": "552238",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Somata",
+    "localName": "सोमटा",
+    "code": "552229",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sonave",
+    "localName": "सोनावे",
+    "code": "552291",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Boisar",
+    "localName": "बोईसर",
+    "code": "552387",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Birwadi",
+    "localName": "बिरवाडी",
+    "code": "552251",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sumadipada",
+    "localName": "सुमडीपाडा",
+    "code": "552222",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Warangade",
+    "localName": "वारांगडे",
+    "code": "552246",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Takwahal",
+    "localName": "टाकवहाळ",
+    "code": "552351",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Wave",
+    "localName": "वावे",
+    "code": "552218",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tamsai",
+    "localName": "तामसई",
+    "code": "552357",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tandulwadi",
+    "localName": "तांदुळवाडी",
+    "code": "552278",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tarapur",
+    "localName": "तारापूर",
+    "code": "552395",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tembhi Khodave",
+    "localName": "टेंभीखोडावे",
+    "code": "552324",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tembhode",
+    "localName": "टेंभोडे",
+    "code": "943974",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ten",
+    "localName": "टेण",
+    "code": "552354",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhadave",
+    "localName": "भादवे",
+    "code": "552300",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Betegaon",
+    "localName": "बेटेगांव",
+    "code": "552244",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tighare",
+    "localName": "तिघरे",
+    "code": "552286",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tokarale",
+    "localName": "टोकराळे",
+    "code": "552263",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Barhanpur",
+    "localName": "बऱ्हाणपूर",
+    "code": "552228",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Aavdhani",
+    "localName": "आवंढाणी",
+    "code": "552342",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Uchavali",
+    "localName": "उचावली",
+    "code": "552292",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Uchchheli",
+    "localName": "उच्छेळी",
+    "code": "552200",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Umbarpada Nandade",
+    "localName": "उंबरपाडा नंदाडे",
+    "code": "552394",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Umbarpada Tarfe Manor",
+    "localName": "उंबरपाडा तर्फे मनोर",
+    "code": "552328",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Umroli",
+    "localName": "उमरोळी",
+    "code": "552211",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Unbhat",
+    "localName": "उनभाट",
+    "code": "552194",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bandhan",
+    "localName": "बांधण",
+    "code": "552346",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bandate",
+    "localName": "बंदाठे",
+    "code": "552264",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Usarani",
+    "localName": "उसरणी",
+    "code": "552284",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bandar",
+    "localName": "बंदर",
+    "code": "552320",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bahadoli",
+    "localName": "बहाडोली",
+    "code": "552366",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vadhiv",
+    "localName": "वाढीव",
+    "code": "552326",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Asheri",
+    "localName": "आशेरी",
+    "code": "552332",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vaiti",
+    "localName": "वैती",
+    "code": "943978",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambodegaon",
+    "localName": "अंबोडे",
+    "code": "552287",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Varkhunti",
+    "localName": "वरखुंटी",
+    "code": "552258",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambhan",
+    "localName": "आंभाण",
+    "code": "552345",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambedhe",
+    "localName": "आंबेदे",
+    "code": "552227",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambatpada",
+    "localName": "आंबातपाडा",
+    "code": "552188",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vasare",
+    "localName": "वसरे",
+    "code": "552276",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vasroli",
+    "localName": "वसरोली",
+    "code": "552349",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambadi",
+    "localName": "अंबाडी",
+    "code": "552257",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kallale",
+    "localName": "कल्लाळे",
+    "code": "552249",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kamare",
+    "localName": "कमारे",
+    "code": "552259",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kambalgaon",
+    "localName": "कांबळगांव",
+    "code": "552243",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kambode",
+    "localName": "कांबोडे",
+    "code": "552185",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kandarwan",
+    "localName": "कांदरवण",
+    "code": "552317",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kandrebhure",
+    "localName": "कांद्रेभूरे",
+    "code": "552318",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kapase",
+    "localName": "कपासे",
+    "code": "552289",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Karalgaon",
+    "localName": "करळगांव",
+    "code": "552353",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kardal",
+    "localName": "कर्दळ",
+    "code": "552294",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Karwale",
+    "localName": "करवाळे",
+    "code": "552306",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Katale",
+    "localName": "काटाळे",
+    "code": "552348",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Katkar",
+    "localName": "काटकर",
+    "code": "552386",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jayshet",
+    "localName": "जायशेत",
+    "code": "552385",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jansai",
+    "localName": "जानसई",
+    "code": "552379",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jalsarang",
+    "localName": "जलसारंग",
+    "code": "552268",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vedhi",
+    "localName": "वेढी",
+    "code": "552302",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kelwa",
+    "localName": "केळवा",
+    "code": "552267",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kelwa Road",
+    "localName": "केळवारोड",
+    "code": "552266",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Jalsar",
+    "localName": "जलसार",
+    "code": "552323",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vehaloli",
+    "localName": "वेहलोली",
+    "code": "552376",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khadkona",
+    "localName": "खडकोना",
+    "code": "552333",
+    "taluka": "Palghar",
+    "district": "Palghar"
+  },
+  {
+    "name": "Manvel",
+    "localName": "मनवेल",
+    "code": "945082",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Rajodi",
+    "localName": "राजोडी",
+    "code": "944188",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Agashi",
+    "localName": "आगाशी",
+    "code": "943979",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Hedavade",
+    "localName": "हेदवडे",
+    "code": "552411",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Manikpur",
+    "localName": "माणिकपूर",
+    "code": "944173",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Rajavali",
+    "localName": "राजावली",
+    "code": "944186",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Barampur",
+    "localName": "बरामपुर",
+    "code": "944157",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Poman",
+    "localName": "पोमण",
+    "code": "552444",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Achole",
+    "localName": "आचोळे",
+    "code": "943980",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Karanjon",
+    "localName": "करंजोण",
+    "code": "552432",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mandvi",
+    "localName": "मांडवी",
+    "code": "944181",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Umela",
+    "localName": "उमेळा",
+    "code": "943983",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Umelman",
+    "localName": "उमेळमान",
+    "code": "943982",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Umrale",
+    "localName": "उमराळे",
+    "code": "943981",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Malonde",
+    "localName": "मालोंडे",
+    "code": "944178",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Depivali",
+    "localName": "देपिवली",
+    "code": "552430",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khaniwade",
+    "localName": "खानिवडे",
+    "code": "552412",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bapane",
+    "localName": "बापाणे",
+    "code": "944158",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Malaji Pada",
+    "localName": "मालजीपाडा",
+    "code": "552441",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Majivali",
+    "localName": "माजिवली",
+    "code": "552431",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pelhar",
+    "localName": "पेल्हार",
+    "code": "944156",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Girij",
+    "localName": "गिरीज",
+    "code": "944015",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Usgaon",
+    "localName": "उसगाव",
+    "code": "552425",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Karmale",
+    "localName": "करमाळे",
+    "code": "943985",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Devdal",
+    "localName": "देवदळ",
+    "code": "944145",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gokhivare",
+    "localName": "गोखिवरे",
+    "code": "944016",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Patilgaon",
+    "localName": "पाटीलगाव",
+    "code": "552400",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Parol",
+    "localName": "पारोळ",
+    "code": "552424",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Panju",
+    "localName": "पाणजू",
+    "code": "552440",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhaniv",
+    "localName": "धानीव",
+    "code": "944146",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vadghar",
+    "localName": "वडघर",
+    "code": "552417",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Pali",
+    "localName": "पाली",
+    "code": "552439",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kalamb",
+    "localName": "कळंब",
+    "code": "552404",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kharodi",
+    "localName": "खारोडी",
+    "code": "945076",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Virar",
+    "localName": "विरार",
+    "code": "944195",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vadvali",
+    "localName": "वडवली",
+    "code": "944190",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nirmal",
+    "localName": "निर्मळ",
+    "code": "944153",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dhovli",
+    "localName": "धोवली",
+    "code": "944147",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Koshimbe",
+    "localName": "कोशिंबे",
+    "code": "944009",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Arnala Killa",
+    "localName": "अर्नाळा किल्ला",
+    "code": "552397",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nilemore",
+    "localName": "निळेमोरे",
+    "code": "944154",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Arnala",
+    "localName": "अर्नाळा",
+    "code": "552402",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Diwanman",
+    "localName": "दिवाणमान",
+    "code": "944036",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kopri",
+    "localName": "कोपरी",
+    "code": "552407",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Navsai",
+    "localName": "नवसई",
+    "code": "552414",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Navghar",
+    "localName": "नवघर",
+    "code": "944148",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Navale",
+    "localName": "नवाळे",
+    "code": "944149",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ambode",
+    "localName": "आंबोडे",
+    "code": "552419",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Doliv",
+    "localName": "डोलीव",
+    "code": "552406",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Naringi",
+    "localName": "नारींगी",
+    "code": "944151",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Juchandra",
+    "localName": "जुचंद्र",
+    "code": "944041",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dongre",
+    "localName": "डोंगरे",
+    "code": "944042",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nale",
+    "localName": "नाळे",
+    "code": "944152",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vatar",
+    "localName": "वटार",
+    "code": "944189",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Naigaon",
+    "localName": "नायगाव",
+    "code": "944150",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Nagle",
+    "localName": "नागले",
+    "code": "552446",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kolhi",
+    "localName": "कोल्ही",
+    "code": "944008",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shirsad",
+    "localName": "शिरसाड",
+    "code": "944198",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shirvali",
+    "localName": "शिरवली",
+    "code": "552423",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kashidkopar",
+    "localName": "काशिदकोपर",
+    "code": "944005",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Waliv",
+    "localName": "वालीव",
+    "code": "944192",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kolhapur",
+    "localName": "कोल्हापूर",
+    "code": "552399",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Adne",
+    "localName": "आडणे",
+    "code": "552422",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shivansai",
+    "localName": "शिवणसई",
+    "code": "552426",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shirgaon",
+    "localName": "शिरगाव",
+    "code": "944196",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Shilottar",
+    "localName": "शिलोत्तर",
+    "code": "552445",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mulgaon",
+    "localName": "मुळगाव",
+    "code": "944183",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mukkam",
+    "localName": "मुक्काम",
+    "code": "552401",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Vaslai",
+    "localName": "वासळई",
+    "code": "552435",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kofrad",
+    "localName": "कोफराड",
+    "code": "944007",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chandansar",
+    "localName": "चंदनसार",
+    "code": "944040",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bolinj",
+    "localName": "बोळींज",
+    "code": "944162",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chandip",
+    "localName": "चांदीप",
+    "code": "944017",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chandrapada",
+    "localName": "चंद्रपाडा",
+    "code": "552447",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kiravali",
+    "localName": "किरवली",
+    "code": "944006",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chikhaldongare",
+    "localName": "चिखलडोंगरे",
+    "code": "944018",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sopara",
+    "localName": "सोपारा",
+    "code": "944208",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kasrali",
+    "localName": "कसराळी",
+    "code": "944003",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kaman",
+    "localName": "कामण",
+    "code": "944004",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khardi",
+    "localName": "खार्डी",
+    "code": "552405",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Satpale",
+    "localName": "सत्पाळे",
+    "code": "552403",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sativali",
+    "localName": "सातिवली",
+    "code": "944203",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sasunavghar",
+    "localName": "ससुनवघर",
+    "code": "944201",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khochivade",
+    "localName": "खोचिवडे",
+    "code": "552438",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chimane",
+    "localName": "चिमणे",
+    "code": "552410",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sarjamori",
+    "localName": "सारजामोरी",
+    "code": "552442",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chinchoti",
+    "localName": "चिंचोटी",
+    "code": "944034",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sandor",
+    "localName": "सांडोर",
+    "code": "909371",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bilalpada",
+    "localName": "बिलालपाडा",
+    "code": "944160",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gaas",
+    "localName": "गास",
+    "code": "944013",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khairpada",
+    "localName": "खैरपाडा",
+    "code": "552428",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhuigaon Khurd",
+    "localName": "भुईगाव खुर्द",
+    "code": "944165",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhuigaon Budruk",
+    "localName": "भुईगाव बुद्रुक",
+    "code": "944168",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Samel",
+    "localName": "समेऴ",
+    "code": "944200",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhinar",
+    "localName": "भिनार",
+    "code": "552420",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chobare",
+    "localName": "चोबारे",
+    "code": "944039",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mori",
+    "localName": "मोरी",
+    "code": "552443",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhatpada",
+    "localName": "भाटपाडा",
+    "code": "552408",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "More",
+    "localName": "मोरे",
+    "code": "945074",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Gaaskopari",
+    "localName": "गासकोपरी",
+    "code": "944014",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tarkhad",
+    "localName": "तरखड",
+    "code": "552437",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhatane",
+    "localName": "भाताणे",
+    "code": "552415",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tembhi",
+    "localName": "टेंभी",
+    "code": "552398",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Khivane",
+    "localName": "खिवणे",
+    "code": "945075",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kaular Budruk",
+    "localName": "कौलार बुद्रुक",
+    "code": "944012",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Bhaliwali",
+    "localName": "भालिवली",
+    "code": "552413",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kaner",
+    "localName": "कणेर",
+    "code": "943984",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Medhe",
+    "localName": "मेढे",
+    "code": "552416",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kalambhon",
+    "localName": "कळंभोण",
+    "code": "552418",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Saloli",
+    "localName": "सालोली",
+    "code": "944205",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Sakwar",
+    "localName": "सकवार",
+    "code": "552409",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Wagholi",
+    "localName": "वाघोली",
+    "code": "944191",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Kaular Khurd",
+    "localName": "कौलार खुर्द",
+    "code": "944011",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Chulne",
+    "localName": "चुळणे",
+    "code": "944038",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Dahisar",
+    "localName": "दहिसर",
+    "code": "944044",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tilher",
+    "localName": "तिल्हेर",
+    "code": "552433",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Saiwan",
+    "localName": "सायवन",
+    "code": "552421",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Actan",
+    "localName": "आक्टण",
+    "code": "552436",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tivari",
+    "localName": "टिवरी",
+    "code": "552429",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Mardes",
+    "localName": "मर्देस",
+    "code": "944171",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tokare",
+    "localName": "टोकरे",
+    "code": "552427",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Ranpada",
+    "localName": "रानपाडा",
+    "code": "945077",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Rangaon",
+    "localName": "रानगाव",
+    "code": "552434",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Karadi",
+    "localName": "कराडी",
+    "code": "945078",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  },
+  {
+    "name": "Tulinj",
+    "localName": "तुळींज",
+    "code": "944043",
+    "taluka": "Vasai",
+    "district": "Palghar"
+  }
+]

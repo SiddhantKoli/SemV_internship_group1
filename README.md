@@ -31,7 +31,7 @@ The current RAG library is in `knowledge/`. It includes Palghar district managem
 
 ## What the assistant can and cannot tell you
 
-It can explain documented Palghar hazards and preparedness material, summarize current and forecast weather values, and provide source links. It does not calculate a flood map or a location-specific disaster probability. Weather-model output is not an official warning. The current Palghar HEC-RAS project is a scaffold without a runnable plan; the old terrain visualization and Prithvi image classifier are not part of this new dashboard. In an emergency, follow official instructions and call 112.
+It can explain documented Palghar hazards and preparedness material, summarize current and forecast weather values, and provide source links. It does not calculate a validated flood map or a location-specific disaster probability. Weather-model output is not an official warning. In an emergency, follow official instructions and call 112.
 
 ## Data and attribution
 
@@ -50,4 +50,4 @@ The dashboard identifies Gemini as a cloud model because questions and retrieved
 
 ## Repository assets
 
-This repository contains the application source, reference text, locality directory, sample Prithvi inputs/configuration, and HEC-RAS pilot project with terrain data. The local Prithvi checkpoint (`Prithvi-EO-V2-300M-TL-Sen1Floods11.pt`, about 1.2 GB) is excluded because GitHub blocks individual files over 100 MB. The HEC-RAS installer is third-party software and is also excluded. Python/Hugging Face caches, server logs, and dated backup copies are excluded. Obtain the model checkpoint and HEC-RAS installer from their official providers if setting up another machine. No API key is stored in this repository.
+This repository contains the application source, reference text, Palghar locality directory, and historical records used by the website. Local-only tools, installers, environment-specific caches, server logs, and dated backups are not included. No API key is stored in this repository.

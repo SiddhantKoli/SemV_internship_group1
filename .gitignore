@@ -10,5 +10,5 @@ installers/
 archive/
 models/**/.cache/
 models/**/__pycache__/
-models/**/*.pt
-ras/**/Backup/
+models/
+ras/

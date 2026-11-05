@@ -75,11 +75,34 @@ async function weatherPlaceForQuestion(question) {
   return palgharForecastPoint;
 }
 
-function closeLocationPrompt() { $('#locationPrompt').hidden=true; }
+function updateLocationBadge(place = selectedPlace) {
+  $('#locationBadgeName').textContent = place?.currentLocation ? 'My location' : (place?.name || 'Palghar');
+  $('#locationBadgeRegion').textContent = place?.currentLocation ? 'nearby' : (place?.district || 'Maharashtra');
+}
+
+function closeLocationMenu(restoreFocus = false) {
+  $('#locationMenu').hidden = true;
+  $('#locationToggle').setAttribute('aria-expanded','false');
+  if (restoreFocus) $('#locationToggle').focus();
+}
+
+$('#locationToggle').addEventListener('click',()=>{
+  const menu=$('#locationMenu');
+  const opening=menu.hidden;
+  menu.hidden=!opening;
+  $('#locationToggle').setAttribute('aria-expanded',String(opening));
+  if (opening) $('#placeSearch').focus();
+});
+$('#locationClose').addEventListener('click',()=>closeLocationMenu(true));
+document.addEventListener('pointerdown',(event)=>{
+  if (!event.target.closest('.location-control')) closeLocationMenu();
+});
+document.addEventListener('keydown',(event)=>{
+  if (event.key==='Escape' && !$('#locationMenu').hidden) closeLocationMenu(true);
+});
 
 $('#skipCurrentLocation').addEventListener('click',()=>{
-  closeLocationPrompt();
-  $('#placeSearchStatus').textContent='Showing Palghar district weather. You can use the location prompt again by refreshing the page.';
+  closeLocationMenu(true);
 });
 
 $('#useCurrentLocation').addEventListener('click',()=>{
@@ -97,11 +120,15 @@ $('#useCurrentLocation').addEventListener('click',()=>{
   navigator.geolocation.getCurrentPosition(async(position)=>{
     const {latitude,longitude}=position.coords;
     selectedPlace={name:'your location',taluka:'',district:'',latitude,longitude,currentLocation:true};
+    updateLocationBadge();
     $('#weatherTitle').textContent='Weather near your location';
     $('#placeCoverage').textContent='Your device location · approximate forecast grid (session only)';
     $('#placeSearch').value='';
     $('#clearPlace').hidden=false;
-    closeLocationPrompt();
+    button.disabled=false;
+    $('#skipCurrentLocation').disabled=false;
+    button.textContent='Use my location';
+    closeLocationMenu();
     loadDashboard(true);
   },(error)=>{
     button.disabled=false;
@@ -372,6 +399,7 @@ async function ask(question) {
         $('#placeCoverage').textContent = `${result.weather.location}${result.weather.taluka ? ` · ${result.weather.taluka} taluka` : ''} · forecast point`;
         if (result.weather.available && result.weather.coordinates) {
           selectedPlace = {name:result.weather.location,latitude:result.weather.coordinates.latitude,longitude:result.weather.coordinates.longitude,taluka:result.weather.taluka || '',district:'Palghar'};
+          updateLocationBadge(selectedPlace);
         }
       }
       if (selectedPlace) {
@@ -404,10 +432,12 @@ function choosePlace(place) {
     selectedPlace.latitude=Number(place.latitude);
     selectedPlace.longitude=Number(place.longitude);
   }
+  updateLocationBadge(selectedPlace);
   $('#weatherTitle').textContent = `${place.name} conditions`;
   $('#placeCoverage').textContent = `${place.name}${place.taluka ? ` · ${place.taluka} taluka` : ''} · settlement-level forecast`;
   $('#clearPlace').hidden = false;
   closePlaceSuggestions();
+  closeLocationMenu();
   $('#placeSearchStatus').textContent = `${place.name} selected. Forecast uses the nearest available settlement point.`;
   loadDashboard(true);
   $('#questionInput').focus();
@@ -496,6 +526,7 @@ $('#placeSearch').addEventListener('input',()=>{
   const query=$('#placeSearch').value.trim();
   if (selectedPlace) {
     selectedPlace=null;
+    updateLocationBadge();
     $('#weatherTitle').textContent='Palghar conditions';
     $('#placeCoverage').textContent='Palghar district · all 1,009 listed revenue villages';
     $('#clearPlace').hidden=true;
@@ -557,6 +588,7 @@ document.addEventListener('pointerdown',(event)=>{
 
 $('#clearPlace').addEventListener('click', () => {
   selectedPlace = null;
+  updateLocationBadge();
   $('#weatherTitle').textContent = 'Palghar conditions';
   $('#placeCoverage').textContent = 'Palghar district · settlement-level forecast';
   $('#clearPlace').hidden = true;

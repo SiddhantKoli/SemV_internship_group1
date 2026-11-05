@@ -16,6 +16,11 @@ $env:PROJ_LIB = Join-Path $envPath 'Library\share\proj'
 $env:PATH = (Join-Path $envPath 'Library\bin') + ';' + $env:PATH
 $env:CHAT_MODEL = 'llama3.2:3b'
 $env:EMBED_MODEL = 'mxbai-embed-large'
+$port = 8765
+if ($env:AQUAPULSE_PORT) {
+    try { $port = [int]$env:AQUAPULSE_PORT } catch { throw 'AQUAPULSE_PORT must be a number between 1 and 65535.' }
+    if ($port -lt 1 -or $port -gt 65535) { throw 'AQUAPULSE_PORT must be a number between 1 and 65535.' }
+}
 if (-not $env:CHAT_PROVIDER) {
     $env:CHAT_PROVIDER = if ($env:GEMINI_API_KEY) { 'gemini' } else { 'local' }
 }
@@ -42,4 +47,4 @@ if (-not $ollamaReady) {
     throw 'Ollama did not start. Open the Ollama app and run this file again.'
 }
 
-& $pythonPath -m uvicorn assistant_app:app --host 127.0.0.1 --port 8765
+& $pythonPath -m uvicorn assistant_app:app --host 127.0.0.1 --port $port

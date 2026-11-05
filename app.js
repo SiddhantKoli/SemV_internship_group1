@@ -72,8 +72,7 @@ async function weatherFromBrowser(place = null) {
 }
 
 async function weatherPlaceForQuestion(question) {
-  if (selectedPlace) return selectedPlace;
-  const match = question.match(/\b(?:in|near|around|for)\s+([A-Za-z][A-Za-z .'-]{1,50}?)(?=\s+(?:region|area|district|taluka|town|village|today|tomorrow|this|what|how|will|is|should|during|next|days|forecast|weather)\b|[?.!,]|$)/i);
+  const match = question.match(/\b(?:in|near|around|for|at|of)\s+([A-Za-z][A-Za-z .'-]{1,50}?)(?=\s+(?:region|area|district|taluka|town|village|rn|right now|currently|now|today|tomorrow|this|what|how|will|is|should|during|next|days|forecast|weather|temperature|temp)\b|[?.!,]|$)/i);
   if (match) {
     try {
       const result = await api(`/api/places/suggest?q=${encodeURIComponent(match[1].trim())}`);
@@ -81,6 +80,7 @@ async function weatherPlaceForQuestion(question) {
       if (place) return place;
     } catch { }
   }
+  if (selectedPlace) return selectedPlace;
   return palgharForecastPoint;
 }
 

@@ -47,4 +47,4 @@ if (-not $ollamaReady) {
     throw 'Ollama did not start. Open the Ollama app and run this file again.'
 }
 
-& $pythonPath -m uvicorn assistant_app:app --host 127.0.0.1 --port $port
+& $pythonPath -m uvicorn assistant_app:app --host 127.0.0.1 --port $port --reload

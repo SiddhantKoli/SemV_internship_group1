@@ -581,14 +581,23 @@ def chat(payload: dict):
         raise HTTPException(422, "Ask a question first.")
     if len(question) > 2000:
         raise HTTPException(413, "Keep each question under 2,000 characters.")
-    agent = str(payload.get("agent", "disaster")).strip().lower()
-    if agent not in {"disaster", "fisheries", "markets"}:
+    agent_value = payload.get("agent")
+    if agent_value:
+        agent = str(agent_value).strip().lower()
+    elif re.search(r"\b(?:wh?eather|temp(?:erature|rature)?|humidity|wind|rain(?:fall)?)\b", question, re.I):
+        agent = "weather"
+    elif re.search(r"\b(?:price|prices|market|markets|rate|rates|cost|auction|mackerel|mackrel|pomfret|prawn|shrimp|crab|sardine|surmai)\b", question, re.I):
+        agent = "markets"
+    elif re.search(r"\b(?:fish|fisher|fisheries|fishing|pfz|catch|landing centre|landing center|closed season)\b", question, re.I):
+        agent = "fisheries"
+    else:
+        agent = "disaster"
+    if agent not in {"weather", "disaster", "fisheries", "markets"}:
         agent = "disaster"
     try:
         selected = payload.get("location") if isinstance(payload.get("location"), dict) else None
         query_place = None
-        import re
-        found = re.search(r"\b(?:in|around|near|at|for)\s+([A-Za-z][A-Za-z .'-]{1,55}?)(?=\s+(?:region|area|district|taluka|town|village|today|tomorrow|this|what|how|will|is|should|during|for)\b|[?.!,]|$)", question, re.I)
+        found = re.search(r"\b(?:in|around|near|at|for|of)\s+([A-Za-z][A-Za-z .'-]{1,55}?)(?=\s+(?:rn|right now|currently|now|region|area|district|taluka|town|village|today|tomorrow|this|what|how|will|is|should|during|for)\b|[?.!,]|$)", question, re.I)
         if found:
             try:
                 query_place = next(iter(search_places(found.group(1).strip())), None)
@@ -608,7 +617,13 @@ def chat(payload: dict):
         else:
             question_for_rag = question
         client_weather = payload.get("weather") if isinstance(payload.get("weather"), dict) else None
-        if agent in {"fisheries", "markets"}:
+        if agent == "weather":
+            if client_weather and client_weather.get("available") is True and client_weather.get("source") == "Open-Meteo" and isinstance(client_weather.get("daily"), dict):
+                weather = client_weather
+            else:
+                weather = fetch_weather(place=query_place or selected or PALGHAR)
+            alerts = {"available": False, "items": [], "scope_note": "Weather questions use Open-Meteo; official warnings are checked separately."}
+        elif agent in {"fisheries", "markets"}:
             weather = {"available": False, "note": "Weather context is not used by this agent."}
             alerts = {"available": False, "items": [], "scope_note": "Official warnings are shown in the separate Disaster section."}
         elif client_weather and client_weather.get("available") is True and client_weather.get("source") == "Open-Meteo" and isinstance(client_weather.get("daily"), dict):
@@ -617,6 +632,64 @@ def chat(payload: dict):
         else:
             weather = fetch_weather(place=query_place or PALGHAR)
             alerts = fetch_alerts()
+        weather_question = bool(re.search(r"\b(?:wh?eather|temp(?:erature|rature)?|humidity|wind|rain(?:fall)?|conditions)\b", question, re.I))
+        forecast_question = bool(re.search(r"\b(?:forecast|outlook|tomorrow|next\s+\d+\s+days?)\b", question, re.I))
+        current_weather_question = weather_question and not forecast_question
+        if current_weather_question:
+            place_name = weather.get("location") or (query_place or {}).get("name") or "Palghar"
+            if weather.get("available") and weather.get("current", {}).get("temperature_2m") is not None:
+                current = weather["current"]
+                units = weather.get("current_units", {})
+                temperature = current["temperature_2m"]
+                temp_unit = units.get("temperature_2m", "°C")
+                observed = current.get("time") or weather.get("fetched_at", "")
+                answer_text = f"Open-Meteo reports {temperature}{temp_unit} for the {place_name} forecast point as of {observed} (Asia/Kolkata). This is modelled forecast data, not a street-level thermometer reading or official warning."
+            else:
+                answer_text = f"I could not retrieve current weather for {place_name}: {weather.get('note', 'the weather service is unavailable or no forecast point could be matched')}. I have not substituted Palghar town data for this location."
+            source_links = [{"id": "open-meteo", "title": "Open-Meteo forecast", "source": "Weather model data", "url": "https://open-meteo.com/en/docs", "citation": "Weather data"}]
+            return {"answer": answer_text, "sources": source_links, "weather": weather, "alerts": alerts, "model": "live weather data", "retrieved_chunks": 0}
+        historical_market_question = agent == "markets" and bool(re.search(r"\b(?:price|prices|rate|rates|cost|market|boatside)\b", question, re.I))
+        if historical_market_question:
+            market_rows = [
+                (r"\bblack\s+pomfrets?\b", "Black pomfrets", 463215),
+                (r"\b(?:pomfrets?)\b", "Pomfret", 646693),
+                (r"\b(?:seer\s+fish|surmai)\b", "Seer fish (Surmai)", 465785),
+                (r"\b(?:prawns?|shrimp)\b", "Prawns", 239787),
+                (r"\b(?:mackerels?|mackrels?)\b", "Mackerels", 126139),
+                (r"\bbombil\b", "Bombil", 89791),
+            ]
+            market_match = next(((label, per_tonne) for pattern, label, per_tonne in market_rows if re.search(pattern, question, re.I)), None)
+            market_source = {"id": "palghar-fish-market-history", "title": "Historical fish prices for the Thane and Palghar district group", "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6", "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf", "citation": "Historical price data"}
+            market_live_source = {"id": "fish-market-data", "title": "ICAR-CMFRI FishWatch", "source": "Sampled landing and auction estimates at selected harbours", "url": "https://www.cmfri.org.in/fishwatch", "citation": "Current market source"}
+            if market_match:
+                species, per_tonne = market_match
+                per_kg = per_tonne / 1000
+                asked_for_current = bool(re.search(r"\b(?:current|currently|today|now|live|latest)\b", question, re.I))
+                if asked_for_current:
+                    answer_text = f"I do not have a verified live {species.lower()} price for a Palghar market. The historical reference is ₹{per_tonne:,} per tonne (about ₹{per_kg:,.2f}/kg) for the combined Thane / Palghar district group in 2022-23. It is an annual wholesale boatside average, not today's local retail or auction quote. FishWatch has sampled current prices at selected harbours; check its listed harbour and date before using a value."
+                    market_sources = [market_source, market_live_source]
+                else:
+                    answer_text = f"The 2022-23 Maharashtra Statistical Abstract lists {species.lower()} at ₹{per_tonne:,} per tonne (about ₹{per_kg:,.2f}/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote."
+                    market_sources = [market_source]
+            else:
+                answer_text = "I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch."
+                market_sources = [market_source, market_live_source]
+            return {"answer": answer_text, "sources": market_sources, "weather": weather, "alerts": alerts, "model": "verified reference data", "retrieved_chunks": 0}
+        warning_verification_question = bool(re.search(r"\b(?:where|how|which|verify|check|confirm|active|current|location)\b", question, re.I)) and bool(re.search(r"\b(?:official warning|alert|warning|sachet|imd|government feed)\b", question, re.I))
+        if agent == "disaster" and warning_verification_question:
+            if alerts.get("status") == "unavailable":
+                feed_status = "AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active."
+            elif alerts.get("stale"):
+                feed_status = f"AquaPulse's alert feed is stale (last update: {alerts.get('last_updated') or 'unknown'}), so it cannot confirm whether a warning is active."
+            else:
+                feed_status = f"AquaPulse's checked feed shows {len(alerts.get('items', []))} Palghar-area match(es); verify affected locations and validity on the official portal."
+            answer_text = f"To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. {feed_status} A missing match in a limited feed is not proof that no local warning exists."
+            warning_sources = [
+                {"id": "sachet", "title": "NDMA SACHET official alerts", "source": "National Disaster Management Authority", "url": "https://sachet.ndma.gov.in/", "citation": "Official alerts"},
+                {"id": "imd", "title": "IMD Mausam warnings", "source": "India Meteorological Department", "url": "https://mausam.imd.gov.in/", "citation": "Official weather warnings"},
+                {"id": "palghar-district", "title": "Palghar district disaster management", "source": "District administration", "url": "https://palghar.gov.in/en/disaster-management/", "citation": "District information"},
+            ]
+            return {"answer": answer_text, "sources": warning_sources, "weather": weather, "alerts": alerts, "model": "official source guidance", "retrieved_chunks": 0}
         prediction_question = agent == "disaster" and bool(re.search(r"\b(?:forecast|weather outlook|next\s+\d+\s+days|what (?:is|will|might|could).*happen|what['’]s going to happen|will there be|predict(?:ion)?|is .{1,50} going to)\b", question, re.I))
         if query_place and prediction_question:
             forecast_lines = []
@@ -689,11 +762,13 @@ def chat(payload: dict):
             "official_portal": alerts.get("official_portal"),
         }, ensure_ascii=False)
         persona = {
+            "weather": "You are AquaPulse's Palghar weather information assistant.",
             "disaster": "You are AquaPulse's Palghar disaster-information assistant.",
             "fisheries": "You are AquaPulse's Palghar fisheries-information assistant.",
             "markets": "You are AquaPulse's fish-market data assistant for Palghar.",
         }[agent]
         domain_rules = {
+            "weather": "Use only the supplied Open-Meteo weather context for current conditions and forecasts. State the location and timestamp. Weather model output is not an official warning, navigation advice, or a street-level measurement. If weather data is missing, say so and do not invent it.",
             "disaster": "Do not claim a risk probability, flood extent, inundation depth, or a future disaster unless supplied evidence explicitly supports it. Weather model forecasts are guidance, not official warnings. Never describe an empty or stale CAP feed as no active warning. If the official feed is stale or unavailable, say so and direct the user to SACHET/IMD.",
             "fisheries": "Explain INCOIS potential fishing zone (PFZ) advisories as potential fish-aggregation guidance only; never promise a catch, invent a current PFZ location, or call it a vessel-safety clearance. Use the issue/validity information only if supplied in retrieved text. Direct users to the linked INCOIS map/text for the current Maharashtra advisory. Distinguish scientific references from local Palghar advice, and do not invent species seasons, fishing rules, or closed-season dates.",
             "markets": "Only quote numeric prices or landing figures that appear explicitly in retrieved passages. Do not infer current Palghar prices from another harbour or from the dated combined Thane/Palghar historical table. State the market/harbour, date, unit, and whether it is sampled auction or historical boatside data when known. If the requested local/current rate is not in the supplied references, say it is unavailable and direct the user to CMFRI FishWatch or the local market; never forecast fish prices.",

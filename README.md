@@ -15,6 +15,8 @@ ollama pull mxbai-embed-large
 
 Then open http://127.0.0.1:8765. The script expects the Miniforge environment at `%USERPROFILE%\miniforge3\envs\delta-watch` and Ollama at its standard Windows installation path. It starts the local Ollama service when needed and launches the dashboard. If port 8765 is already occupied, run `$env:AQUAPULSE_PORT='8766'; ./run.ps1` and open http://127.0.0.1:8766. The local chat model is `llama3.2:3b`; `mxbai-embed-large` provides semantic search for the RAG library.
 
+For an interactive terminal conversation, keep `run.ps1` open in one PowerShell window and run `./chat.ps1` in another. The chat script detects ports 8766 and 8765, keeps conversation context, and supports `/agent weather`, `/agent disaster`, `/agent fisheries`, `/agent markets`, `/location <name>`, `/clear`, `/help`, and `/exit`. Current weather questions fetch and report a Palghar-matched Open-Meteo forecast directly; this requires an internet connection. Weather responses are modelled forecast data, not official warnings or street-level measurements.
+
 ## What it connects
 
 - **Chat model and retrieval:** By default, Ollama runs the chat locally. Text in `knowledge/` is embedded locally and retrieved for each question. As an optional alternative, set a rotated Gemini key in the Windows `GEMINI_API_KEY` user environment variable; `run.ps1` then uses Gemini for chat through the Python backend. The question, recent chat history, retrieved reference passages, forecast context, and alert status are sent to Google's API in that mode. RAG embeddings remain local in Ollama. The key is never placed in browser code or project files.

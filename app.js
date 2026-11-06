@@ -532,8 +532,8 @@ async function ask(question) {
   const pending = addMessage('assistant',environmentalQuestion ? 'Searching dated Palghar environment references…' : 'Searching Palghar references and checking the latest weather context…',[],true);
   try {
     const weatherPlace = await weatherPlaceForQuestion(clean);
-    const weather = (environmentalQuestion || syntheticMode)
-      ? {available:false,note:syntheticMode ? 'Synthetic demo only; no live data is used.' : 'Weather context is not used for environmental references.'}
+    const weather = environmentalQuestion
+      ? {available:false,note:'Weather context is not used for environmental references.'}
       : await weatherFromBrowser(weatherPlace);
     const chatLocation={...weatherPlace};
     delete chatLocation.latitude; delete chatLocation.longitude; delete chatLocation.currentLocation;

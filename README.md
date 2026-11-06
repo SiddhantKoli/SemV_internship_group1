@@ -12,7 +12,7 @@ ollama pull llama3.2:3b
 ollama pull mxbai-embed-large
 ./run.ps1
 ```
-Then open http://127.0.0.1:8765.
+Then open http://127.0.0.1:8767. If that port is unavailable, `run.ps1` automatically tries fallback ports and prints the URL to open.
 
 ### Cross-Platform (Linux / macOS / Windows without Miniforge)
 AquaPulse can run on any platform with Python 3.10+ and Ollama:

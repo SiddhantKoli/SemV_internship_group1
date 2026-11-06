@@ -522,7 +522,7 @@ async function loadDashboard(force = false) {
 async function ask(question) {
   const clean = question.trim();
   if (!clean || sendButton.disabled) return;
-  const environmentalQuestion = /\b(environment|pollution|contamination|water quality|water pollution|shoreline|erosion|mangroves?|chlorophyll|ocean colou?r|sea surface temperature|sea temperature|ocean temperature|water temperature|coastal habitat|marine litter|oil spill|effluent|sewage|beach|bathing|swimming)\b/i.test(clean);
+  const environmentalQuestion = /\b(environment|pollution|contamination|water quality|water pollution|shoreline|erosion|mangroves?|chlorophyll|ocean colou?r|sea surface temperature|sea temperature|ocean temperature|water temperature|coastal habitat|marine litter|oil spill|effluent|sewage|beach|bathing|swimming|waves?(?: height| period)?|swell|tide height|ocean currents?|marine conditions|sea conditions)\b/i.test(clean);
   $('#welcomeBlock').hidden = true;
   addMessage('user', clean);
   history.push({role:'user',content:clean});

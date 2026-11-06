@@ -10,7 +10,7 @@ $ErrorActionPreference = 'Stop'
 if ($Port -gt 0) {
     $candidatePorts = @($Port)
 } else {
-    $candidatePorts = @(8766, 8765)
+    $candidatePorts = @(8767, 8766, 8765, 8000)
 }
 
 $baseUrl = $null
@@ -138,8 +138,8 @@ while ($true) {
     $weatherPlace = if ($weatherMatch.Success) { $weatherMatch.Groups['place'].Value.Trim() } else { $Location }
     if ($weatherPlace -match '^chichani$') { $weatherPlace = 'Chinchani' }
     $marketQuestion = $line -match '(?i)\b(price|prices|market|markets|rate|rates|cost|auction|mackerel|mackrel|pomfret|prawn|shrimp|crab|sardine|surmai)\b'
-    $fisheriesQuestion = $line -match '(?i)\b(fish|fisher|fisheries|fishing|pfz|catch|landing centre|landing center|closed[- ]season|fishing ban|ocean|sea|marine|waves?|swell|tide|currents?)\b'
-    $environmentQuestion = $line -match '(?i)\b(environment|pollution|contamination|water quality|water pollution|shoreline|erosion|mangroves?|chlorophyll|ocean colou?r|sea surface temperature|sea temperature|ocean temperature|water temperature|coastal habitat|marine litter|oil spill|effluent|sewage|beach|bathing|swimming)\b'
+    $fisheriesQuestion = $line -match '(?i)\b(fish|fisher|fisheries|fishing|pfz|catch|landing centre|landing center|closed[- ]season|fishing ban)\b'
+    $environmentQuestion = $line -match '(?i)\b(environment|pollution|contamination|water quality|water pollution|shoreline|erosion|mangroves?|chlorophyll|ocean colou?r|sea surface temperature|sea temperature|ocean temperature|water temperature|coastal habitat|marine litter|oil spill|effluent|sewage|beach|bathing|swimming|wave(?:s)?(?: height| period)?|swell|tide height|ocean currents?|marine conditions|sea conditions)\b'
     $disasterQuestion = $line -match '(?i)\b(alert|warning|flood|cyclone|storm|high tide|disaster(?:s)?|evacuat|surge|coastal hazard|incident reports?)\b'
     if ($environmentQuestion) { $requestAgent = 'environment' }
     elseif ($weatherQuestion) { $requestAgent = 'weather' }

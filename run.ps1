@@ -16,7 +16,7 @@ $env:PROJ_LIB = Join-Path $envPath 'Library\share\proj'
 $env:PATH = (Join-Path $envPath 'Library\bin') + ';' + $env:PATH
 $env:CHAT_MODEL = 'llama3.2:3b'
 $env:EMBED_MODEL = 'mxbai-embed-large'
-$port = 8765
+$port = 8767
 if ($env:AQUAPULSE_PORT) {
     try { $port = [int]$env:AQUAPULSE_PORT } catch { throw 'AQUAPULSE_PORT must be a number between 1 and 65535.' }
     if ($port -lt 1 -or $port -gt 65535) { throw 'AQUAPULSE_PORT must be a number between 1 and 65535.' }
@@ -47,4 +47,10 @@ if (-not $ollamaReady) {
     throw 'Ollama did not start. Open the Ollama app and run this file again.'
 }
 
-& $pythonPath -m uvicorn assistant_app:app --host 127.0.0.1 --port $port --reload
+$portCandidates = @($port, 8767, 8765, 8766, 8000) | Select-Object -Unique
+foreach ($candidatePort in $portCandidates) {
+    Write-Host "Starting AquaPulse at http://127.0.0.1:$candidatePort/"
+    & $pythonPath -m uvicorn assistant_app:app --host 127.0.0.1 --port $candidatePort --reload
+    if ($LASTEXITCODE -eq 0) { break }
+    Write-Warning "Could not start on port $candidatePort; trying the next available port."
+}

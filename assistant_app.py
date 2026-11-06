@@ -711,21 +711,21 @@ def normalize_agent_name(raw_agent: str | None, query: str) -> str:
         cleaned = raw_agent.strip().lower().replace("_", "-")
         if cleaned in ("fish-markets", "markets", "market", "fish_markets"):
             return "fish-markets"
-        if cleaned in ("weather", "disaster", "fisheries", "environment", "records", "ask"):
+        if cleaned in ("weather", "disaster", "fisheries", "environment", "records"):
             return cleaned
 
     # Heuristic agent detection based on query content
     q = query.lower()
     if re.search(r"\b(?:past\s+record|historical\s+record|realised\s+rainfall|station\s+measurement|rainfall\s+record|nisarga\s+order)\b", q):
         return "records"
+    if re.search(r"\b(?:environment|pollution|contamination|water\s+quality|water\s+pollution|shoreline|erosion|mangroves?|chlorophyll|ocean\s+colou?r|sea[- ]surface\s+temperature|coastal\s+habitat|marine\s+litter|oil\s+spill|effluent|sewage|bathing\s+safety|waves?(?:\s+height|\s+period)?|swell|tide\s+height|ocean\s+current|marine\s+conditions|sea\s+conditions)\b", q):
+        return "environment"
     if re.search(r"\b(?:wh?eather|temp(?:erature)?|humidity|wind|forecast|tomorrow|outlook)\b", q) and not re.search(r"\b(?:price|market|fish)\b", q):
         return "weather"
     if re.search(r"\b(?:price|prices|market|markets|rate|rates|cost|auction|boatside|wholesale|tonne)\b", q):
         return "fish-markets"
     if re.search(r"\b(?:pfz|potential\s+fishing|landing\s+centre|active\s+fishers|marine\s+catch|fishing\s+ban)\b", q):
         return "fisheries"
-    if re.search(r"\b(?:environment|pollution|contamination|water\s+quality|water\s+pollution|shoreline|erosion|mangroves?|chlorophyll|ocean\s+colou?r|sea[- ]surface\s+temperature|coastal\s+habitat|marine\s+litter|oil\s+spill|effluent|sewage|bathing\s+safety)\b", q):
-        return "environment"
     if re.search(r"\b(?:alert|warning|cyclone|flood|tsunami|hazard|shelter|control\s+room|sachet|imd)\b", q):
         return "disaster"
 

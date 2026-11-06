@@ -5,6 +5,9 @@ const sendButton = $('#sendButton');
 const conversation = $('#conversation');
 const history = [];
 let toastTimer;
+const demoModeToggle = $('#demoModeToggle');
+const demoModeBanner = $('#demoModeBanner');
+const demoPanels = [...document.querySelectorAll('[data-demo-panel]')];
 let selectedPlace = null;
 let placeSuggestTimer;
 let placeSuggestRequest = 0;
@@ -17,6 +20,43 @@ function toast(message) {
   node.classList.add('show');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => node.classList.remove('show'), 3200);
+}
+
+function setDemoMode(enabled) {
+  const active = Boolean(enabled);
+  demoModeToggle.setAttribute('aria-pressed', String(active));
+  demoModeToggle.textContent = `DEMO MODE · ${active ? 'ON' : 'OFF'}`;
+  demoModeBanner.hidden = !active;
+  demoPanels.forEach((panel) => { panel.hidden = !active; });
+  try { localStorage.setItem('aquapulse-demo-mode', active ? 'on' : 'off'); } catch { }
+}
+
+async function loadDemoScenarios() {
+  try {
+    const response = await fetch('/assets/demo-scenarios.json');
+    if (!response.ok) throw new Error(`Demo examples returned ${response.status}`);
+    const data = await response.json();
+    document.querySelectorAll('[data-demo-path]').forEach((node) => {
+      const value = node.dataset.demoPath.split('.').reduce((item, key) => item?.[key], data);
+      node.textContent = value == null ? 'Sample data unavailable.' : String(value);
+    });
+    const marketList = $('[data-demo-market-list]');
+    marketList.replaceChildren();
+    for (const price of data.markets?.prices || []) {
+      const item = document.createElement('div');
+      item.className = 'demo-market-item';
+      const species = document.createElement('b');
+      species.textContent = price.species;
+      const range = document.createElement('span');
+      range.textContent = `₹${price.low_inr_kg}–₹${price.high_inr_kg} / kg`;
+      item.append(species, range);
+      marketList.append(item);
+    }
+  } catch {
+    document.querySelectorAll('[data-demo-path]').forEach((node) => { node.textContent = 'The separate demo sample file could not be loaded. Live data is unaffected.'; });
+    const marketList = $('[data-demo-market-list]');
+    if (marketList) marketList.textContent = 'Synthetic sample rows unavailable.';
+  }
 }
 
 async function api(path, options = {}) {
@@ -54,7 +94,7 @@ async function weatherFromBrowser(place = null) {
     try {
       const marineParams = new URLSearchParams({
         latitude:String(target.latitude),longitude:String(target.longitude),
-        hourly:'wave_height,wave_period,sea_surface_temperature',forecast_days:'3',timezone:'Asia/Kolkata'
+        hourly:'wave_height,wave_period,sea_surface_temperature',forecast_days:'3',timezone:'Asia/Kolkata',cell_selection:'sea'
       });
       const marineResponse = await fetch(`https://marine-api.open-meteo.com/v1/marine?${marineParams}`);
       if (marineResponse.ok) marine = await marineResponse.json();
@@ -63,7 +103,7 @@ async function weatherFromBrowser(place = null) {
       available:true,source:'Open-Meteo',source_url:'https://open-meteo.com/en/docs',
       attribution:'Weather data by Open-Meteo · CC BY 4.0',location:target.name || 'Palghar',taluka:target.taluka || '',
       coordinates:{latitude:raw.latitude,longitude:raw.longitude},timezone:raw.timezone || 'Asia/Kolkata',
-      current:raw.current || {},current_units:raw.current_units || {},hourly:raw.hourly || {},daily:raw.daily || {},marine:marine?.hourly ? {available:true,hourly:marine.hourly,units:marine.hourly_units || {}} : {available:false},
+      current:raw.current || {},current_units:raw.current_units || {},hourly:raw.hourly || {},daily:raw.daily || {},marine:marine?.hourly ? {available:true,hourly:marine.hourly,units:marine.hourly_units || {},coordinates:{latitude:marine.latitude,longitude:marine.longitude}} : {available:false},
       fetched_at:new Date().toISOString(),note:`Forecast model guidance for ${target.name || 'Palghar'} area, not an official warning or a flood prediction.`
     };
   } catch (error) {
@@ -165,13 +205,19 @@ function addMessage(role, text, sources = [], pending = false) {
     const links = document.createElement('div');
     links.className = 'message-sources';
     for (const source of sources) {
-      if (!source.url) continue;
-      const link = document.createElement('a');
-      link.href = source.url;
-      link.target = '_blank';
-      link.rel = 'noreferrer';
-      link.textContent = `[${source.citation}] ${source.title} ↗`;
-      links.append(link);
+      const provenance = source.provenance === 'synthetic' ? 'SYNTHETIC' : 'REAL SOURCE';
+      if (source.url) {
+        const link = document.createElement('a');
+        link.href = source.url;
+        link.target = '_blank';
+        link.rel = 'noreferrer';
+        link.textContent = `[${provenance} · ${source.citation || 'reference'}] ${source.title} ↗`;
+        links.append(link);
+      } else {
+        const label = document.createElement('span');
+        label.textContent = `[${provenance} · ${source.citation || 'reference'}] ${source.title}`;
+        links.append(label);
+      }
     }
     if (links.childElementCount) message.append(links);
   }
@@ -190,6 +236,7 @@ function renderWeather(data) {
     $('#weatherContent').hidden = true;
     $('#weatherError').hidden = false;
     $('#weatherError').textContent = data?.note || 'Forecast data could not be loaded.';
+    renderEnvironmentMarine(null, data?.location || selectedPlace?.name || 'Palghar');
     return;
   }
   $('#weatherError').hidden = true;
@@ -199,6 +246,7 @@ function renderWeather(data) {
   $('#wind').textContent = `${formatNum(data.current?.wind_speed_10m)} km/h`;
   $('#rainNow').textContent = `${formatNum(data.current?.precipitation,1)} mm`;
   const marine = data.marine;
+  renderEnvironmentMarine(marine, data.location || 'Palghar');
   const marineState = $('#marineState');
   if (marine?.available) {
     const times = marine.hourly.time || [];
@@ -287,6 +335,35 @@ function renderWeather(data) {
   $('#weatherStamp').textContent = fetched && !Number.isNaN(fetched.getTime())
     ? `Updated ${new Intl.DateTimeFormat('en-IN',{hour:'2-digit',minute:'2-digit',day:'numeric',month:'short',timeZone:'Asia/Kolkata'}).format(fetched)} IST`
     : 'Update time unavailable';
+}
+
+function renderEnvironmentMarine(marine, locationName = 'Palghar') {
+  const note = $('#environmentLiveNote');
+  if (!note) return;
+  if (!marine?.available) {
+    $('#environmentWave').textContent = '—';
+    $('#environmentSeaTemp').textContent = '—';
+    $('#environmentWavePeriod').textContent = '—';
+    note.textContent = 'Live marine model is temporarily unavailable. Historical environmental records and official source links remain available.';
+    return;
+  }
+  const series = marine.hourly || {};
+  const times = series.time || [];
+  const localHour = new Intl.DateTimeFormat('sv-SE', {timeZone:'Asia/Kolkata', year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', hourCycle:'h23'}).format(new Date()).replace(' ', 'T').slice(0,13);
+  let index = times.findIndex((value) => value.slice(0,13) >= localHour);
+  if (index < 0) index = 0;
+  const value = (key) => series[key]?.[index];
+  const display = (key, digits, unit) => {
+    const raw = value(key);
+    return raw === null || raw === undefined || !Number.isFinite(Number(raw)) ? 'Unavailable' : `${Number(raw).toFixed(digits)} ${unit}`;
+  };
+  $('#environmentWave').textContent = display('wave_height', 1, 'm');
+  $('#environmentSeaTemp').textContent = display('sea_surface_temperature', 1, '°C');
+  $('#environmentWavePeriod').textContent = display('wave_period', 0, 's');
+  const modelTime = times[index] || '';
+  const coords = marine.coordinates?.latitude !== undefined && marine.coordinates?.longitude !== undefined
+    ? ` · sea grid ${Number(marine.coordinates.latitude).toFixed(2)}, ${Number(marine.coordinates.longitude).toFixed(2)}` : '';
+  note.textContent = `Open-Meteo Marine model · ${locationName}${coords} · ${modelTime || 'latest forecast'} (IST). No API key required.`;
 }
 
 function renderAlerts(data) {
@@ -405,6 +482,7 @@ async function loadDashboard(force = false) {
       : 'MODEL UNAVAILABLE';
     $('#fisheriesModelChip').textContent = agentModelLabel;
     $('#marketsModelChip').textContent = agentModelLabel;
+    $('#environmentModelChip').textContent = agentModelLabel;
     if (health.status === 'fulfilled' && health.value.assistant?.available) {
       status.className = 'assistant-status ok';
       const isGemini = health.value.assistant.provider === 'gemini';
@@ -444,16 +522,19 @@ async function loadDashboard(force = false) {
 async function ask(question) {
   const clean = question.trim();
   if (!clean || sendButton.disabled) return;
+  const environmentalQuestion = /\b(environment|pollution|contamination|water quality|water pollution|shoreline|erosion|mangroves?|chlorophyll|ocean colou?r|sea surface temperature|sea temperature|ocean temperature|water temperature|coastal habitat|marine litter|oil spill|effluent|sewage|beach|bathing|swimming)\b/i.test(clean);
   $('#welcomeBlock').hidden = true;
   addMessage('user', clean);
   history.push({role:'user',content:clean});
   input.value = '';
   sendButton.disabled = true;
   sendButton.querySelector('span').textContent = 'Thinking';
-  const pending = addMessage('assistant','Searching Palghar references and checking the latest weather context…',[],true);
+  const pending = addMessage('assistant',environmentalQuestion ? 'Searching dated Palghar environment references…' : 'Searching Palghar references and checking the latest weather context…',[],true);
   try {
     const weatherPlace = await weatherPlaceForQuestion(clean);
-    const weather = await weatherFromBrowser(weatherPlace);
+    const weather = (environmentalQuestion || syntheticMode)
+      ? {available:false,note:syntheticMode ? 'Synthetic demo only; no live data is used.' : 'Weather context is not used for environmental references.'}
+      : await weatherFromBrowser(weatherPlace);
     const chatLocation={...weatherPlace};
     delete chatLocation.latitude; delete chatLocation.longitude; delete chatLocation.currentLocation;
     if (weatherPlace.currentLocation) { chatLocation.name='nearby area'; chatLocation.taluka=''; chatLocation.district=''; }
@@ -717,7 +798,7 @@ function connectAgentQuestion(formId, inputId, answerId, agent) {
     const question = input.value.trim();
     if (!question) return;
     button.disabled = true;
-    answer.textContent = 'Searching the local reference library…';
+    answer.textContent = 'Searching local and live sources…';
     try {
       const result = await api('/api/chat', {
         method:'POST',
@@ -732,13 +813,20 @@ function connectAgentQuestion(formId, inputId, answerId, agent) {
         const links = document.createElement('div');
         links.className = 'agent-answer-sources';
         result.sources.forEach((source, index) => {
-          if (!source.url) return;
-          const link = document.createElement('a');
-          link.href = source.url;
-          link.target = '_blank';
-          link.rel = 'noreferrer';
-          link.textContent = `[S${index + 1}] ${source.title} ↗`;
-          links.append(link);
+          const provenance = source.provenance === 'synthetic' ? 'SYNTHETIC' : 'REAL SOURCE';
+          const citation = `[${provenance} · ${source.citation || `S${index + 1}`}] ${source.title}`;
+          if (source.url) {
+            const link = document.createElement('a');
+            link.href = source.url;
+            link.target = '_blank';
+            link.rel = 'noreferrer';
+            link.textContent = `${citation} ↗`;
+            links.append(link);
+          } else {
+            const label = document.createElement('span');
+            label.textContent = citation;
+            links.append(label);
+          }
         });
         if (links.childElementCount) answer.append(links);
       }
@@ -751,6 +839,7 @@ function connectAgentQuestion(formId, inputId, answerId, agent) {
 }
 connectAgentQuestion('fisheriesAskForm','fisheriesQuestion','fisheriesAnswer','fisheries');
 connectAgentQuestion('marketsAskForm','marketsQuestion','marketsAnswer','markets');
+connectAgentQuestion('environmentAskForm','environmentQuestion','environmentAnswer','environment');
 
 function activateTabFromHash() {
   const targetId = decodeURIComponent(location.hash.slice(1));
@@ -788,6 +877,12 @@ $('#reindexButton').addEventListener('click',async()=>{
     toast('Could not refresh the reference index.');
   } finally { button.disabled=false; }
 });
+
+demoModeToggle.addEventListener('click', () => setDemoMode(demoModeToggle.getAttribute('aria-pressed') !== 'true'));
+let savedDemoPreference = null;
+try { savedDemoPreference = localStorage.getItem('aquapulse-demo-mode'); } catch { }
+setDemoMode(savedDemoPreference === null ? true : savedDemoPreference === 'on');
+loadDemoScenarios();
 
 loadDashboard();
 renderHistory();

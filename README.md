@@ -1,6 +1,6 @@
 # AquaPulse · Palghar Coastal Information
 
-AquaPulse is a local coastal information assistant for Palghar district, Maharashtra. It provides grounded, domain-specific guidance across Weather, Disaster Preparedness, Marine Fisheries, Fish Markets, Past Records, and General Coastal Q&A.
+AquaPulse is a local coastal information assistant for Palghar district, Maharashtra. It provides grounded, domain-specific guidance across Weather, Disaster Preparedness, Marine Fisheries, Environment, Fish Markets, Past Records, and General Coastal Q&A.
 
 ## How to Run
 
@@ -146,6 +146,14 @@ AquaPulse is hardened against prompt injection, hallucinations, jailbreaks, and 
 ## What It Connects
 - **Chat Model & Retrieval:** Local Ollama running `llama3.2:3b` with `mxbai-embed-large` embeddings for semantic search over `knowledge/`.
 - **Weather Context:** Open-Meteo live API provides temperature, precipitation, humidity, and wind guidance.
+- **Environment:** Searchable notes cite the MPCB 2015–2016 Dahanu/Tarapur sampling report, NCCR 1990–2016 shoreline assessment, and 2023 mangrove assessment. The Environment agent also fetches wave height, wave period, and sea-surface temperature from the no-key Open-Meteo Marine API. These are model estimates at a sea grid point, not buoy readings, pollution tests, beach safety results, or official warnings. The original government PDFs are linked from each note, not bundled into the repo.
+- **Synthetic example cases:** `assets/synthetic-answers.json` contains 500 generated cases (100 per Weather, Disaster, Fisheries, Fish Markets, and Environment). Ask for a synthetic/demo example to retrieve one. The answer citation labels it `SYNTHETIC`; real evidence is labeled `REAL SOURCE`. Synthetic cases are kept out of the factual RAG corpus.
 - **Official Warning Check:** Live RSS integration with NDMA SACHET Maharashtra and All-India CAP feeds.
 - **Past Records Archive:** Source-linked archive in `historical-records.json` of IMD rainfall observations and district notices.
 - **Village Directory:** 1,009 listed Palghar revenue villages in `palghar-villages.json`.
+
+Environment example questions:
+- `What did the MPCB study report about Tarapur creek water quality?`
+- `Which Palghar beaches were named in the shoreline assessment?`
+- `What is the modelled wave height near Palghar?`
+- `Show a synthetic demo temperature case for Boisar.`

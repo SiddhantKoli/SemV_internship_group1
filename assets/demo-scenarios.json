@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "kind": "synthetic-demo-only",
+    "warning": "Every value in this file is invented for interface demonstration. It is not a real observation, government alert, fishing advisory, or market quote.",
+    "useInRag": false
+  },
+  "weather": {
+    "title": "Light showers with a moderate breeze",
+    "area": "Fictional demo coast point · no real coordinates",
+    "temperature_c": "28.4",
+    "wind_kmh": "18",
+    "rain_mm": "6.2",
+    "wave_height_m": "0.8",
+    "note": "Invented example values only. No forecast provider supplied these conditions, and they do not describe Palghar today."
+  },
+  "disaster": {
+    "title": "Heavy rainfall watch",
+    "summary": "This fabricated sample shows how a future notice could be laid out. It does not describe current or expected conditions.",
+    "area": "Fictional demo coastal sector",
+    "period": "Example 6-hour window · not a forecast",
+    "source": "No agency issued this sample",
+    "guidance": "A real alert would show the issuing authority's advice and a link to its official notice."
+  },
+  "fisheries": {
+    "title": "Potential aggregation scenario",
+    "area": "Fictional Demo Sector A · no coordinates or real fishing ground",
+    "summary": "Illustrative scenario: sample sea-surface temperature 27.1 °C and sample chlorophyll 1.2 mg/m³. These invented values demonstrate how advisory context might be displayed.",
+    "note": "This is not an INCOIS PFZ map, location, species recommendation, catch prediction, or safety clearance."
+  },
+  "markets": {
+    "title": "Sample auction board",
+    "harbour": "Demo Harbour · fictional place · no real date",
+    "prices": [
+      {"species": "Pomfret · sample", "low_inr_kg": "280", "high_inr_kg": "360"},
+      {"species": "Prawns · sample", "low_inr_kg": "170", "high_inr_kg": "230"},
+      {"species": "Mackerel · sample", "low_inr_kg": "90", "high_inr_kg": "130"}
+    ],
+    "note": "Made-up example prices for interface demonstration only. They are not current, historical, retail, auction, or Palghar market prices."
+  },
+  "ask": {
+    "question": "Demo question: What does this sample rainfall watch mean?",
+    "answer": "Demo answer: this fictional scenario illustrates how AquaPulse could explain a notice, its area, time window, and issuing authority. It is not a real warning and provides no current local guidance."
+  }
+}

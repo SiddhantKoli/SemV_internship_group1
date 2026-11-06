@@ -48,16 +48,21 @@
         <a id="tabLinkWeather" href="#weatherPanel" role="tab" aria-controls="tab-weather" aria-selected="false" tabindex="-1">Weather</a>
         <a id="tabLinkDisaster" href="#disasterPanel" role="tab" aria-controls="tab-disaster" aria-selected="false" tabindex="-1">Disaster</a>
         <a id="tabLinkFisheries" href="#fisheriesPanel" role="tab" aria-controls="tab-fisheries" aria-selected="false" tabindex="-1">Fisheries</a>
+        <a id="tabLinkEnvironment" href="#environmentPanel" role="tab" aria-controls="tab-environment" aria-selected="false" tabindex="-1">Environment</a>
         <a id="tabLinkMarkets" href="#marketsPanel" role="tab" aria-controls="tab-markets" aria-selected="false" tabindex="-1">Fish markets</a>
         <a id="tabLinkAsk" href="#assistant" role="tab" aria-controls="tab-ask" aria-selected="false" tabindex="-1">Ask</a>
         <a id="tabLinkHistory" href="#historyPanel" role="tab" aria-controls="tab-history" aria-selected="false" tabindex="-1">Past records</a>
         <a id="tabLinkSources" href="#libraryPanel" role="tab" aria-controls="tab-sources" aria-selected="false" tabindex="-1">Sources</a>
       </nav>
       <div class="top-meta"><div class="assistant-status" id="assistantStatus" role="status"><span class="status-dot"></span><span>Checking assistant…</span></div><span class="top-separator"></span><span class="service-location">LOCAL SERVICE · MAHARASHTRA</span></div>
-      <div class="top-actions"><button class="refresh-button" id="refreshData" type="button"><span aria-hidden="true">↻</span> Refresh data</button></div>
+      <div class="top-actions"><button class="demo-mode-toggle" id="demoModeToggle" type="button" aria-pressed="true">Demo examples · ON</button><button class="refresh-button" id="refreshData" type="button"><span aria-hidden="true">↻</span> Refresh data</button></div>
     </header>
 
     <main>
+      <aside class="demo-mode-banner" id="demoModeBanner" role="note">
+        <span class="demo-mode-indicator">DEMO EXAMPLES ON</span>
+        <p>Panels marked <strong>SYNTHETIC DEMO</strong> contain invented examples for showing the interface. They are not live Palghar conditions, official warnings, INCOIS advisories, or market quotes. Live data remains separate.</p>
+      </aside>
       <div class="tab-stage">
         <section class="tab-view" id="tab-home" role="tabpanel" aria-labelledby="tabLinkHome">
           <section class="home-view" id="home" aria-labelledby="homeTitle">
@@ -69,23 +74,27 @@
               </div>
               <div class="home-location"><span class="home-location-mark" aria-hidden="true">⌖</span><span><small>YOUR SELECTED AREA</small><b id="homeLocationName">Palghar, Maharashtra</b></span></div>
             </div>
-            <div class="home-section-heading"><div><h2>Explore AquaPulse</h2><p>Weather, disaster, fisheries, and fish market information are available. Environment services are being prepared.</p></div><span class="home-coverage">PALGHAR PILOT</span></div>
+            <div class="home-section-heading"><div><h2>Explore AquaPulse</h2><p>Local coastal conditions, environment records, official alerts, fisheries, and market references.</p></div><span class="home-coverage">PALGHAR PILOT</span></div>
             <div class="agent-grid" aria-label="AquaPulse services">
               <article class="agent-card agent-weather"><div class="agent-card-top"><span class="agent-icon" aria-hidden="true">◌</span><span class="agent-status available">Available</span></div><h3>Weather & sea conditions</h3><p>Local forecast, wind, rainfall, and marine conditions with source and update time.</p><button type="button" class="agent-action" data-open-section="tab-weather">Open weather <span aria-hidden="true">↗</span></button></article>
               <article class="agent-card agent-disaster"><div class="agent-card-top"><span class="agent-icon" aria-hidden="true">!</span><span class="agent-status available">Available</span></div><h3>Disaster & official alerts</h3><p>Check government alert feeds and find the official notice for your area.</p><button type="button" class="agent-action" data-open-section="tab-disaster">Open disaster desk <span aria-hidden="true">↗</span></button></article>
               <article class="agent-card agent-fisheries"><div class="agent-card-top"><span class="agent-icon" aria-hidden="true">≈</span><span class="agent-status available">Available</span></div><h3>Fisheries</h3><p>Palghar fishing-centre profile plus direct access to current INCOIS PFZ maps and text.</p><button type="button" class="agent-action" data-open-section="tab-fisheries">Open fisheries <span aria-hidden="true">↗</span></button></article>
               <article class="agent-card agent-markets"><div class="agent-card-top"><span class="agent-icon" aria-hidden="true">₹</span><span class="agent-status available">Available</span></div><h3>Fish markets</h3><p>Historical Thane/Palghar boatside prices, with a separate link to current CMFRI FishWatch snapshots.</p><button type="button" class="agent-action" data-open-section="tab-markets">Open fish markets <span aria-hidden="true">↗</span></button></article>
-              <article class="agent-card"><div class="agent-card-top"><span class="agent-icon" aria-hidden="true">⌁</span><span class="agent-status planned">In preparation</span></div><h3>Coastal environment</h3><p>Water-quality results and shoreline-change references.</p></article>
+              <article class="agent-card agent-environment"><div class="agent-card-top"><span class="agent-icon" aria-hidden="true">⌁</span><span class="agent-status available">Reference data</span></div><h3>Coastal environment</h3><p>Published water-quality samples, shoreline change, mangrove context, and ocean data sources.</p><button type="button" class="agent-action" data-open-section="tab-environment">Open environment <span aria-hidden="true">↗</span></button></article>
             </div>
             <p class="home-note">Forecasts provide awareness only. Government agencies issue official warnings.</p>
           </section>
         </section>
 
         <section class="tab-view" id="tab-ask" role="tabpanel" aria-labelledby="tabLinkAsk">
+        <details class="panel demo-example-panel ask-demo-panel" data-demo-panel>
+          <summary><span><b>SYNTHETIC DEMO</b> · Sample assistant response</span><span class="demo-summary-hint">No API call · illustrative only</span></summary>
+          <div class="demo-example-content"><p class="demo-example-question" data-demo-path="ask.question"></p><p class="demo-example-answer" data-demo-path="ask.answer"></p></div>
+        </details>
         <section class="chat-panel panel" id="assistant" aria-labelledby="chatTitle">
           <div class="panel-head chat-head"><div><p class="eyebrow">AQUAPULSE · PALGHAR</p><h2 id="chatTitle">Ask a local question</h2></div><span class="model-chip" id="modelChip">Llama · local</span></div>
           <div class="conversation" id="conversation" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Assistant conversation">
-            <article class="message assistant welcome-message" id="welcomeBlock"><div class="message-label">AquaPulse</div><div class="message-body">Ask about Palghar weather, official alerts, past records, fishing centres, PFZ advisories, or historical fish prices.</div><p class="welcome-note">Ask searches curated Palghar references, recent weather and alert data, and the separate historical-record set. The village directory helps locate places; it does not contain verified hazard, catch, or price data for every village. Answers include source links when available.</p></article>
+            <article class="message assistant welcome-message" id="welcomeBlock"><div class="message-label">AquaPulse</div><div class="message-body">Ask about Palghar weather, official alerts, environment references, past records, fishing centres, PFZ advisories, or historical fish prices.</div><p class="welcome-note">Ask searches curated Palghar references, recent weather and alert data, and the separate historical-record set. The village directory helps locate places; it does not contain verified hazard, catch, environment, or price data for every village. Answers include source links when available.</p></article>
           </div>
           <div class="chat-dock">
             <div class="suggestion-list" aria-label="Quick questions">
@@ -93,6 +102,7 @@
               <button class="suggestion" data-question="What is the current official warning status for Palghar?">Official warnings</button>
               <button class="suggestion" data-question="What past heavy rainfall or cyclone records are available for Palghar?">Past records</button>
               <button class="suggestion" data-question="Which fishing centres and fishing villages are listed for Palghar district?">Palghar fishing centres</button>
+              <button class="suggestion" data-question="What does the historical shoreline assessment say about erosion near Kelva?">Shoreline history</button>
               <button class="suggestion" data-question="What is the latest valid INCOIS PFZ advisory for Maharashtra?">PFZ advisories</button>
               <button class="suggestion" data-question="What are the historical Thane/Palghar boatside prices for pomfret and prawns?">Historical fish prices</button>
             </div>
@@ -108,6 +118,12 @@
 
         <section class="tab-view" id="tab-weather" role="tabpanel" aria-labelledby="tabLinkWeather" hidden>
           <div class="section-intro"><div><p class="eyebrow">WEATHER · PALGHAR</p><h1>Weather & sea conditions</h1><p>Forecast context for your selected area. Choose a place from the location control above.</p></div><span class="section-pill">MODEL FORECAST</span></div>
+          <section class="panel demo-example-panel" data-demo-panel aria-label="Synthetic weather example">
+            <div class="demo-example-head"><div><p class="eyebrow">SYNTHETIC DEMO · NOT A FORECAST</p><h2 data-demo-path="weather.title"></h2></div><span class="demo-data-tag">ILLUSTRATIVE ONLY</span></div>
+            <p class="demo-example-location" data-demo-path="weather.area"></p>
+            <div class="demo-metric-grid"><div><small>Air temperature</small><b><span data-demo-path="weather.temperature_c"></span> °C</b></div><div><small>Wind</small><b><span data-demo-path="weather.wind_kmh"></span> km/h</b></div><div><small>Rain in sample window</small><b><span data-demo-path="weather.rain_mm"></span> mm</b></div><div><small>Wave height</small><b><span data-demo-path="weather.wave_height_m"></span> m</b></div></div>
+            <p class="demo-example-note" data-demo-path="weather.note"></p>
+          </section>
           <section class="panel weather-panel" id="weatherPanel" aria-labelledby="weatherTitle">
             <div class="panel-head"><div><p class="eyebrow">WEATHER MODEL</p><h2 id="weatherTitle">Palghar conditions</h2></div><span class="source-mark">OPEN‑METEO</span></div>
             <div class="weather-error" id="weatherError" hidden></div>
@@ -135,7 +151,50 @@
             </div>
             <div class="fisheries-caveat"><strong>Important:</strong> A PFZ is a potential fish-aggregation advisory, not a catch guarantee or a safety clearance. Check the date and validity on the official source. Follow fishing-ban rules and current weather and safety warnings.</div>
           </section>
+          <section class="panel demo-example-panel" data-demo-panel aria-label="Synthetic fisheries example">
+            <div class="demo-example-head"><div><p class="eyebrow">SYNTHETIC DEMO · NOT AN INCOIS ADVISORY</p><h2 data-demo-path="fisheries.title"></h2></div><span class="demo-data-tag">NO REAL COORDINATES</span></div>
+            <p class="demo-example-location" data-demo-path="fisheries.area"></p>
+            <p class="demo-example-copy" data-demo-path="fisheries.summary"></p>
+            <p class="demo-example-note" data-demo-path="fisheries.note"></p>
+          </section>
           <section class="panel agent-question-panel" aria-labelledby="fisheriesAskTitle"><div class="panel-head"><div><p class="eyebrow">FISHERIES ASSISTANT</p><h2 id="fisheriesAskTitle">Ask about an advisory</h2></div><span class="model-chip" id="fisheriesModelChip">Checking model…</span></div><div class="agent-answer" id="fisheriesAnswer" role="status" aria-live="polite">Answers use the reference library and include source links. The assistant cannot predict catch or replace the official advisory.</div><form class="agent-question-form" id="fisheriesAskForm"><label class="visually-hidden" for="fisheriesQuestion">Ask a fisheries question</label><input id="fisheriesQuestion" type="text" maxlength="1000" placeholder="What does a potential fishing zone advisory mean?" required><button type="submit">Ask</button></form></section>
+        </section>
+
+        <section class="tab-view" id="tab-environment" role="tabpanel" aria-labelledby="tabLinkEnvironment" hidden>
+          <div class="section-intro"><div><p class="eyebrow">ENVIRONMENT · PALGHAR COAST</p><h1>Coastal environment records</h1><p>View modelled nearshore sea conditions alongside dated water-quality, shoreline, and mangrove records.</p></div><span class="section-pill">LIVE MARINE MODEL · DATED STUDIES</span></div>
+          <section class="panel environment-panel" id="environmentPanel" aria-labelledby="environmentTitle">
+            <div class="panel-head"><div><p class="eyebrow">PALGHAR ENVIRONMENT AGENT</p><h2 id="environmentTitle">What the available evidence says</h2></div><span class="source-mark">MPCB · NCCR · INCOIS</span></div>
+            <div class="environment-notice"><strong>Coverage note</strong><p>These are dated studies and regional satellite products. They do not show today’s beach water safety, confirm a new pollution incident, or replace laboratory testing.</p></div>
+            <div class="environment-grid">
+              <article class="environment-record water-record">
+                <div class="environment-record-head"><span>WATER QUALITY</span><time datetime="2015">Samples · 2015–2016</time></div>
+                <h3>Dahanu and Tarapur coastal transects</h3>
+                <p>The MPCB study reported Dahanu coastal water quality index values of 71–76. Tarapur’s coastal and creek results were described as good post-monsoon, while the creek ranged from bad to medium pre-monsoon.</p>
+                <p class="environment-age">Historical sampling; this is not a current bathing-water result.</p>
+                <a href="https://mpcb.gov.in/sites/default/files/focus-area-reports-documents/FINAL_MPCB_PART_A_%28Main_Report%29_22022019-min_0.pdf" target="_blank" rel="noreferrer">Read MPCB coastal monitoring report ↗</a>
+              </article>
+              <article class="environment-record shore-record">
+                <div class="environment-record-head"><span>SHORELINE CHANGE</span><span>1990–2016 assessment</span></div>
+                <h3>Erosion noted at Bordi and Kelva</h3>
+                <p>NCCR’s assessment lists Bordi, Kelva, and Shrigaon among Maharashtra beaches observed with erosion. Its shoreline-length table groups Palghar with Thane, so the district-group totals cannot be read as Palghar-only measurements.</p>
+                <p class="environment-age">Historical satellite analysis; no live erosion tracking.</p>
+                <a href="https://www.nccr.gov.in/sites/default/files/schangenew.pdf" target="_blank" rel="noreferrer">Read NCCR shoreline assessment ↗</a>
+              </article>
+              <article class="environment-record mangrove-record">
+                <div class="environment-record-head"><span>MANGROVES</span><time datetime="2023">Assessment · 2023</time></div>
+                <h3>Palghar’s share of Maharashtra cover</h3>
+                <p>The Maharashtra Economic Survey reports state mangrove cover of 315.09 km² for 2023; Palghar accounted for 12.2% of the state’s mangrove-cover distribution in that assessment.</p>
+                <p class="environment-age">District-level share, not a village-by-village map.</p>
+                <a href="https://mahades.maharashtra.gov.in/ESM1920/chapter/English/ch7_e.pdf" target="_blank" rel="noreferrer">Read Maharashtra Economic Survey ↗</a>
+              </article>
+            </div>
+            <section class="ocean-data-band" aria-labelledby="oceanDataTitle">
+              <div class="ocean-live-heading"><p class="eyebrow">LIVE MARINE MODEL · SELECTED LOCATION</p><h3 id="oceanDataTitle">Nearshore sea conditions</h3><p id="environmentLiveNote" role="status">Loading the latest marine model data…</p><div class="environment-live-metrics"><div><small>Significant wave height</small><b id="environmentWave">—</b></div><div><small>Sea surface temperature</small><b id="environmentSeaTemp">—</b></div><div><small>Wave period</small><b id="environmentWavePeriod">—</b></div></div></div>
+              <div class="ocean-live-links"><a class="source-action" href="https://marine-api.open-meteo.com/" target="_blank" rel="noreferrer">Marine data source ↗</a><a href="https://incois.gov.in/site/services/hab_products.jsp" target="_blank" rel="noreferrer">INCOIS bloom products ↗</a></div>
+            </section>
+            <p class="environment-data-limit">Open-Meteo’s free marine API requires no key and provides modelled wave and sea-surface conditions. Coastal resolution is limited; this is not a direct pollution measurement, beach-safety result, bloom confirmation, navigation warning, or official alert. INCOIS publishes dated satellite bloom products separately; AquaPulse links to them but does not yet ingest their image data.</p>
+          </section>
+          <section class="panel agent-question-panel" aria-labelledby="environmentAskTitle"><div class="panel-head"><div><p class="eyebrow">ENVIRONMENT ASSISTANT</p><h2 id="environmentAskTitle">Ask about Palghar’s environment data</h2></div><span class="model-chip" id="environmentModelChip">Checking model…</span></div><div class="agent-answer" id="environmentAnswer" role="status" aria-live="polite">Ask about live modelled waves or sea temperature, or published water-quality, erosion, and mangrove records. Live marine values are estimates, not safety readings.</div><form class="agent-question-form" id="environmentAskForm"><label class="visually-hidden" for="environmentQuestion">Ask an environment question</label><input id="environmentQuestion" type="text" maxlength="1000" placeholder="What is the modelled wave height near Palghar?" required><button type="submit">Ask</button></form></section>
         </section>
 
         <section class="tab-view" id="tab-markets" role="tabpanel" aria-labelledby="tabLinkMarkets" hidden>
@@ -148,6 +207,12 @@
             </tbody></table></div>
             <div class="markets-lower"><div class="markets-caveat"><strong>How to use this:</strong> Compare historical species-level context only. These annual averages are neither retail rates nor live auction prices; current local Palghar harbour prices are not reliably available from this public dashboard.</div><a class="historical-price-link" href="https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf" target="_blank" rel="noreferrer"><span><small>OPEN ORIGINAL DATA · TABLE 16.6</small><b>Maharashtra Statistical Abstract · Fisheries · 2022–23</b><em>Source: Directorate of Fisheries, Government of Maharashtra. Values above are converted from ₹/tonne to approximate ₹/kg.</em></span><span aria-hidden="true">↗</span></a><a class="historical-price-link" href="https://www.cmfri.org.in/fishwatch" target="_blank" rel="noreferrer"><span><small>LIVE REFERENCE</small><b>ICAR-CMFRI FishWatch</b><em>Daily sampled landing and auction estimates for selected harbours; verify whether Palghar is covered.</em></span><span aria-hidden="true">↗</span></a></div>
           </section>
+          <section class="panel demo-example-panel" data-demo-panel aria-label="Synthetic market example">
+            <div class="demo-example-head"><div><p class="eyebrow">SYNTHETIC DEMO · NOT A MARKET QUOTE</p><h2 data-demo-path="markets.title"></h2></div><span class="demo-data-tag">FICTIONAL HARBOUR</span></div>
+            <p class="demo-example-location" data-demo-path="markets.harbour"></p>
+            <div class="demo-market-row" data-demo-market-list></div>
+            <p class="demo-example-note" data-demo-path="markets.note"></p>
+          </section>
           <section class="panel agent-question-panel" aria-labelledby="marketsAskTitle"><div class="panel-head"><div><p class="eyebrow">MARKET ASSISTANT</p><h2 id="marketsAskTitle">Ask about price data</h2></div><span class="model-chip" id="marketsModelChip">Checking model…</span></div><div class="agent-answer" id="marketsAnswer" role="status" aria-live="polite">I can explain the source, units, and coverage. I won’t estimate a current Palghar price when the source does not report one.</div><form class="agent-question-form" id="marketsAskForm"><label class="visually-hidden" for="marketsQuestion">Ask a market data question</label><input id="marketsQuestion" type="text" maxlength="1000" placeholder="Are these retail prices for Palghar?" required><button type="submit">Ask</button></form></section>
         </section>
 
@@ -157,6 +222,7 @@
             <div class="panel-head"><div><p class="eyebrow">OFFICIAL WARNING CHECK</p><h2 id="alertsTitle">Government alert feed</h2></div><span class="alert-symbol" aria-hidden="true">!</span></div>
             <div class="alert-state" id="alertState" role="status">Checking public IMD alert feed…</div>
             <div id="alertItems" class="alert-items"></div>
+            <div class="demo-example-panel demo-alert-example" data-demo-panel>
             <div class="alert-demo-tools">
               <button class="demo-toggle" id="demoAlertToggle" type="button" aria-expanded="true" aria-controls="demoAlertCard">Hide sample warning · demo</button>
               <span>Fictional display example; separate from the live feed.</span>
@@ -164,12 +230,13 @@
             <article class="simulated-alert" id="demoAlertCard" aria-labelledby="demoAlertTitle">
               <div class="simulated-alert-banner"><span>SIMULATED · NOT AN OFFICIAL WARNING</span><span>DEMO DATA</span></div>
               <div class="simulated-alert-body">
-                <div class="simulated-alert-heading"><div><p class="eyebrow">EXAMPLE ALERT · FICTIONAL</p><h3 id="demoAlertTitle">Heavy rainfall watch</h3></div><span class="demo-severity">WATCH · DEMO</span></div>
-                <p class="simulated-alert-summary">This is fabricated sample text to show how an alert could be presented. It does not describe current or expected conditions.</p>
-                <dl class="demo-alert-facts"><div><dt>Example area</dt><dd>Boisar coastal belt · illustrative only</dd></div><div><dt>Example period</dt><dd>Next 6 hours · fictional</dd></div><div><dt>Example source</dt><dd>No agency issued this sample</dd></div></dl>
-                <p class="demo-alert-guidance"><strong>Example guidance:</strong> A real alert would show the issuing authority's advice and link to its official notice here.</p>
+                <div class="simulated-alert-heading"><div><p class="eyebrow">EXAMPLE ALERT · FICTIONAL</p><h3 id="demoAlertTitle" data-demo-path="disaster.title"></h3></div><span class="demo-severity">WATCH · DEMO</span></div>
+                <p class="simulated-alert-summary" data-demo-path="disaster.summary"></p>
+                <dl class="demo-alert-facts"><div><dt>Example area</dt><dd data-demo-path="disaster.area"></dd></div><div><dt>Example period</dt><dd data-demo-path="disaster.period"></dd></div><div><dt>Example source</dt><dd data-demo-path="disaster.source"></dd></div></dl>
+                <p class="demo-alert-guidance"><strong>Example guidance:</strong> <span data-demo-path="disaster.guidance"></span></p>
               </div>
             </article>
+            </div>
             <div class="official-links"><a href="https://sachet.ndma.gov.in/" target="_blank" rel="noreferrer">NDMA SACHET ↗</a><a href="https://mausam.imd.gov.in/" target="_blank" rel="noreferrer">IMD Mausam ↗</a></div>
           </section>
         </section>
@@ -187,7 +254,7 @@
         <section class="tab-view" id="tab-sources" role="tabpanel" aria-labelledby="tabLinkSources" hidden>
           <section class="panel library-panel" id="libraryPanel" aria-labelledby="libraryTitle">
             <div class="panel-head"><div><p class="eyebrow">RETRIEVAL LIBRARY</p><h2 id="libraryTitle">Reference sources</h2></div><span class="doc-count" id="docCount">—</span></div>
-            <p class="library-copy">The listed documents support assistant answers. Weather and official alert feeds are checked live in their sections; past records are a separate dated dataset. The village directory powers location lookup, but does not prove village-level hazard or fisheries conditions.</p>
+            <p class="library-copy">Answers cite their provenance as REAL SOURCE or SYNTHETIC. Real documents, forecast feeds, and government alerts support real-world answers. The same Ask flow can also retrieve 500 generated demonstration cases when you explicitly ask for a synthetic or demo example; these are fictional and cannot establish real conditions.</p>
             <div id="sourceList" class="source-list"><span class="muted">Loading sources…</span></div>
             <button id="reindexButton" class="reindex-button" type="button">Refresh document index</button>
             <div class="library-meta" id="indexStatus">Local document retrieval · source links included in answers</div>

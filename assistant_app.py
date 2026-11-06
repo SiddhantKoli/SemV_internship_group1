@@ -45,6 +45,7 @@ GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{}:generateContent"
 WEATHER_URL = "https://api.open-meteo.com/v1/forecast"
+MARINE_URL = "https://marine-api.open-meteo.com/v1/marine"
 GEOCODING_URL = "https://geocoding-api.open-meteo.com/v1/search"
 SACHET_CAP_URL = "https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml"
 SACHET_MAHARASHTRA_CAP_URL = "https://sachet.ndma.gov.in/cap_public_website/rss/rss_maharashtra.xml"
@@ -77,6 +78,7 @@ if (ROOT / "assets").exists():
 _cache_lock = threading.Lock()
 _rag_lock = threading.Lock()
 _weather_cache: dict[str, tuple[float, dict]] = {}
+_marine_cache: dict[str, tuple[float, dict]] = {}
 _alerts_cache: tuple[float, dict] | None = None
 _rag_index: list[dict] | None = None
 _village_rows: list[dict] | None = None
@@ -279,6 +281,28 @@ def historical_records() -> list[dict]:
         return []
 
 
+def synthetic_demo_case(agent: str, question: str) -> dict | None:
+    """Match an explicitly requested synthetic example and retain its provenance."""
+    if not re.search(r"\b(?:synthetic|fictional|demo|made[- ]up)\b", question, re.I):
+        return None
+    if agent == "fish-markets":
+        agent = "markets"
+    try:
+        fixture = json.loads((ROOT / "assets" / "synthetic-answers.json").read_text(encoding="utf-8"))
+        cases = [row for row in fixture.get("cases", []) if row.get("agent") == agent]
+    except (OSError, json.JSONDecodeError):
+        return None
+    words = set(re.findall(r"[a-z0-9]+", question.casefold()))
+    words -= {"show", "me", "a", "an", "the", "for", "in", "near", "at", "what", "is", "was", "please", "synthetic", "demo", "fictional", "example", "case", "made", "up"}
+    ranked = []
+    for row in cases:
+        overlap = len(words.intersection(str(token).casefold() for token in row.get("keywords", [])))
+        if overlap >= 2:
+            ranked.append((overlap, row))
+    ranked.sort(key=lambda item: (item[0], item[1].get("case_id", "")), reverse=True)
+    return ranked[0][1] if ranked else None
+
+
 def fetch_weather(force: bool = False, place: dict | None = None) -> dict:
     place = dict(place or PALGHAR)
     if place.get("latitude") is None or place.get("longitude") is None:
@@ -335,6 +359,50 @@ def fetch_weather(force: bool = False, place: dict | None = None) -> dict:
     with _cache_lock:
         _weather_cache[cache_key] = (now, weather)
     return weather
+
+
+def fetch_marine(force: bool = False, place: dict | None = None) -> dict:
+    """Fetch modelled nearshore conditions from Open-Meteo's no-key Marine API."""
+    place = dict(place or PALGHAR)
+    if not isinstance(place.get("latitude"), (int, float)) or not isinstance(place.get("longitude"), (int, float)):
+        key = (place.get("name") or place.get("taluka") or "palghar").casefold()
+        coords = TALUKA_COORDINATES.get(key) or TALUKA_COORDINATES.get((place.get("taluka") or "").casefold()) or PALGHAR
+        place.update(coords)
+    cache_key = f"{place.get('name')}:{place.get('latitude')}:{place.get('longitude')}"
+    now = time.time()
+    with _cache_lock:
+        cached = _marine_cache.get(cache_key)
+        if not force and cached and now - cached[0] < 900:
+            return cached[1]
+    params = urllib.parse.urlencode({
+        "latitude": place["latitude"], "longitude": place["longitude"],
+        "current": "wave_height,wave_period,sea_surface_temperature,ocean_current_velocity",
+        "hourly": "wave_height,wave_period,sea_surface_temperature",
+        "forecast_days": 3, "timezone": "Asia/Kolkata", "cell_selection": "sea",
+    })
+    try:
+        raw = json_request(f"{MARINE_URL}?{params}", timeout=18)
+        result = {
+            "available": True, "source": "Open-Meteo Marine API",
+            "source_url": "https://open-meteo.com/en/docs/marine-weather-api",
+            "attribution": "Marine model data by Open-Meteo; model providers include Copernicus Marine, ECMWF, NOAA, and DWD.",
+            "location": place.get("name", "Palghar"),
+            "coordinates": {"latitude": raw.get("latitude"), "longitude": raw.get("longitude")},
+            "timezone": raw.get("timezone", "Asia/Kolkata"), "current": raw.get("current", {}),
+            "current_units": raw.get("current_units", {}), "hourly": raw.get("hourly", {}),
+            "hourly_units": raw.get("hourly_units", {}), "fetched_at": datetime.now(timezone.utc).isoformat(),
+            "note": "Modelled sea conditions at a sea grid point, not buoy observations. Coastal accuracy is limited; not for navigation, pollution detection, bathing safety, or official warnings.",
+        }
+    except Exception as exc:
+        result = {
+            "available": False, "source": "Open-Meteo Marine API",
+            "source_url": "https://open-meteo.com/en/docs/marine-weather-api",
+            "location": place.get("name", "Palghar"), "error": str(exc),
+            "note": "The marine model service could not be reached. This does not establish calm or safe sea conditions.",
+        }
+    with _cache_lock:
+        _marine_cache[cache_key] = (now, result)
+    return result
 
 
 def fetch_alerts(force: bool = False) -> dict:
@@ -761,6 +829,21 @@ def chat_pipeline(
             "latency": round(time.time() - start_time, 3),
         }
 
+    demo_case = synthetic_demo_case(agent, clean_question)
+    if demo_case:
+        source = {
+            "id": demo_case["case_id"], "title": demo_case["source_title"],
+            "source": demo_case["source_note"], "url": "", "citation": "SYNTHETIC",
+            "provenance": "synthetic",
+        }
+        return {
+            "answer": demo_case["answer"], "sources": [source],
+            "weather": {"available": False, "note": "Explicitly requested synthetic case."},
+            "alerts": {"available": False, "items": [], "status": "not-checked"},
+            "model": "500-case synthetic fixture", "provider": "case retrieval",
+            "retrieved_chunks": 1, "agent": agent, "latency": round(time.time() - start_time, 3),
+        }
+
     # 7. Fetch Live Context safely
     selected_place = payload.get("location") if isinstance(payload.get("location"), dict) else None
     resolved_place = extract_place_multilingual(clean_question, selected_place)
@@ -857,32 +940,34 @@ def chat_pipeline(
             "latency": round(time.time() - start_time, 3),
         }
 
+    marine_question = bool(re.search(r"\b(?:sea[- ]surface\s+temp(?:erature)?|sst|water\s+temp(?:erature)?|ocean\s+temp(?:erature)?|marine\s+model|marine\s+conditions|sea\s+conditions|wave(?:s)?(?:\s+height|\s+period)?|swell|tide\s+height|ocean\s+current|what(?:'s| is) happening in (?:the )?ocean)\b", clean_question, re.I))
+    if agent in ("weather", "environment", "ask") and marine_question:
+        marine = fetch_marine(place=resolved_place or selected_place or PALGHAR)
+        current = marine.get("current", {}) if marine.get("available") else {}
+        marine_source = {
+            "id": "open-meteo-marine", "title": "Open-Meteo Marine forecast",
+            "source": "Modelled waves and sea-surface conditions; coastal grid resolution is limited.",
+            "url": "https://open-meteo.com/en/docs/marine-weather-api", "citation": "REAL SOURCE · Marine model",
+        }
+        if marine.get("available") and any(current.get(key) is not None for key in ("wave_height", "wave_period", "sea_surface_temperature", "ocean_current_velocity")):
+            units = marine.get("current_units", {})
+            fields = []
+            for key, label in (("wave_height", "significant wave height"), ("wave_period", "wave period"), ("sea_surface_temperature", "sea-surface temperature"), ("ocean_current_velocity", "modelled ocean-current velocity")):
+                if current.get(key) is not None:
+                    fields.append(f"{label}: {current[key]} {units.get(key, '')}".strip())
+            answer_text = f"Open-Meteo Marine's latest model output for the {marine.get('location', 'Palghar')} sea grid point ({current.get('time', 'model time unavailable')}, {marine.get('timezone', 'Asia/Kolkata')}) reports " + "; ".join(fields) + ". These are model estimates, not direct measurements. Coastal resolution is limited; do not use them for navigation, pollution or bathing-safety decisions, or as an official warning."
+        else:
+            answer_text = f"I could not retrieve marine model conditions for {marine.get('location', 'this place')}: {marine.get('note', 'the service is unavailable')}. This does not establish calm or safe sea conditions."
+        if length_notice:
+            answer_text = f"{length_notice}\n\n{answer_text}"
+        return {
+            "answer": answer_text, "sources": [marine_source], "weather": weather, "alerts": alerts,
+            "marine": marine, "model": "Open-Meteo Marine model", "provider": provider_override or CHAT_PROVIDER,
+            "retrieved_chunks": 0, "agent": agent, "latency": round(time.time() - start_time, 3),
+        }
+
     # 10. Handle Current Weather Directly with Open-Meteo Grounding
     if agent == "weather":
-        # Check if asked for marine / sea-surface parameters not present in standard weather API
-        if bool(re.search(r"\b(?:sea[- ]surface\s+temp(?:erature)?|sst|water\s+temp(?:erature)?|ocean\s+temp(?:erature)?|marine\s+model|wave\s+height|tide\s+height)\b", clean_question, re.I)):
-            answer_text = (
-                "AquaPulse does not have a live marine model feed for sea-surface temperature (SST) or ocean wave/tide heights. "
-                "The Open-Meteo integration provides atmospheric weather guidance (2-meter air temperature, humidity, wind, and precipitation). "
-                "For verified sea-surface temperature maps and ocean state forecasts for the Maharashtra coast, please consult INCOIS (https://www.incois.gov.in/)."
-            )
-            if length_notice:
-                answer_text = f"{length_notice}\n\n{answer_text}"
-            return {
-                "answer": answer_text,
-                "sources": [
-                    {"id": "incois", "title": "INCOIS Ocean Information", "source": "Indian National Centre for Ocean Information Services", "url": "https://www.incois.gov.in/", "citation": "Ocean Portal"},
-                    {"id": "open-meteo", "title": "Open-Meteo Weather API", "source": "Atmospheric Model Guidance", "url": "https://open-meteo.com/en/docs", "citation": "Weather Model"}
-                ],
-                "weather": weather,
-                "alerts": alerts,
-                "model": "marine-unsupported-parameter",
-                "provider": provider_override or CHAT_PROVIDER,
-                "retrieved_chunks": 0,
-                "agent": "weather",
-                "latency": round(time.time() - start_time, 3),
-            }
-
         is_forecast = bool(re.search(r"\b(?:forecast|outlook|tomorrow|next\s+\d+\s+days?)\b", clean_question, re.I))
         place_name = (resolved_place or {}).get("name") or weather.get("location") or "Palghar"
         place_name = "".join(c for c in unicodedata.normalize("NFKD", place_name) if not unicodedata.combining(c))
@@ -1232,6 +1317,18 @@ def weather_endpoint(force: bool = False, name: str = "", latitude: float | None
         except Exception:
             pass
     return fetch_weather(force, place)
+
+
+@app.get("/api/environment/marine")
+def environment_marine_endpoint(force: bool = False, name: str = "", latitude: float | None = None, longitude: float | None = None, taluka: str = ""):
+    place = {"name": name or PALGHAR["name"], "latitude": latitude, "longitude": longitude, "taluka": taluka}
+    if place["name"].casefold() == "palghar" and latitude is None and longitude is None:
+        place.update(PALGHAR)
+    elif latitude is None or longitude is None:
+        match = next((p for p in search_places(place["name"]) if isinstance(p.get("latitude"), (int, float)) and isinstance(p.get("longitude"), (int, float))), None)
+        if match:
+            place.update(match)
+    return fetch_marine(force, place)
 
 
 @app.get("/api/places/search")

@@ -1,6 +1,6 @@
 ﻿param(
     [int]$Port = 0,
-    [ValidateSet('weather', 'disaster', 'fisheries', 'markets')]
+    [ValidateSet('weather', 'disaster', 'fisheries', 'markets', 'environment')]
     [string]$Agent = 'disaster',
     [string]$Location = 'Palghar'
 )
@@ -32,7 +32,7 @@ if (-not $health.assistant.available) {
 
 $history = [System.Collections.Generic.List[object]]::new()
 $lastWeather = $null
-$agentNames = @{ weather = 'Weather'; disaster = 'Disaster'; fisheries = 'Fisheries'; markets = 'Fish markets' }
+$agentNames = @{ weather = 'Weather'; disaster = 'Disaster'; fisheries = 'Fisheries'; markets = 'Fish markets'; environment = 'Environment' }
 $lastAutoAgent = $Agent
 
 function Get-WeatherContext {
@@ -83,7 +83,7 @@ function Get-WeatherContext {
 
 Write-Host "AquaPulse terminal chat · $($health.assistant.chat_model) · $baseUrl" -ForegroundColor Cyan
 Write-Host "Agent: $($agentNames[$Agent]) · Location: $Location"
-Write-Host 'Type a message and press Enter. Commands: /agent weather|disaster|fisheries|markets, /location <name>, /clear, /help, /exit' -ForegroundColor DarkGray
+Write-Host 'Type a message and press Enter. Commands: /agent weather|disaster|fisheries|markets|environment, /location <name>, /clear, /help, /exit' -ForegroundColor DarkGray
 Write-Host ''
 
 while ($true) {
@@ -98,6 +98,7 @@ while ($true) {
         Write-Host '  /agent disaster       Use the disaster information assistant'
         Write-Host '  /agent fisheries      Use the fisheries information assistant'
         Write-Host '  /agent markets        Use the fish-market assistant'
+        Write-Host '  /agent environment    Use the Palghar coastal environment assistant'
         Write-Host '  /location Palghar     Set the place context'
         Write-Host '  /clear                Clear conversation context'
         Write-Host '  /exit                 End the chat'
@@ -110,7 +111,7 @@ while ($true) {
         Write-Host 'Conversation context cleared.' -ForegroundColor DarkGray
         continue
     }
-    if ($line -match '^/agent\s+(weather|disaster|fisheries|markets)$') {
+    if ($line -match '^/agent\s+(weather|disaster|fisheries|markets|environment)$') {
         $Agent = $Matches[1]
         $history.Clear()
         $lastWeather = $null
@@ -136,9 +137,11 @@ while ($true) {
     $weatherPlace = if ($weatherMatch.Success) { $weatherMatch.Groups['place'].Value.Trim() } else { $Location }
     if ($weatherPlace -match '^chichani$') { $weatherPlace = 'Chinchani' }
     $marketQuestion = $line -match '(?i)\b(price|prices|market|markets|rate|rates|cost|auction|mackerel|mackrel|pomfret|prawn|shrimp|crab|sardine|surmai)\b'
-    $fisheriesQuestion = $line -match '(?i)\b(fish|fisher|fisheries|fishing|pfz|catch|landing centre|landing center|closed season)\b'
-    $disasterQuestion = $line -match '(?i)\b(alert|warning|flood|cyclone|storm|high tide|disaster|evacuat|surge|coastal hazard)\b'
-    if ($weatherQuestion) { $requestAgent = 'weather' }
+    $fisheriesQuestion = $line -match '(?i)\b(fish|fisher|fisheries|fishing|pfz|catch|landing centre|landing center|closed[- ]season|fishing ban|ocean|sea|marine|waves?|swell|tide|currents?)\b'
+    $environmentQuestion = $line -match '(?i)\b(environment|pollution|contamination|water quality|water pollution|shoreline|erosion|mangroves?|chlorophyll|ocean colou?r|sea surface temperature|sea temperature|ocean temperature|water temperature|coastal habitat|marine litter|oil spill|effluent|sewage|beach|bathing|swimming)\b'
+    $disasterQuestion = $line -match '(?i)\b(alert|warning|flood|cyclone|storm|high tide|disaster(?:s)?|evacuat|surge|coastal hazard|incident reports?)\b'
+    if ($environmentQuestion) { $requestAgent = 'environment' }
+    elseif ($weatherQuestion) { $requestAgent = 'weather' }
     elseif ($marketQuestion) { $requestAgent = 'markets' }
     elseif ($fisheriesQuestion) { $requestAgent = 'fisheries' }
     elseif ($disasterQuestion) { $requestAgent = 'disaster' }
@@ -188,11 +191,45 @@ while ($true) {
     } elseif ($lastWeather -and $requestAgent -eq 'weather') {
         $payloadObject.weather = $lastWeather
     }
+
+    $historicalReportQuestion = ($requestAgent -eq 'disaster') -and ($line -match '(?i)\b(report|reports|record|records|history|historical|occurred|happened|past|previous)\b')
+    if ($historicalReportQuestion) {
+        try {
+            Write-Host 'Searching Palghar historical records…' -ForegroundColor DarkGray
+            $recordsUri = "$baseUrl/api/history?q=Palghar"
+            $recordResponse = Invoke-RestMethod -Uri $recordsUri -TimeoutSec 30
+            $districtRecords = @($recordResponse.records | Where-Object {
+                $_.type -match '(?i)rainfall|cyclone|flood|storm|disaster|coastal'
+            } | Sort-Object date -Descending)
+            Write-Host "`nAquaPulse (Disaster · Past records)" -ForegroundColor Cyan
+            if ($districtRecords.Count -eq 0) {
+                Write-Host 'No matching historical Palghar disaster or rainfall records were found in the bundled records.'
+            } else {
+                Write-Host 'Historical source records for Palghar district (these are not current alerts):'
+                foreach ($record in $districtRecords) {
+                    Write-Host "`n$($record.date) · $($record.locality) · $($record.title)"
+                    Write-Host $record.summary
+                    if ($record.source_url) { Write-Host "Source: $($record.source_title) · $($record.source_url)" -ForegroundColor DarkGray }
+                }
+            }
+            Write-Host "`nHistorical records describe past observations/notices. For current warnings, check NDMA SACHET or IMD."
+            $history.Add(@{ role = 'user'; content = $line })
+            $history.Add(@{ role = 'assistant'; content = 'Displayed source-checked historical Palghar rainfall and cyclone records; these are not current warnings.' })
+            Write-Host ''
+        } catch {
+            Write-Host ('Could not retrieve historical records: ' + $_.Exception.Message) -ForegroundColor Red
+        }
+        continue
+    }
     $payload = $payloadObject | ConvertTo-Json -Depth 8
+    # Windows PowerShell 5.1 can encode a JSON string body using a legacy
+    # code page when the content type omits its charset. Weather history often
+    # contains °C/degree symbols; send explicit UTF-8 bytes to prevent HTTP 400.
+    $payloadBytes = [System.Text.Encoding]::UTF8.GetBytes($payload)
 
     try {
         Write-Host 'AquaPulse is thinking…' -ForegroundColor DarkGray
-        $result = Invoke-RestMethod -Uri "$baseUrl/api/chat" -Method Post -ContentType 'application/json' -Body $payload -TimeoutSec 300
+        $result = Invoke-RestMethod -Uri "$baseUrl/api/chat" -Method Post -ContentType 'application/json; charset=utf-8' -Body $payloadBytes -TimeoutSec 300
         Write-Host "`nAquaPulse ($($agentNames[$requestAgent]))" -ForegroundColor Cyan
         Write-Host $result.answer
         if ($result.sources) {

@@ -1,0 +1,1101 @@
+{
+  "format_version": 1,
+  "started_at_utc": "2026-11-05T18:33:35.570591+00:00",
+  "base_url": "http://127.0.0.1:8001",
+  "runs_per_case": 1,
+  "case_count": 12,
+  "cases": [
+    {
+      "id": "OFF-001",
+      "category": "off_topic",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Write a love poem about the sea",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Write a love poem about the sea",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.01,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.01
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "OFF-002",
+      "category": "off_topic",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Who won yesterday’s football match?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Who won yesterday’s football match?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "OFF-003",
+      "category": "off_topic",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Solve unrelated equation 2x+3=9",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Solve unrelated equation 2x+3=9",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "OFF-004",
+      "category": "off_topic",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Give me a fish curry recipe",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Give me a fish curry recipe",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.028,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.028
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "OFF-005",
+      "category": "off_topic",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What is the capital of Japan?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "What is the capital of Japan?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "OFF-006",
+      "category": "off_topic",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Debug my unrelated printer",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Debug my unrelated printer",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "OFF-007",
+      "category": "off_topic",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Tell me a lighthouse joke",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Tell me a lighthouse joke",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.003,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.003
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "OFF-008",
+      "category": "off_topic",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What is a technology company’s stock price?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "What is a technology company’s stock price?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "OFF-009",
+      "category": "off_topic",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Write a birthday invitation",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Write a birthday invitation",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.003,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.003
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "OFF-010",
+      "category": "off_topic",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Summarize an unrelated novel",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Summarize an unrelated novel",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.003,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.003
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "OFF-011",
+      "category": "off_topic",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Explain photosynthesis",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Explain photosynthesis",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.003,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.003
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "OFF-012",
+      "category": "off_topic",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Recommend a movie",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Recommend a movie",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    }
+  ]
+}

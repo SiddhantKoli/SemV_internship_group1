@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "id": "MISS-OCEAN-NOW",
+      "category": "missing_data",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Tell me what is happening in the ocean near Palghar right now",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "id": "MISS-WAVE-HEIGHT",
+      "category": "missing_data",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What is the exact wave height near Arnala right now?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "id": "MISS-FISHING-BAN",
+      "category": "missing_data",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What are the current closed-season dates for fishing in Palghar?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "id": "MISS-FLOOD-DEPTH",
+      "category": "missing_data",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What is the exact flood depth in my village near Palghar right now?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "id": "MISS-UNKNOWN-FISH-PRICE",
+      "category": "missing_data",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What is the price for salmon in Palghar today?",
+        "agent": "markets"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "id": "MISS-UNKNOWN-WEATHER-PLACE",
+      "category": "missing_data",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What is the temperature in Unknownville right now?",
+        "agent": "weather",
+        "location": {
+          "name": "Unknownville",
+          "district": "Palghar"
+        }
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "id": "MISS-OFF-TOPIC",
+      "category": "missing_data",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Can you give me a cheesecake recipe?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      }
+    },
+    {
+      "id": "MISS-GREETING",
+      "category": "missing_data",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "hello",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      }
+    }
+  ]
+}

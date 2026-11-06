@@ -1,0 +1,118 @@
+{
+  "format_version": 1,
+  "started_at_utc": "2026-11-05T18:36:27.570439+00:00",
+  "base_url": "http://127.0.0.1:8001",
+  "runs_per_case": 1,
+  "case_count": 1,
+  "cases": [
+    {
+      "id": "FIX-FORECAST-7DAY",
+      "category": "weather_forecast",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Give me a seven-day weather forecast for Palghar",
+        "agent": "weather"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Give me a seven-day weather forecast for Palghar",
+              "agent": "weather"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.129,
+          "raw_response": "{\"answer\":\"Weather service could not be reached. Check the connection and retry.\",\"sources\":[{\"id\":\"open-meteo\",\"title\":\"Open-Meteo forecast\",\"source\":\"Weather model data\",\"url\":\"https://open-meteo.com/en/docs\",\"citation\":\"Forecast\"}],\"weather\":{\"available\":false,\"source\":\"Open-Meteo\",\"source_url\":\"https://open-meteo.com/en/docs\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"note\":\"Weather service could not be reached. Check the connection and retry.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Weather questions use Open-Meteo; official warnings are checked separately.\"},\"model\":\"live weather data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "Weather service could not be reached. Check the connection and retry.",
+            "sources": [
+              {
+                "id": "open-meteo",
+                "title": "Open-Meteo forecast",
+                "source": "Weather model data",
+                "url": "https://open-meteo.com/en/docs",
+                "citation": "Forecast"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "source": "Open-Meteo",
+              "source_url": "https://open-meteo.com/en/docs",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "note": "Weather service could not be reached. Check the connection and retry."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Weather questions use Open-Meteo; official warnings are checked separately."
+            },
+            "model": "live weather data",
+            "retrieved_chunks": 0
+          },
+          "answer": "Weather service could not be reached. Check the connection and retry.",
+          "model": "live weather data",
+          "sources": [
+            {
+              "id": "open-meteo",
+              "title": "Open-Meteo forecast",
+              "source": "Weather model data",
+              "url": "https://open-meteo.com/en/docs",
+              "citation": "Forecast"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "live weather data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.129
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    }
+  ]
+}

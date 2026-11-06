@@ -1,0 +1,221 @@
+{
+  "format_version": 1,
+  "started_at_utc": "2026-11-05T18:33:48.336378+00:00",
+  "base_url": "http://127.0.0.1:8001",
+  "runs_per_case": 1,
+  "case_count": 2,
+  "cases": [
+    {
+      "id": "FIX-FISH-LANDINGS",
+      "category": "fisheries_profile",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What landing centres are listed for Palghar?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "What landing centres are listed for Palghar?",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.131,
+          "raw_response": "{\"answer\":\"The Palghar District Strategic Plan names Satpati, Dativare, Murabe, Navapur, Dandi, Alevadi and Nandgaon in Palghar taluka; Naigaon, Pacu Port, Castle Harbour and Arnala in Vasai taluka; and Bordi, Chinchani and Dahanu in Dahanu taluka. It reports 24 centres overall; the named list is not exhaustive and does not confirm current facility status.\",\"sources\":[{\"id\":\"palghar-fisheries-profile\",\"title\":\"Palghar district fisheries profile and landing centres\",\"source\":\"District Strategic Plan for Palghar 2023\",\"url\":\"https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf\",\"citation\":\"Palghar fisheries profile\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "The Palghar District Strategic Plan names Satpati, Dativare, Murabe, Navapur, Dandi, Alevadi and Nandgaon in Palghar taluka; Naigaon, Pacu Port, Castle Harbour and Arnala in Vasai taluka; and Bordi, Chinchani and Dahanu in Dahanu taluka. It reports 24 centres overall; the named list is not exhaustive and does not confirm current facility status.",
+            "sources": [
+              {
+                "id": "palghar-fisheries-profile",
+                "title": "Palghar district fisheries profile and landing centres",
+                "source": "District Strategic Plan for Palghar 2023",
+                "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+                "citation": "Palghar fisheries profile"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "The Palghar District Strategic Plan names Satpati, Dativare, Murabe, Navapur, Dandi, Alevadi and Nandgaon in Palghar taluka; Naigaon, Pacu Port, Castle Harbour and Arnala in Vasai taluka; and Bordi, Chinchani and Dahanu in Dahanu taluka. It reports 24 centres overall; the named list is not exhaustive and does not confirm current facility status.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fisheries-profile",
+              "title": "Palghar district fisheries profile and landing centres",
+              "source": "District Strategic Plan for Palghar 2023",
+              "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+              "citation": "Palghar fisheries profile"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.131
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "FIX-FISH-PRODUCTION",
+      "category": "fisheries_profile",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "How many fishing villages are in Palghar and what are the production figures?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "How many fishing villages are in Palghar and what are the production figures?",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.132,
+          "raw_response": "{\"answer\":\"The Palghar District Strategic Plan reports an 85 km coastline, 74 fishing villages, 18,203 active fishers and 24 landing centres. Its historical fisheries production was 43,220 tonnes in 2020–21, 25,252 tonnes in 2021–22 and 43,069 tonnes in 2022–23. These are district-level historical figures, not current catch or village-level totals. Listed varieties include Pomfret, Surmai, Rohu, Katla, Bombil, Mrugal, Javla and prawns.\",\"sources\":[{\"id\":\"palghar-fisheries-profile\",\"title\":\"Palghar district fisheries profile and landing centres\",\"source\":\"District Strategic Plan for Palghar 2023\",\"url\":\"https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf\",\"citation\":\"Palghar fisheries profile\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "The Palghar District Strategic Plan reports an 85 km coastline, 74 fishing villages, 18,203 active fishers and 24 landing centres. Its historical fisheries production was 43,220 tonnes in 2020–21, 25,252 tonnes in 2021–22 and 43,069 tonnes in 2022–23. These are district-level historical figures, not current catch or village-level totals. Listed varieties include Pomfret, Surmai, Rohu, Katla, Bombil, Mrugal, Javla and prawns.",
+            "sources": [
+              {
+                "id": "palghar-fisheries-profile",
+                "title": "Palghar district fisheries profile and landing centres",
+                "source": "District Strategic Plan for Palghar 2023",
+                "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+                "citation": "Palghar fisheries profile"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "The Palghar District Strategic Plan reports an 85 km coastline, 74 fishing villages, 18,203 active fishers and 24 landing centres. Its historical fisheries production was 43,220 tonnes in 2020–21, 25,252 tonnes in 2021–22 and 43,069 tonnes in 2022–23. These are district-level historical figures, not current catch or village-level totals. Listed varieties include Pomfret, Surmai, Rohu, Katla, Bombil, Mrugal, Javla and prawns.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fisheries-profile",
+              "title": "Palghar district fisheries profile and landing centres",
+              "source": "District Strategic Plan for Palghar 2023",
+              "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+              "citation": "Palghar fisheries profile"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.132
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    }
+  ]
+}

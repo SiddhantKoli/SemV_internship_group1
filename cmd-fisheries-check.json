@@ -1,0 +1,1540 @@
+{
+  "format_version": 1,
+  "started_at_utc": "2026-11-05T19:42:35.411043+00:00",
+  "base_url": "http://127.0.0.1:8001",
+  "runs_per_case": 1,
+  "case_count": 12,
+  "cases": [
+    {
+      "id": "FIS-001",
+      "category": "fisheries",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What does the INCOIS PFZ advisory tell fishermen?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "What does the INCOIS PFZ advisory tell fishermen?",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 16.828,
+          "raw_response": "{\"answer\":\"The INCOIS Potential Fishing Zone (PFZ) advisory provides potential zones of fish aggregation identified with remotely sensed ocean information, including sea-surface temperature and chlorophyll. It does not guarantee a catch, report the quantity or species of fish at a point, or certify that it is safe to go to sea.\\n\\nTo find the current Maharashtra advisory, visit the official INCOIS PFZ advisory page: https://www.incois.gov.in/MarineFisheries/PfzAdvisory\\n\\nFor the current Maharashtra advisory text, visit: https://iioe-2.incois.gov.in/MarineFisheries/TextDataHome?mfid=1&request_locale=en\\n\\nFor the current INCOIS PFZ WebGIS map, visit: https://incois.gov.in/geoportal/MFASPFZ/index.html\\n\\nFor information on Palghar district fisheries profile and landing centres, visit: https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf\\n\\nPlease note that the PFZ advisory is not a guarantee of a catch, and the marked zone may shift. Do not turn an old map or archived advisory into a current location recommendation.\",\"sources\":[{\"id\":\"fisheries-advisories\",\"title\":\"Official fisheries advisories and Palghar coverage notes\",\"source\":\"INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI\",\"url\":\"https://www.incois.gov.in/MarineFisheries/PfzAdvisory\",\"document\":\"\",\"citation\":\"S1\"},{\"id\":\"fish-market-data\",\"title\":\"Fish market prices, FishWatch coverage, and Palghar historical data\",\"source\":\"ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics\",\"url\":\"https://www.cmfri.org.in/fishwatch\",\"document\":\"\",\"citation\":\"S2\"},{\"id\":\"palghar-fisheries-profile\",\"title\":\"Palghar district fisheries profile and landing centres\",\"source\":\"District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures\",\"url\":\"https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf\",\"document\":\"\",\"citation\":\"S3\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"llama3.2:3b\",\"provider\":\"local\",\"retrieved_chunks\":4}",
+          "parsed_response": {
+            "answer": "The INCOIS Potential Fishing Zone (PFZ) advisory provides potential zones of fish aggregation identified with remotely sensed ocean information, including sea-surface temperature and chlorophyll. It does not guarantee a catch, report the quantity or species of fish at a point, or certify that it is safe to go to sea.\n\nTo find the current Maharashtra advisory, visit the official INCOIS PFZ advisory page: https://www.incois.gov.in/MarineFisheries/PfzAdvisory\n\nFor the current Maharashtra advisory text, visit: https://iioe-2.incois.gov.in/MarineFisheries/TextDataHome?mfid=1&request_locale=en\n\nFor the current INCOIS PFZ WebGIS map, visit: https://incois.gov.in/geoportal/MFASPFZ/index.html\n\nFor information on Palghar district fisheries profile and landing centres, visit: https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf\n\nPlease note that the PFZ advisory is not a guarantee of a catch, and the marked zone may shift. Do not turn an old map or archived advisory into a current location recommendation.",
+            "sources": [
+              {
+                "id": "fisheries-advisories",
+                "title": "Official fisheries advisories and Palghar coverage notes",
+                "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+                "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+                "document": "",
+                "citation": "S1"
+              },
+              {
+                "id": "fish-market-data",
+                "title": "Fish market prices, FishWatch coverage, and Palghar historical data",
+                "source": "ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics",
+                "url": "https://www.cmfri.org.in/fishwatch",
+                "document": "",
+                "citation": "S2"
+              },
+              {
+                "id": "palghar-fisheries-profile",
+                "title": "Palghar district fisheries profile and landing centres",
+                "source": "District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures",
+                "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+                "document": "",
+                "citation": "S3"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "llama3.2:3b",
+            "provider": "local",
+            "retrieved_chunks": 4
+          },
+          "answer": "The INCOIS Potential Fishing Zone (PFZ) advisory provides potential zones of fish aggregation identified with remotely sensed ocean information, including sea-surface temperature and chlorophyll. It does not guarantee a catch, report the quantity or species of fish at a point, or certify that it is safe to go to sea.\n\nTo find the current Maharashtra advisory, visit the official INCOIS PFZ advisory page: https://www.incois.gov.in/MarineFisheries/PfzAdvisory\n\nFor the current Maharashtra advisory text, visit: https://iioe-2.incois.gov.in/MarineFisheries/TextDataHome?mfid=1&request_locale=en\n\nFor the current INCOIS PFZ WebGIS map, visit: https://incois.gov.in/geoportal/MFASPFZ/index.html\n\nFor information on Palghar district fisheries profile and landing centres, visit: https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf\n\nPlease note that the PFZ advisory is not a guarantee of a catch, and the marked zone may shift. Do not turn an old map or archived advisory into a current location recommendation.",
+          "model": "llama3.2:3b",
+          "sources": [
+            {
+              "id": "fisheries-advisories",
+              "title": "Official fisheries advisories and Palghar coverage notes",
+              "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+              "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+              "document": "",
+              "citation": "S1"
+            },
+            {
+              "id": "fish-market-data",
+              "title": "Fish market prices, FishWatch coverage, and Palghar historical data",
+              "source": "ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics",
+              "url": "https://www.cmfri.org.in/fishwatch",
+              "document": "",
+              "citation": "S2"
+            },
+            {
+              "id": "palghar-fisheries-profile",
+              "title": "Palghar district fisheries profile and landing centres",
+              "source": "District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures",
+              "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+              "document": "",
+              "citation": "S3"
+            }
+          ],
+          "retrieved_chunks": 4,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "llama3.2:3b"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": false,
+              "unsupported_urls": [
+                "https://iioe-2.incois.gov.in/MarineFisheries/TextDataHome?mfid=1&request_locale=en",
+                "https://incois.gov.in/geoportal/MFASPFZ/index.html"
+              ]
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 16.828
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "FIS-002",
+      "category": "fisheries",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Can PFZ guidance guarantee a catch?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Can PFZ guidance guarantee a catch?",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 7.598,
+          "raw_response": "{\"answer\":\"PFZ guidance does not guarantee a catch. It is an advisory to help search for potential fish aggregation. The marked zone may shift, and it does not certify that it is safe to go to sea. For current Maharashtra advisory and PFZ information, please refer to the official INCOIS map/text: https://iioe-2.incois.gov.in/MarineFisheries/TextDataHome?mfid=1&request_locale=en and https://incois.gov.in/geoportal/MFASPFZ/index.html.\",\"sources\":[{\"id\":\"fisheries-advisories\",\"title\":\"Official fisheries advisories and Palghar coverage notes\",\"source\":\"INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI\",\"url\":\"https://www.incois.gov.in/MarineFisheries/PfzAdvisory\",\"document\":\"\",\"citation\":\"S1\"},{\"id\":\"fish-market-data\",\"title\":\"Fish market prices, FishWatch coverage, and Palghar historical data\",\"source\":\"ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics\",\"url\":\"https://www.cmfri.org.in/fishwatch\",\"document\":\"\",\"citation\":\"S2\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"llama3.2:3b\",\"provider\":\"local\",\"retrieved_chunks\":4}",
+          "parsed_response": {
+            "answer": "PFZ guidance does not guarantee a catch. It is an advisory to help search for potential fish aggregation. The marked zone may shift, and it does not certify that it is safe to go to sea. For current Maharashtra advisory and PFZ information, please refer to the official INCOIS map/text: https://iioe-2.incois.gov.in/MarineFisheries/TextDataHome?mfid=1&request_locale=en and https://incois.gov.in/geoportal/MFASPFZ/index.html.",
+            "sources": [
+              {
+                "id": "fisheries-advisories",
+                "title": "Official fisheries advisories and Palghar coverage notes",
+                "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+                "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+                "document": "",
+                "citation": "S1"
+              },
+              {
+                "id": "fish-market-data",
+                "title": "Fish market prices, FishWatch coverage, and Palghar historical data",
+                "source": "ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics",
+                "url": "https://www.cmfri.org.in/fishwatch",
+                "document": "",
+                "citation": "S2"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "llama3.2:3b",
+            "provider": "local",
+            "retrieved_chunks": 4
+          },
+          "answer": "PFZ guidance does not guarantee a catch. It is an advisory to help search for potential fish aggregation. The marked zone may shift, and it does not certify that it is safe to go to sea. For current Maharashtra advisory and PFZ information, please refer to the official INCOIS map/text: https://iioe-2.incois.gov.in/MarineFisheries/TextDataHome?mfid=1&request_locale=en and https://incois.gov.in/geoportal/MFASPFZ/index.html.",
+          "model": "llama3.2:3b",
+          "sources": [
+            {
+              "id": "fisheries-advisories",
+              "title": "Official fisheries advisories and Palghar coverage notes",
+              "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+              "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+              "document": "",
+              "citation": "S1"
+            },
+            {
+              "id": "fish-market-data",
+              "title": "Fish market prices, FishWatch coverage, and Palghar historical data",
+              "source": "ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics",
+              "url": "https://www.cmfri.org.in/fishwatch",
+              "document": "",
+              "citation": "S2"
+            }
+          ],
+          "retrieved_chunks": 4,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "llama3.2:3b"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": false,
+              "unsupported_urls": [
+                "https://iioe-2.incois.gov.in/MarineFisheries/TextDataHome?mfid=1&request_locale=en",
+                "https://incois.gov.in/geoportal/MFASPFZ/index.html"
+              ]
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 7.598
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "FIS-003",
+      "category": "fisheries",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Where can I find the Maharashtra fishing advisory?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Where can I find the Maharashtra fishing advisory?",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 7.631,
+          "raw_response": "{\"answer\":\"To find the current Maharashtra fishing advisory, please visit the official INCOIS Potential Fishing Zone Advisory page: https://www.incois.gov.in/MarineFisheries/PfzAdvisory. You can also check the current advisory text and map on the INCOIS PFZ WebGIS map: https://incois.gov.in/geoportal/MFASPFZ/index.html. Please note that the advisory is issued daily for fishing landing centres when operating, but can pause during government fishing bans or adverse sea-state conditions. Read the forecast date and validity on the current official advisory before using it.\",\"sources\":[{\"id\":\"fisheries-advisories\",\"title\":\"Official fisheries advisories and Palghar coverage notes\",\"source\":\"INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI\",\"url\":\"https://www.incois.gov.in/MarineFisheries/PfzAdvisory\",\"document\":\"\",\"citation\":\"S1\"},{\"id\":\"fish-market-data\",\"title\":\"Fish market prices, FishWatch coverage, and Palghar historical data\",\"source\":\"ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics\",\"url\":\"https://www.cmfri.org.in/fishwatch\",\"document\":\"\",\"citation\":\"S2\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"llama3.2:3b\",\"provider\":\"local\",\"retrieved_chunks\":4}",
+          "parsed_response": {
+            "answer": "To find the current Maharashtra fishing advisory, please visit the official INCOIS Potential Fishing Zone Advisory page: https://www.incois.gov.in/MarineFisheries/PfzAdvisory. You can also check the current advisory text and map on the INCOIS PFZ WebGIS map: https://incois.gov.in/geoportal/MFASPFZ/index.html. Please note that the advisory is issued daily for fishing landing centres when operating, but can pause during government fishing bans or adverse sea-state conditions. Read the forecast date and validity on the current official advisory before using it.",
+            "sources": [
+              {
+                "id": "fisheries-advisories",
+                "title": "Official fisheries advisories and Palghar coverage notes",
+                "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+                "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+                "document": "",
+                "citation": "S1"
+              },
+              {
+                "id": "fish-market-data",
+                "title": "Fish market prices, FishWatch coverage, and Palghar historical data",
+                "source": "ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics",
+                "url": "https://www.cmfri.org.in/fishwatch",
+                "document": "",
+                "citation": "S2"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "llama3.2:3b",
+            "provider": "local",
+            "retrieved_chunks": 4
+          },
+          "answer": "To find the current Maharashtra fishing advisory, please visit the official INCOIS Potential Fishing Zone Advisory page: https://www.incois.gov.in/MarineFisheries/PfzAdvisory. You can also check the current advisory text and map on the INCOIS PFZ WebGIS map: https://incois.gov.in/geoportal/MFASPFZ/index.html. Please note that the advisory is issued daily for fishing landing centres when operating, but can pause during government fishing bans or adverse sea-state conditions. Read the forecast date and validity on the current official advisory before using it.",
+          "model": "llama3.2:3b",
+          "sources": [
+            {
+              "id": "fisheries-advisories",
+              "title": "Official fisheries advisories and Palghar coverage notes",
+              "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+              "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+              "document": "",
+              "citation": "S1"
+            },
+            {
+              "id": "fish-market-data",
+              "title": "Fish market prices, FishWatch coverage, and Palghar historical data",
+              "source": "ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics",
+              "url": "https://www.cmfri.org.in/fishwatch",
+              "document": "",
+              "citation": "S2"
+            }
+          ],
+          "retrieved_chunks": 4,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "llama3.2:3b"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": false,
+              "unsupported_urls": [
+                "https://incois.gov.in/geoportal/MFASPFZ/index.html"
+              ]
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 7.631
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "FIS-004",
+      "category": "fisheries",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What landing centres are listed for Palghar?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "What landing centres are listed for Palghar?",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.924,
+          "raw_response": "{\"answer\":\"The Palghar District Strategic Plan names Satpati, Dativare, Murabe, Navapur, Dandi, Alevadi and Nandgaon in Palghar taluka; Naigaon, Pacu Port, Castle Harbour and Arnala in Vasai taluka; and Bordi, Chinchani and Dahanu in Dahanu taluka. It reports 24 centres overall; the named list is not exhaustive and does not confirm current facility status.\",\"sources\":[{\"id\":\"palghar-fisheries-profile\",\"title\":\"Palghar district fisheries profile and landing centres\",\"source\":\"District Strategic Plan for Palghar 2023\",\"url\":\"https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf\",\"citation\":\"Palghar fisheries profile\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "The Palghar District Strategic Plan names Satpati, Dativare, Murabe, Navapur, Dandi, Alevadi and Nandgaon in Palghar taluka; Naigaon, Pacu Port, Castle Harbour and Arnala in Vasai taluka; and Bordi, Chinchani and Dahanu in Dahanu taluka. It reports 24 centres overall; the named list is not exhaustive and does not confirm current facility status.",
+            "sources": [
+              {
+                "id": "palghar-fisheries-profile",
+                "title": "Palghar district fisheries profile and landing centres",
+                "source": "District Strategic Plan for Palghar 2023",
+                "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+                "citation": "Palghar fisheries profile"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "The Palghar District Strategic Plan names Satpati, Dativare, Murabe, Navapur, Dandi, Alevadi and Nandgaon in Palghar taluka; Naigaon, Pacu Port, Castle Harbour and Arnala in Vasai taluka; and Bordi, Chinchani and Dahanu in Dahanu taluka. It reports 24 centres overall; the named list is not exhaustive and does not confirm current facility status.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fisheries-profile",
+              "title": "Palghar district fisheries profile and landing centres",
+              "source": "District Strategic Plan for Palghar 2023",
+              "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+              "citation": "Palghar fisheries profile"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.924
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "FIS-005",
+      "category": "fisheries",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What is the fishing season for pomfret?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "What is the fishing season for pomfret?",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 12.182,
+          "raw_response": "{\"answer\":\"The fishing season for pomfret is not specified in the retrieved reference passages. \\n\\nThe Maharashtra Statistical Abstract 2022-23 provides average annual wholesale prices for pomfret in the Thane / Palghar district group, but these prices are historical and not current market prices. The prices are ₹646,693/tonne for pomfret in 2022-23.\\n\\nFor the most current information on pomfret fishing in Palghar, check the official INCOIS Potential Fishing Zone Advisory map or text for the Maharashtra sector, as it provides potential zones of fish aggregation identified with remotely sensed ocean information. The advisory is issued daily for fishing landing centres when operating, but its validity and accuracy should be verified.\",\"sources\":[{\"id\":\"fish-market-data\",\"title\":\"Fish market prices, FishWatch coverage, and Palghar historical data\",\"source\":\"ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics\",\"url\":\"https://www.cmfri.org.in/fishwatch\",\"document\":\"\",\"citation\":\"S1\"},{\"id\":\"fisheries-advisories\",\"title\":\"Official fisheries advisories and Palghar coverage notes\",\"source\":\"INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI\",\"url\":\"https://www.incois.gov.in/MarineFisheries/PfzAdvisory\",\"document\":\"\",\"citation\":\"S2\"},{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Directorate of Fisheries, Government of Maharashtra, Statistical Abstract of Maharashtra 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"document\":\"\",\"citation\":\"S3\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"llama3.2:3b\",\"provider\":\"local\",\"retrieved_chunks\":4}",
+          "parsed_response": {
+            "answer": "The fishing season for pomfret is not specified in the retrieved reference passages. \n\nThe Maharashtra Statistical Abstract 2022-23 provides average annual wholesale prices for pomfret in the Thane / Palghar district group, but these prices are historical and not current market prices. The prices are ₹646,693/tonne for pomfret in 2022-23.\n\nFor the most current information on pomfret fishing in Palghar, check the official INCOIS Potential Fishing Zone Advisory map or text for the Maharashtra sector, as it provides potential zones of fish aggregation identified with remotely sensed ocean information. The advisory is issued daily for fishing landing centres when operating, but its validity and accuracy should be verified.",
+            "sources": [
+              {
+                "id": "fish-market-data",
+                "title": "Fish market prices, FishWatch coverage, and Palghar historical data",
+                "source": "ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics",
+                "url": "https://www.cmfri.org.in/fishwatch",
+                "document": "",
+                "citation": "S1"
+              },
+              {
+                "id": "fisheries-advisories",
+                "title": "Official fisheries advisories and Palghar coverage notes",
+                "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+                "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+                "document": "",
+                "citation": "S2"
+              },
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Directorate of Fisheries, Government of Maharashtra, Statistical Abstract of Maharashtra 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "document": "",
+                "citation": "S3"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "llama3.2:3b",
+            "provider": "local",
+            "retrieved_chunks": 4
+          },
+          "answer": "The fishing season for pomfret is not specified in the retrieved reference passages. \n\nThe Maharashtra Statistical Abstract 2022-23 provides average annual wholesale prices for pomfret in the Thane / Palghar district group, but these prices are historical and not current market prices. The prices are ₹646,693/tonne for pomfret in 2022-23.\n\nFor the most current information on pomfret fishing in Palghar, check the official INCOIS Potential Fishing Zone Advisory map or text for the Maharashtra sector, as it provides potential zones of fish aggregation identified with remotely sensed ocean information. The advisory is issued daily for fishing landing centres when operating, but its validity and accuracy should be verified.",
+          "model": "llama3.2:3b",
+          "sources": [
+            {
+              "id": "fish-market-data",
+              "title": "Fish market prices, FishWatch coverage, and Palghar historical data",
+              "source": "ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics",
+              "url": "https://www.cmfri.org.in/fishwatch",
+              "document": "",
+              "citation": "S1"
+            },
+            {
+              "id": "fisheries-advisories",
+              "title": "Official fisheries advisories and Palghar coverage notes",
+              "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+              "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+              "document": "",
+              "citation": "S2"
+            },
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Directorate of Fisheries, Government of Maharashtra, Statistical Abstract of Maharashtra 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "document": "",
+              "citation": "S3"
+            }
+          ],
+          "retrieved_chunks": 4,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "llama3.2:3b"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 12.182
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "FIS-006",
+      "category": "fisheries",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Are there fishing restrictions today?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Are there fishing restrictions today?",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 5.993,
+          "raw_response": "{\"answer\":\"There is no current fishing advisory available for Palghar. Check the official INCOIS PFZ advisory map and text for the current advisory: https://incois.gov.in/geoportal/MFASPFZ/index.html and https://iioe-2.incois.gov.in/MarineFisheries/TextDataHome?mfid=1&request_locale=en.\",\"sources\":[{\"id\":\"fisheries-advisories\",\"title\":\"Official fisheries advisories and Palghar coverage notes\",\"source\":\"INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI\",\"url\":\"https://www.incois.gov.in/MarineFisheries/PfzAdvisory\",\"document\":\"\",\"citation\":\"S1\"},{\"id\":\"fish-market-data\",\"title\":\"Fish market prices, FishWatch coverage, and Palghar historical data\",\"source\":\"ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics\",\"url\":\"https://www.cmfri.org.in/fishwatch\",\"document\":\"\",\"citation\":\"S2\"},{\"id\":\"palghar-fisheries-profile\",\"title\":\"Palghar district fisheries profile and landing centres\",\"source\":\"District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures\",\"url\":\"https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf\",\"document\":\"\",\"citation\":\"S3\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"llama3.2:3b\",\"provider\":\"local\",\"retrieved_chunks\":4}",
+          "parsed_response": {
+            "answer": "There is no current fishing advisory available for Palghar. Check the official INCOIS PFZ advisory map and text for the current advisory: https://incois.gov.in/geoportal/MFASPFZ/index.html and https://iioe-2.incois.gov.in/MarineFisheries/TextDataHome?mfid=1&request_locale=en.",
+            "sources": [
+              {
+                "id": "fisheries-advisories",
+                "title": "Official fisheries advisories and Palghar coverage notes",
+                "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+                "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+                "document": "",
+                "citation": "S1"
+              },
+              {
+                "id": "fish-market-data",
+                "title": "Fish market prices, FishWatch coverage, and Palghar historical data",
+                "source": "ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics",
+                "url": "https://www.cmfri.org.in/fishwatch",
+                "document": "",
+                "citation": "S2"
+              },
+              {
+                "id": "palghar-fisheries-profile",
+                "title": "Palghar district fisheries profile and landing centres",
+                "source": "District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures",
+                "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+                "document": "",
+                "citation": "S3"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "llama3.2:3b",
+            "provider": "local",
+            "retrieved_chunks": 4
+          },
+          "answer": "There is no current fishing advisory available for Palghar. Check the official INCOIS PFZ advisory map and text for the current advisory: https://incois.gov.in/geoportal/MFASPFZ/index.html and https://iioe-2.incois.gov.in/MarineFisheries/TextDataHome?mfid=1&request_locale=en.",
+          "model": "llama3.2:3b",
+          "sources": [
+            {
+              "id": "fisheries-advisories",
+              "title": "Official fisheries advisories and Palghar coverage notes",
+              "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+              "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+              "document": "",
+              "citation": "S1"
+            },
+            {
+              "id": "fish-market-data",
+              "title": "Fish market prices, FishWatch coverage, and Palghar historical data",
+              "source": "ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics",
+              "url": "https://www.cmfri.org.in/fishwatch",
+              "document": "",
+              "citation": "S2"
+            },
+            {
+              "id": "palghar-fisheries-profile",
+              "title": "Palghar district fisheries profile and landing centres",
+              "source": "District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures",
+              "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+              "document": "",
+              "citation": "S3"
+            }
+          ],
+          "retrieved_chunks": 4,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "llama3.2:3b"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": false,
+              "unsupported_urls": [
+                "https://iioe-2.incois.gov.in/MarineFisheries/TextDataHome?mfid=1&request_locale=en",
+                "https://incois.gov.in/geoportal/MFASPFZ/index.html"
+              ]
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 5.993
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "FIS-007",
+      "category": "fisheries",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What should fishers check before sailing?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "What should fishers check before sailing?",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "FIS-008",
+      "category": "fisheries",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Does this system provide vessel navigation?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Does this system provide vessel navigation?",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "FIS-009",
+      "category": "fisheries",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Which species are described in Palghar fisheries sources?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Which species are described in Palghar fisheries sources?",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 20.754,
+          "raw_response": "{\"answer\":\"The Palghar fisheries sources do not describe specific species availability, fishing rules, or closed-season dates. However, the sources do mention the following fish varieties: Pomfret, Surmai (seer fish), Rohu, Katla, Bombil, Mrugal, Javla, and prawns.\\n\\nThe Palghar district fisheries profile and landing centres are summarized in the District Strategic Plan for Palghar 2023, which reports 74 fishing villages, 18,203 active fishers, and 24 fish landing centres. The plan names landing/fishing centres in Palghar taluka, including Satpati, Dativare, Murabe, Navapur, Dandi, Alevadi, and Nandgaon.\\n\\nFor current fishing advisories, including Potential Fishing Zone (PFZ) advisories, please check the INCOIS map/text at https://www.incois.gov.in/MarineFisheries/PfzAdvisory. The validity of this information may change, and it is recommended to check for updates.\\n\\nFor historical fish prices, the Maharashtra Statistical Abstract 2022-23 reports average annual wholesale boatside marine fish prices in rupees per tonne for the Thane and Palghar district group. The published values include Pomfret ₹646,693/tonne, black pomfrets ₹463,215/tonne, seer fish ₹465,785/tonne, prawns ₹239,787/tonne, mackerels ₹126,139/tonne, and Bombil ₹89,791/tonne.\\n\\nPlease note that these sources are historical and may not reflect current prices or availability.\",\"sources\":[{\"id\":\"fisheries-advisories\",\"title\":\"Official fisheries advisories and Palghar coverage notes\",\"source\":\"INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI\",\"url\":\"https://www.incois.gov.in/MarineFisheries/PfzAdvisory\",\"document\":\"\",\"citation\":\"S1\"},{\"id\":\"palghar-fisheries-profile\",\"title\":\"Palghar district fisheries profile and landing centres\",\"source\":\"District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures\",\"url\":\"https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf\",\"document\":\"\",\"citation\":\"S2\"},{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Directorate of Fisheries, Government of Maharashtra, Statistical Abstract of Maharashtra 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"document\":\"\",\"citation\":\"S3\"},{\"id\":\"fish-market-data\",\"title\":\"Fish market prices, FishWatch coverage, and Palghar historical data\",\"source\":\"ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics\",\"url\":\"https://www.cmfri.org.in/fishwatch\",\"document\":\"\",\"citation\":\"S4\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"llama3.2:3b\",\"provider\":\"local\",\"retrieved_chunks\":4}",
+          "parsed_response": {
+            "answer": "The Palghar fisheries sources do not describe specific species availability, fishing rules, or closed-season dates. However, the sources do mention the following fish varieties: Pomfret, Surmai (seer fish), Rohu, Katla, Bombil, Mrugal, Javla, and prawns.\n\nThe Palghar district fisheries profile and landing centres are summarized in the District Strategic Plan for Palghar 2023, which reports 74 fishing villages, 18,203 active fishers, and 24 fish landing centres. The plan names landing/fishing centres in Palghar taluka, including Satpati, Dativare, Murabe, Navapur, Dandi, Alevadi, and Nandgaon.\n\nFor current fishing advisories, including Potential Fishing Zone (PFZ) advisories, please check the INCOIS map/text at https://www.incois.gov.in/MarineFisheries/PfzAdvisory. The validity of this information may change, and it is recommended to check for updates.\n\nFor historical fish prices, the Maharashtra Statistical Abstract 2022-23 reports average annual wholesale boatside marine fish prices in rupees per tonne for the Thane and Palghar district group. The published values include Pomfret ₹646,693/tonne, black pomfrets ₹463,215/tonne, seer fish ₹465,785/tonne, prawns ₹239,787/tonne, mackerels ₹126,139/tonne, and Bombil ₹89,791/tonne.\n\nPlease note that these sources are historical and may not reflect current prices or availability.",
+            "sources": [
+              {
+                "id": "fisheries-advisories",
+                "title": "Official fisheries advisories and Palghar coverage notes",
+                "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+                "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+                "document": "",
+                "citation": "S1"
+              },
+              {
+                "id": "palghar-fisheries-profile",
+                "title": "Palghar district fisheries profile and landing centres",
+                "source": "District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures",
+                "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+                "document": "",
+                "citation": "S2"
+              },
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Directorate of Fisheries, Government of Maharashtra, Statistical Abstract of Maharashtra 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "document": "",
+                "citation": "S3"
+              },
+              {
+                "id": "fish-market-data",
+                "title": "Fish market prices, FishWatch coverage, and Palghar historical data",
+                "source": "ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics",
+                "url": "https://www.cmfri.org.in/fishwatch",
+                "document": "",
+                "citation": "S4"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "llama3.2:3b",
+            "provider": "local",
+            "retrieved_chunks": 4
+          },
+          "answer": "The Palghar fisheries sources do not describe specific species availability, fishing rules, or closed-season dates. However, the sources do mention the following fish varieties: Pomfret, Surmai (seer fish), Rohu, Katla, Bombil, Mrugal, Javla, and prawns.\n\nThe Palghar district fisheries profile and landing centres are summarized in the District Strategic Plan for Palghar 2023, which reports 74 fishing villages, 18,203 active fishers, and 24 fish landing centres. The plan names landing/fishing centres in Palghar taluka, including Satpati, Dativare, Murabe, Navapur, Dandi, Alevadi, and Nandgaon.\n\nFor current fishing advisories, including Potential Fishing Zone (PFZ) advisories, please check the INCOIS map/text at https://www.incois.gov.in/MarineFisheries/PfzAdvisory. The validity of this information may change, and it is recommended to check for updates.\n\nFor historical fish prices, the Maharashtra Statistical Abstract 2022-23 reports average annual wholesale boatside marine fish prices in rupees per tonne for the Thane and Palghar district group. The published values include Pomfret ₹646,693/tonne, black pomfrets ₹463,215/tonne, seer fish ₹465,785/tonne, prawns ₹239,787/tonne, mackerels ₹126,139/tonne, and Bombil ₹89,791/tonne.\n\nPlease note that these sources are historical and may not reflect current prices or availability.",
+          "model": "llama3.2:3b",
+          "sources": [
+            {
+              "id": "fisheries-advisories",
+              "title": "Official fisheries advisories and Palghar coverage notes",
+              "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+              "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+              "document": "",
+              "citation": "S1"
+            },
+            {
+              "id": "palghar-fisheries-profile",
+              "title": "Palghar district fisheries profile and landing centres",
+              "source": "District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures",
+              "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+              "document": "",
+              "citation": "S2"
+            },
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Directorate of Fisheries, Government of Maharashtra, Statistical Abstract of Maharashtra 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "document": "",
+              "citation": "S3"
+            },
+            {
+              "id": "fish-market-data",
+              "title": "Fish market prices, FishWatch coverage, and Palghar historical data",
+              "source": "ICAR-CMFRI FishWatch; Maharashtra Directorate of Economics and Statistics",
+              "url": "https://www.cmfri.org.in/fishwatch",
+              "document": "",
+              "citation": "S4"
+            }
+          ],
+          "retrieved_chunks": 4,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "llama3.2:3b"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 20.754
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "FIS-010",
+      "category": "fisheries",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Explain potential fishing zones simply.",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Explain potential fishing zones simply.",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 12.323,
+          "raw_response": "{\"answer\":\"Potential fishing zones are advisories to help search for potential fish aggregation. They do not guarantee a catch, report the quantity or species of fish at a point, or certify that it is safe to go to sea. \\n\\nCheck the current INCOIS PFZ advisory map and text for the latest information on potential fishing zones in the Maharashtra sector. The advisory is issued daily for fishing landing centres when operating, but can pause during government fishing bans or adverse sea-state conditions. Read the forecast date and validity on the current official advisory before using it.\\n\\nFor Palghar district-specific information, refer to the Palghar District Strategic Plan 2023, which reports on the district's fisheries production and named landing centres. However, this plan is a historical document and does not provide current information on fishing conditions or availability.\\n\\nSource links:\\n- https://www.incois.gov.in/MarineFisheries/PfzAdvisory\\n- https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf\",\"sources\":[{\"id\":\"fisheries-advisories\",\"title\":\"Official fisheries advisories and Palghar coverage notes\",\"source\":\"INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI\",\"url\":\"https://www.incois.gov.in/MarineFisheries/PfzAdvisory\",\"document\":\"\",\"citation\":\"S1\"},{\"id\":\"palghar-fisheries-profile\",\"title\":\"Palghar district fisheries profile and landing centres\",\"source\":\"District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures\",\"url\":\"https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf\",\"document\":\"\",\"citation\":\"S2\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"llama3.2:3b\",\"provider\":\"local\",\"retrieved_chunks\":4}",
+          "parsed_response": {
+            "answer": "Potential fishing zones are advisories to help search for potential fish aggregation. They do not guarantee a catch, report the quantity or species of fish at a point, or certify that it is safe to go to sea. \n\nCheck the current INCOIS PFZ advisory map and text for the latest information on potential fishing zones in the Maharashtra sector. The advisory is issued daily for fishing landing centres when operating, but can pause during government fishing bans or adverse sea-state conditions. Read the forecast date and validity on the current official advisory before using it.\n\nFor Palghar district-specific information, refer to the Palghar District Strategic Plan 2023, which reports on the district's fisheries production and named landing centres. However, this plan is a historical document and does not provide current information on fishing conditions or availability.\n\nSource links:\n- https://www.incois.gov.in/MarineFisheries/PfzAdvisory\n- https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+            "sources": [
+              {
+                "id": "fisheries-advisories",
+                "title": "Official fisheries advisories and Palghar coverage notes",
+                "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+                "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+                "document": "",
+                "citation": "S1"
+              },
+              {
+                "id": "palghar-fisheries-profile",
+                "title": "Palghar district fisheries profile and landing centres",
+                "source": "District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures",
+                "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+                "document": "",
+                "citation": "S2"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "llama3.2:3b",
+            "provider": "local",
+            "retrieved_chunks": 4
+          },
+          "answer": "Potential fishing zones are advisories to help search for potential fish aggregation. They do not guarantee a catch, report the quantity or species of fish at a point, or certify that it is safe to go to sea. \n\nCheck the current INCOIS PFZ advisory map and text for the latest information on potential fishing zones in the Maharashtra sector. The advisory is issued daily for fishing landing centres when operating, but can pause during government fishing bans or adverse sea-state conditions. Read the forecast date and validity on the current official advisory before using it.\n\nFor Palghar district-specific information, refer to the Palghar District Strategic Plan 2023, which reports on the district's fisheries production and named landing centres. However, this plan is a historical document and does not provide current information on fishing conditions or availability.\n\nSource links:\n- https://www.incois.gov.in/MarineFisheries/PfzAdvisory\n- https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+          "model": "llama3.2:3b",
+          "sources": [
+            {
+              "id": "fisheries-advisories",
+              "title": "Official fisheries advisories and Palghar coverage notes",
+              "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+              "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+              "document": "",
+              "citation": "S1"
+            },
+            {
+              "id": "palghar-fisheries-profile",
+              "title": "Palghar district fisheries profile and landing centres",
+              "source": "District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures",
+              "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+              "document": "",
+              "citation": "S2"
+            }
+          ],
+          "retrieved_chunks": 4,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "llama3.2:3b"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": false,
+              "markdown_marker_found": true
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 12.323
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "FIS-011",
+      "category": "fisheries",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Does PFZ certify that the sea is safe?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Does PFZ certify that the sea is safe?",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"AquaPulse does not currently receive a live ocean-observation feed, so it cannot report current sea temperature, waves, currents, water quality, or what fish are present at a location. INCOIS publishes potential fishing zone guidance for possible fish aggregation when an advisory is available; it is not live underwater monitoring and does not certify that conditions are safe for sailing. Check the advisory date and validity on the official INCOIS page before relying on it.\",\"sources\":[{\"id\":\"incois-pfz\",\"title\":\"INCOIS Potential Fishing Zone advisories\",\"source\":\"Indian National Centre for Ocean Information Services\",\"url\":\"https://www.incois.gov.in/MarineFisheries/PfzAdvisory\",\"citation\":\"INCOIS PFZ\"},{\"id\":\"incois-map\",\"title\":\"INCOIS PFZ WebGIS map\",\"source\":\"Indian National Centre for Ocean Information Services\",\"url\":\"https://incois.gov.in/geoportal/MFASPFZ/index.html\",\"citation\":\"INCOIS map\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified source guidance\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "AquaPulse does not currently receive a live ocean-observation feed, so it cannot report current sea temperature, waves, currents, water quality, or what fish are present at a location. INCOIS publishes potential fishing zone guidance for possible fish aggregation when an advisory is available; it is not live underwater monitoring and does not certify that conditions are safe for sailing. Check the advisory date and validity on the official INCOIS page before relying on it.",
+            "sources": [
+              {
+                "id": "incois-pfz",
+                "title": "INCOIS Potential Fishing Zone advisories",
+                "source": "Indian National Centre for Ocean Information Services",
+                "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+                "citation": "INCOIS PFZ"
+              },
+              {
+                "id": "incois-map",
+                "title": "INCOIS PFZ WebGIS map",
+                "source": "Indian National Centre for Ocean Information Services",
+                "url": "https://incois.gov.in/geoportal/MFASPFZ/index.html",
+                "citation": "INCOIS map"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified source guidance",
+            "retrieved_chunks": 0
+          },
+          "answer": "AquaPulse does not currently receive a live ocean-observation feed, so it cannot report current sea temperature, waves, currents, water quality, or what fish are present at a location. INCOIS publishes potential fishing zone guidance for possible fish aggregation when an advisory is available; it is not live underwater monitoring and does not certify that conditions are safe for sailing. Check the advisory date and validity on the official INCOIS page before relying on it.",
+          "model": "verified source guidance",
+          "sources": [
+            {
+              "id": "incois-pfz",
+              "title": "INCOIS Potential Fishing Zone advisories",
+              "source": "Indian National Centre for Ocean Information Services",
+              "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+              "citation": "INCOIS PFZ"
+            },
+            {
+              "id": "incois-map",
+              "title": "INCOIS PFZ WebGIS map",
+              "source": "Indian National Centre for Ocean Information Services",
+              "url": "https://incois.gov.in/geoportal/MFASPFZ/index.html",
+              "citation": "INCOIS map"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified source guidance"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "FIS-012",
+      "category": "fisheries",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Can you show today’s current advisory for Palghar?",
+        "agent": "fisheries"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Can you show today’s current advisory for Palghar?",
+              "agent": "fisheries"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 14.232,
+          "raw_response": "{\"answer\":\"For current Palghar fisheries advisories, please check the INCOIS Potential Fishing Zone Advisory map/text at https://www.incois.gov.in/MarineFisheries/PfzAdvisory. The validity of this advisory may vary, and it is recommended to verify its accuracy.\\n\\nThe Palghar district fisheries profile and landing centres are available in the District Strategic Plan for Palghar 2023, which can be accessed at https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf. This document provides historical information on the district's fisheries and does not reflect current conditions.\\n\\nPlease note that the district's published preparedness material, including the District Disaster Management Plan and the Palghar Heat Action Plan, is available at https://palghar.gov.in/en/disaster-management/. These documents provide general information on disaster management and preparedness but are not real-time warnings or advisories.\\n\\nIn an immediate emergency, contact the Palghar District Disaster Management control room at 02525-297474 or toll-free 1077, or the Maharashtra Disaster Management control room at 022-22027990, or the National Disaster Management Authority control room at 011-26701728.\",\"sources\":[{\"id\":\"palghar-district\",\"title\":\"Palghar district disaster information and official contacts\",\"source\":\"District Disaster Management, District Palghar, Government of Maharashtra\",\"url\":\"https://palghar.gov.in/en/disaster-management/\",\"document\":\"\",\"citation\":\"S1\"},{\"id\":\"palghar-fisheries-profile\",\"title\":\"Palghar district fisheries profile and landing centres\",\"source\":\"District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures\",\"url\":\"https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf\",\"document\":\"\",\"citation\":\"S2\"},{\"id\":\"maharashtra-plan\",\"title\":\"Maharashtra State Disaster Management Plan 2023\",\"source\":\"Maharashtra State Disaster Management Authority\",\"url\":\"https://sdma.maharashtra.gov.in/en/state-disaster-management-plan-sdmp/\",\"document\":\"https://cdnbbsr.s3waas.gov.in/s36143cc48107351648de16d8367dc5db4/uploads/2025/03/20250313303207907.pdf\",\"citation\":\"S3\"},{\"id\":\"fisheries-advisories\",\"title\":\"Official fisheries advisories and Palghar coverage notes\",\"source\":\"INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI\",\"url\":\"https://www.incois.gov.in/MarineFisheries/PfzAdvisory\",\"document\":\"\",\"citation\":\"S4\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"llama3.2:3b\",\"provider\":\"local\",\"retrieved_chunks\":4}",
+          "parsed_response": {
+            "answer": "For current Palghar fisheries advisories, please check the INCOIS Potential Fishing Zone Advisory map/text at https://www.incois.gov.in/MarineFisheries/PfzAdvisory. The validity of this advisory may vary, and it is recommended to verify its accuracy.\n\nThe Palghar district fisheries profile and landing centres are available in the District Strategic Plan for Palghar 2023, which can be accessed at https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf. This document provides historical information on the district's fisheries and does not reflect current conditions.\n\nPlease note that the district's published preparedness material, including the District Disaster Management Plan and the Palghar Heat Action Plan, is available at https://palghar.gov.in/en/disaster-management/. These documents provide general information on disaster management and preparedness but are not real-time warnings or advisories.\n\nIn an immediate emergency, contact the Palghar District Disaster Management control room at 02525-297474 or toll-free 1077, or the Maharashtra Disaster Management control room at 022-22027990, or the National Disaster Management Authority control room at 011-26701728.",
+            "sources": [
+              {
+                "id": "palghar-district",
+                "title": "Palghar district disaster information and official contacts",
+                "source": "District Disaster Management, District Palghar, Government of Maharashtra",
+                "url": "https://palghar.gov.in/en/disaster-management/",
+                "document": "",
+                "citation": "S1"
+              },
+              {
+                "id": "palghar-fisheries-profile",
+                "title": "Palghar district fisheries profile and landing centres",
+                "source": "District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures",
+                "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+                "document": "",
+                "citation": "S2"
+              },
+              {
+                "id": "maharashtra-plan",
+                "title": "Maharashtra State Disaster Management Plan 2023",
+                "source": "Maharashtra State Disaster Management Authority",
+                "url": "https://sdma.maharashtra.gov.in/en/state-disaster-management-plan-sdmp/",
+                "document": "https://cdnbbsr.s3waas.gov.in/s36143cc48107351648de16d8367dc5db4/uploads/2025/03/20250313303207907.pdf",
+                "citation": "S3"
+              },
+              {
+                "id": "fisheries-advisories",
+                "title": "Official fisheries advisories and Palghar coverage notes",
+                "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+                "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+                "document": "",
+                "citation": "S4"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "llama3.2:3b",
+            "provider": "local",
+            "retrieved_chunks": 4
+          },
+          "answer": "For current Palghar fisheries advisories, please check the INCOIS Potential Fishing Zone Advisory map/text at https://www.incois.gov.in/MarineFisheries/PfzAdvisory. The validity of this advisory may vary, and it is recommended to verify its accuracy.\n\nThe Palghar district fisheries profile and landing centres are available in the District Strategic Plan for Palghar 2023, which can be accessed at https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf. This document provides historical information on the district's fisheries and does not reflect current conditions.\n\nPlease note that the district's published preparedness material, including the District Disaster Management Plan and the Palghar Heat Action Plan, is available at https://palghar.gov.in/en/disaster-management/. These documents provide general information on disaster management and preparedness but are not real-time warnings or advisories.\n\nIn an immediate emergency, contact the Palghar District Disaster Management control room at 02525-297474 or toll-free 1077, or the Maharashtra Disaster Management control room at 022-22027990, or the National Disaster Management Authority control room at 011-26701728.",
+          "model": "llama3.2:3b",
+          "sources": [
+            {
+              "id": "palghar-district",
+              "title": "Palghar district disaster information and official contacts",
+              "source": "District Disaster Management, District Palghar, Government of Maharashtra",
+              "url": "https://palghar.gov.in/en/disaster-management/",
+              "document": "",
+              "citation": "S1"
+            },
+            {
+              "id": "palghar-fisheries-profile",
+              "title": "Palghar district fisheries profile and landing centres",
+              "source": "District Strategic Plan for Palghar 2023, using Fisheries Department and Directorate of Economics and Statistics figures",
+              "url": "https://abhinavpahal.nic.in/visions_doc/489VBcyu4MPalgharDSP1July2024.pdf",
+              "document": "",
+              "citation": "S2"
+            },
+            {
+              "id": "maharashtra-plan",
+              "title": "Maharashtra State Disaster Management Plan 2023",
+              "source": "Maharashtra State Disaster Management Authority",
+              "url": "https://sdma.maharashtra.gov.in/en/state-disaster-management-plan-sdmp/",
+              "document": "https://cdnbbsr.s3waas.gov.in/s36143cc48107351648de16d8367dc5db4/uploads/2025/03/20250313303207907.pdf",
+              "citation": "S3"
+            },
+            {
+              "id": "fisheries-advisories",
+              "title": "Official fisheries advisories and Palghar coverage notes",
+              "source": "INCOIS Potential Fishing Zone Advisory; Maharashtra Department of Fisheries; ICAR-CMFRI",
+              "url": "https://www.incois.gov.in/MarineFisheries/PfzAdvisory",
+              "document": "",
+              "citation": "S4"
+            }
+          ],
+          "retrieved_chunks": 4,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "llama3.2:3b"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 14.232
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    }
+  ]
+}

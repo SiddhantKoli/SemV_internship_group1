@@ -1,0 +1,1379 @@
+{
+  "format_version": 1,
+  "started_at_utc": "2026-11-05T19:42:28.643224+00:00",
+  "base_url": "http://127.0.0.1:8001",
+  "runs_per_case": 1,
+  "case_count": 12,
+  "cases": [
+    {
+      "id": "MAR-001",
+      "category": "markets",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What was the historical price for prawns?",
+        "agent": "markets"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "What was the historical price for prawns?",
+              "agent": "markets"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.802,
+          "raw_response": "{\"answer\":\"The 2022-23 Maharashtra Statistical Abstract lists prawns at ₹239,787 per tonne (about ₹239.79/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.\",\"sources\":[{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Maharashtra Statistical Abstract 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"citation\":\"Historical price data\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "The 2022-23 Maharashtra Statistical Abstract lists prawns at ₹239,787 per tonne (about ₹239.79/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.",
+            "sources": [
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "citation": "Historical price data"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "The 2022-23 Maharashtra Statistical Abstract lists prawns at ₹239,787 per tonne (about ₹239.79/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "citation": "Historical price data"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.802
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "MAR-002",
+      "category": "markets",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Current mackerel price in Palghar today",
+        "agent": "markets"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Current mackerel price in Palghar today",
+              "agent": "markets"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.75,
+          "raw_response": "{\"answer\":\"I do not have a verified live mackerels price for a Palghar market. The historical reference is ₹126,139 per tonne (about ₹126.14/kg) for the combined Thane / Palghar district group in 2022-23. It is an annual wholesale boatside average, not today's local retail or auction quote. FishWatch has sampled current prices at selected harbours; check its listed harbour and date before using a value.\",\"sources\":[{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Maharashtra Statistical Abstract 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"citation\":\"Historical price data\"},{\"id\":\"fish-market-data\",\"title\":\"ICAR-CMFRI FishWatch\",\"source\":\"Sampled landing and auction estimates at selected harbours\",\"url\":\"https://www.cmfri.org.in/fishwatch\",\"citation\":\"Current market source\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I do not have a verified live mackerels price for a Palghar market. The historical reference is ₹126,139 per tonne (about ₹126.14/kg) for the combined Thane / Palghar district group in 2022-23. It is an annual wholesale boatside average, not today's local retail or auction quote. FishWatch has sampled current prices at selected harbours; check its listed harbour and date before using a value.",
+            "sources": [
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "citation": "Historical price data"
+              },
+              {
+                "id": "fish-market-data",
+                "title": "ICAR-CMFRI FishWatch",
+                "source": "Sampled landing and auction estimates at selected harbours",
+                "url": "https://www.cmfri.org.in/fishwatch",
+                "citation": "Current market source"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "I do not have a verified live mackerels price for a Palghar market. The historical reference is ₹126,139 per tonne (about ₹126.14/kg) for the combined Thane / Palghar district group in 2022-23. It is an annual wholesale boatside average, not today's local retail or auction quote. FishWatch has sampled current prices at selected harbours; check its listed harbour and date before using a value.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "citation": "Historical price data"
+            },
+            {
+              "id": "fish-market-data",
+              "title": "ICAR-CMFRI FishWatch",
+              "source": "Sampled landing and auction estimates at selected harbours",
+              "url": "https://www.cmfri.org.in/fishwatch",
+              "citation": "Current market source"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.75
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "MAR-003",
+      "category": "markets",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Historical boatside rate for Bombil",
+        "agent": "markets"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Historical boatside rate for Bombil",
+              "agent": "markets"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.856,
+          "raw_response": "{\"answer\":\"The 2022-23 Maharashtra Statistical Abstract lists bombil at ₹89,791 per tonne (about ₹89.79/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.\",\"sources\":[{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Maharashtra Statistical Abstract 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"citation\":\"Historical price data\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "The 2022-23 Maharashtra Statistical Abstract lists bombil at ₹89,791 per tonne (about ₹89.79/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.",
+            "sources": [
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "citation": "Historical price data"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "The 2022-23 Maharashtra Statistical Abstract lists bombil at ₹89,791 per tonne (about ₹89.79/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "citation": "Historical price data"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.856
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "MAR-004",
+      "category": "markets",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What is the price of pomfret?",
+        "agent": "markets"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "What is the price of pomfret?",
+              "agent": "markets"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 1.087,
+          "raw_response": "{\"answer\":\"The 2022-23 Maharashtra Statistical Abstract lists pomfret at ₹646,693 per tonne (about ₹646.69/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.\",\"sources\":[{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Maharashtra Statistical Abstract 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"citation\":\"Historical price data\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "The 2022-23 Maharashtra Statistical Abstract lists pomfret at ₹646,693 per tonne (about ₹646.69/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.",
+            "sources": [
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "citation": "Historical price data"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "The 2022-23 Maharashtra Statistical Abstract lists pomfret at ₹646,693 per tonne (about ₹646.69/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "citation": "Historical price data"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 1.087
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "MAR-005",
+      "category": "markets",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Is the price per kg or per tonne?",
+        "agent": "markets"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Is the price per kg or per tonne?",
+              "agent": "markets"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.029,
+          "raw_response": "{\"answer\":\"I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.\",\"sources\":[{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Maharashtra Statistical Abstract 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"citation\":\"Historical price data\"},{\"id\":\"fish-market-data\",\"title\":\"ICAR-CMFRI FishWatch\",\"source\":\"Sampled landing and auction estimates at selected harbours\",\"url\":\"https://www.cmfri.org.in/fishwatch\",\"citation\":\"Current market source\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.",
+            "sources": [
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "citation": "Historical price data"
+              },
+              {
+                "id": "fish-market-data",
+                "title": "ICAR-CMFRI FishWatch",
+                "source": "Sampled landing and auction estimates at selected harbours",
+                "url": "https://www.cmfri.org.in/fishwatch",
+                "citation": "Current market source"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "citation": "Historical price data"
+            },
+            {
+              "id": "fish-market-data",
+              "title": "ICAR-CMFRI FishWatch",
+              "source": "Sampled landing and auction estimates at selected harbours",
+              "url": "https://www.cmfri.org.in/fishwatch",
+              "citation": "Current market source"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.029
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "MAR-006",
+      "category": "markets",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Latest auction price at Dahanu harbour?",
+        "agent": "markets"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Latest auction price at Dahanu harbour?",
+              "agent": "markets"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 1.055,
+          "raw_response": "{\"answer\":\"I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.\",\"sources\":[{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Maharashtra Statistical Abstract 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"citation\":\"Historical price data\"},{\"id\":\"fish-market-data\",\"title\":\"ICAR-CMFRI FishWatch\",\"source\":\"Sampled landing and auction estimates at selected harbours\",\"url\":\"https://www.cmfri.org.in/fishwatch\",\"citation\":\"Current market source\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.",
+            "sources": [
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "citation": "Historical price data"
+              },
+              {
+                "id": "fish-market-data",
+                "title": "ICAR-CMFRI FishWatch",
+                "source": "Sampled landing and auction estimates at selected harbours",
+                "url": "https://www.cmfri.org.in/fishwatch",
+                "citation": "Current market source"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "citation": "Historical price data"
+            },
+            {
+              "id": "fish-market-data",
+              "title": "ICAR-CMFRI FishWatch",
+              "source": "Sampled landing and auction estimates at selected harbours",
+              "url": "https://www.cmfri.org.in/fishwatch",
+              "citation": "Current market source"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 1.055
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "MAR-007",
+      "category": "markets",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Historical Surmai price in Thane and Palghar",
+        "agent": "markets"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Historical Surmai price in Thane and Palghar",
+              "agent": "markets"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.797,
+          "raw_response": "{\"answer\":\"The 2022-23 Maharashtra Statistical Abstract lists seer fish (surmai) at ₹465,785 per tonne (about ₹465.79/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.\",\"sources\":[{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Maharashtra Statistical Abstract 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"citation\":\"Historical price data\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "The 2022-23 Maharashtra Statistical Abstract lists seer fish (surmai) at ₹465,785 per tonne (about ₹465.79/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.",
+            "sources": [
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "citation": "Historical price data"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "The 2022-23 Maharashtra Statistical Abstract lists seer fish (surmai) at ₹465,785 per tonne (about ₹465.79/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "citation": "Historical price data"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.797
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "MAR-008",
+      "category": "markets",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Do you have a current crab price?",
+        "agent": "markets"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Do you have a current crab price?",
+              "agent": "markets"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.\",\"sources\":[{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Maharashtra Statistical Abstract 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"citation\":\"Historical price data\"},{\"id\":\"fish-market-data\",\"title\":\"ICAR-CMFRI FishWatch\",\"source\":\"Sampled landing and auction estimates at selected harbours\",\"url\":\"https://www.cmfri.org.in/fishwatch\",\"citation\":\"Current market source\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.",
+            "sources": [
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "citation": "Historical price data"
+              },
+              {
+                "id": "fish-market-data",
+                "title": "ICAR-CMFRI FishWatch",
+                "source": "Sampled landing and auction estimates at selected harbours",
+                "url": "https://www.cmfri.org.in/fishwatch",
+                "citation": "Current market source"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "citation": "Historical price data"
+            },
+            {
+              "id": "fish-market-data",
+              "title": "ICAR-CMFRI FishWatch",
+              "source": "Sampled landing and auction estimates at selected harbours",
+              "url": "https://www.cmfri.org.in/fishwatch",
+              "citation": "Current market source"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "MAR-009",
+      "category": "markets",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Compare historical prawn and mackerel prices",
+        "agent": "markets"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Compare historical prawn and mackerel prices",
+              "agent": "markets"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"The 2022-23 Maharashtra Statistical Abstract lists prawns at ₹239,787 per tonne (about ₹239.79/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.\",\"sources\":[{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Maharashtra Statistical Abstract 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"citation\":\"Historical price data\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "The 2022-23 Maharashtra Statistical Abstract lists prawns at ₹239,787 per tonne (about ₹239.79/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.",
+            "sources": [
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "citation": "Historical price data"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "The 2022-23 Maharashtra Statistical Abstract lists prawns at ₹239,787 per tonne (about ₹239.79/kg) as the annual wholesale boatside average for the combined Thane / Palghar district group. This is historical district-group data, not a current price or Palghar-only quote.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "citation": "Historical price data"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "MAR-010",
+      "category": "markets",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Where can I verify current fish prices?",
+        "agent": "markets"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Where can I verify current fish prices?",
+              "agent": "markets"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.\",\"sources\":[{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Maharashtra Statistical Abstract 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"citation\":\"Historical price data\"},{\"id\":\"fish-market-data\",\"title\":\"ICAR-CMFRI FishWatch\",\"source\":\"Sampled landing and auction estimates at selected harbours\",\"url\":\"https://www.cmfri.org.in/fishwatch\",\"citation\":\"Current market source\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.",
+            "sources": [
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "citation": "Historical price data"
+              },
+              {
+                "id": "fish-market-data",
+                "title": "ICAR-CMFRI FishWatch",
+                "source": "Sampled landing and auction estimates at selected harbours",
+                "url": "https://www.cmfri.org.in/fishwatch",
+                "citation": "Current market source"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "citation": "Historical price data"
+            },
+            {
+              "id": "fish-market-data",
+              "title": "ICAR-CMFRI FishWatch",
+              "source": "Sampled landing and auction estimates at selected harbours",
+              "url": "https://www.cmfri.org.in/fishwatch",
+              "citation": "Current market source"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "MAR-011",
+      "category": "markets",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What is today’s exact retail rate for prawns in Palghar?",
+        "agent": "markets"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "What is today’s exact retail rate for prawns in Palghar?",
+              "agent": "markets"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.811,
+          "raw_response": "{\"answer\":\"I do not have a verified live prawns price for a Palghar market. The historical reference is ₹239,787 per tonne (about ₹239.79/kg) for the combined Thane / Palghar district group in 2022-23. It is an annual wholesale boatside average, not today's local retail or auction quote. FishWatch has sampled current prices at selected harbours; check its listed harbour and date before using a value.\",\"sources\":[{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Maharashtra Statistical Abstract 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"citation\":\"Historical price data\"},{\"id\":\"fish-market-data\",\"title\":\"ICAR-CMFRI FishWatch\",\"source\":\"Sampled landing and auction estimates at selected harbours\",\"url\":\"https://www.cmfri.org.in/fishwatch\",\"citation\":\"Current market source\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I do not have a verified live prawns price for a Palghar market. The historical reference is ₹239,787 per tonne (about ₹239.79/kg) for the combined Thane / Palghar district group in 2022-23. It is an annual wholesale boatside average, not today's local retail or auction quote. FishWatch has sampled current prices at selected harbours; check its listed harbour and date before using a value.",
+            "sources": [
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "citation": "Historical price data"
+              },
+              {
+                "id": "fish-market-data",
+                "title": "ICAR-CMFRI FishWatch",
+                "source": "Sampled landing and auction estimates at selected harbours",
+                "url": "https://www.cmfri.org.in/fishwatch",
+                "citation": "Current market source"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "I do not have a verified live prawns price for a Palghar market. The historical reference is ₹239,787 per tonne (about ₹239.79/kg) for the combined Thane / Palghar district group in 2022-23. It is an annual wholesale boatside average, not today's local retail or auction quote. FishWatch has sampled current prices at selected harbours; check its listed harbour and date before using a value.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "citation": "Historical price data"
+            },
+            {
+              "id": "fish-market-data",
+              "title": "ICAR-CMFRI FishWatch",
+              "source": "Sampled landing and auction estimates at selected harbours",
+              "url": "https://www.cmfri.org.in/fishwatch",
+              "citation": "Current market source"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.811
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "MAR-012",
+      "category": "markets",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Can I treat a 2022-23 average as today’s rate?",
+        "agent": "markets"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Can I treat a 2022-23 average as today’s rate?",
+              "agent": "markets"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.\",\"sources\":[{\"id\":\"palghar-fish-market-history\",\"title\":\"Historical fish prices for the Thane and Palghar district group\",\"source\":\"Maharashtra Statistical Abstract 2022-23, Table 16.6\",\"url\":\"https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf\",\"citation\":\"Historical price data\"},{\"id\":\"fish-market-data\",\"title\":\"ICAR-CMFRI FishWatch\",\"source\":\"Sampled landing and auction estimates at selected harbours\",\"url\":\"https://www.cmfri.org.in/fishwatch\",\"citation\":\"Current market source\"}],\"weather\":{\"available\":false,\"note\":\"Weather context is not used by this agent.\"},\"alerts\":{\"available\":false,\"items\":[],\"scope_note\":\"Official warnings are shown in the separate Disaster section.\"},\"model\":\"verified reference data\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.",
+            "sources": [
+              {
+                "id": "palghar-fish-market-history",
+                "title": "Historical fish prices for the Thane and Palghar district group",
+                "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+                "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+                "citation": "Historical price data"
+              },
+              {
+                "id": "fish-market-data",
+                "title": "ICAR-CMFRI FishWatch",
+                "source": "Sampled landing and auction estimates at selected harbours",
+                "url": "https://www.cmfri.org.in/fishwatch",
+                "citation": "Current market source"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "note": "Weather context is not used by this agent."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "scope_note": "Official warnings are shown in the separate Disaster section."
+            },
+            "model": "verified reference data",
+            "retrieved_chunks": 0
+          },
+          "answer": "I do not have a verified price row for that fish in the bundled historical table. It contains selected 2022-23 Thane / Palghar combined annual boatside averages for pomfrets, seer fish (Surmai), prawns, mackerels, and Bombil. For sampled recent auction ranges, check the harbour and date shown by CMFRI FishWatch.",
+          "model": "verified reference data",
+          "sources": [
+            {
+              "id": "palghar-fish-market-history",
+              "title": "Historical fish prices for the Thane and Palghar district group",
+              "source": "Maharashtra Statistical Abstract 2022-23, Table 16.6",
+              "url": "https://mahades.maharashtra.gov.in/files/publication/StatisticalAbstractofMaharashtraState2022-23.pdf",
+              "citation": "Historical price data"
+            },
+            {
+              "id": "fish-market-data",
+              "title": "ICAR-CMFRI FishWatch",
+              "source": "Sampled landing and auction estimates at selected harbours",
+              "url": "https://www.cmfri.org.in/fishwatch",
+              "citation": "Current market source"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "verified reference data"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    }
+  ]
+}

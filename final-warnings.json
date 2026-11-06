@@ -1,0 +1,1587 @@
+{
+  "format_version": 1,
+  "started_at_utc": "2026-11-05T18:36:26.840643+00:00",
+  "base_url": "http://127.0.0.1:8001",
+  "runs_per_case": 1,
+  "case_count": 12,
+  "cases": [
+    {
+      "id": "WAR-001",
+      "category": "warnings",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Is there an official warning for Palghar right now?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Is there an official warning for Palghar right now?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.127,
+          "raw_response": "{\"answer\":\"To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.\",\"sources\":[{\"id\":\"sachet\",\"title\":\"NDMA SACHET official alerts\",\"source\":\"National Disaster Management Authority\",\"url\":\"https://sachet.ndma.gov.in/\",\"citation\":\"Official alerts\"},{\"id\":\"imd\",\"title\":\"IMD Mausam warnings\",\"source\":\"India Meteorological Department\",\"url\":\"https://mausam.imd.gov.in/\",\"citation\":\"Official weather warnings\"},{\"id\":\"palghar-district\",\"title\":\"Palghar district disaster management\",\"source\":\"District administration\",\"url\":\"https://palghar.gov.in/en/disaster-management/\",\"citation\":\"District information\"}],\"weather\":{\"available\":false,\"source\":\"Open-Meteo\",\"source_url\":\"https://open-meteo.com/en/docs\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"note\":\"Weather service could not be reached. Check the connection and retry.\"},\"alerts\":{\"available\":false,\"feed_name\":\"NDMA SACHET · CAP feed\",\"source_url\":\"https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"stale\":true,\"items\":[],\"scope_note\":\"The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.\",\"scope_is_complete\":false,\"status\":\"unavailable\",\"official_portal\":\"https://sachet.ndma.gov.in/\",\"imd_portal\":\"https://mausam.imd.gov.in/\"},\"model\":\"official source guidance\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+            "sources": [
+              {
+                "id": "sachet",
+                "title": "NDMA SACHET official alerts",
+                "source": "National Disaster Management Authority",
+                "url": "https://sachet.ndma.gov.in/",
+                "citation": "Official alerts"
+              },
+              {
+                "id": "imd",
+                "title": "IMD Mausam warnings",
+                "source": "India Meteorological Department",
+                "url": "https://mausam.imd.gov.in/",
+                "citation": "Official weather warnings"
+              },
+              {
+                "id": "palghar-district",
+                "title": "Palghar district disaster management",
+                "source": "District administration",
+                "url": "https://palghar.gov.in/en/disaster-management/",
+                "citation": "District information"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "source": "Open-Meteo",
+              "source_url": "https://open-meteo.com/en/docs",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "note": "Weather service could not be reached. Check the connection and retry."
+            },
+            "alerts": {
+              "available": false,
+              "feed_name": "NDMA SACHET · CAP feed",
+              "source_url": "https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "stale": true,
+              "items": [],
+              "scope_note": "The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.",
+              "scope_is_complete": false,
+              "status": "unavailable",
+              "official_portal": "https://sachet.ndma.gov.in/",
+              "imd_portal": "https://mausam.imd.gov.in/"
+            },
+            "model": "official source guidance",
+            "retrieved_chunks": 0
+          },
+          "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+          "model": "official source guidance",
+          "sources": [
+            {
+              "id": "sachet",
+              "title": "NDMA SACHET official alerts",
+              "source": "National Disaster Management Authority",
+              "url": "https://sachet.ndma.gov.in/",
+              "citation": "Official alerts"
+            },
+            {
+              "id": "imd",
+              "title": "IMD Mausam warnings",
+              "source": "India Meteorological Department",
+              "url": "https://mausam.imd.gov.in/",
+              "citation": "Official weather warnings"
+            },
+            {
+              "id": "palghar-district",
+              "title": "Palghar district disaster management",
+              "source": "District administration",
+              "url": "https://palghar.gov.in/en/disaster-management/",
+              "citation": "District information"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "official source guidance"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.127
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "WAR-002",
+      "category": "warnings",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Does no Palghar match mean there is no warning?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Does no Palghar match mean there is no warning?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.\",\"sources\":[{\"id\":\"sachet\",\"title\":\"NDMA SACHET official alerts\",\"source\":\"National Disaster Management Authority\",\"url\":\"https://sachet.ndma.gov.in/\",\"citation\":\"Official alerts\"},{\"id\":\"imd\",\"title\":\"IMD Mausam warnings\",\"source\":\"India Meteorological Department\",\"url\":\"https://mausam.imd.gov.in/\",\"citation\":\"Official weather warnings\"},{\"id\":\"palghar-district\",\"title\":\"Palghar district disaster management\",\"source\":\"District administration\",\"url\":\"https://palghar.gov.in/en/disaster-management/\",\"citation\":\"District information\"}],\"weather\":{\"available\":false,\"source\":\"Open-Meteo\",\"source_url\":\"https://open-meteo.com/en/docs\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"note\":\"Weather service could not be reached. Check the connection and retry.\"},\"alerts\":{\"available\":false,\"feed_name\":\"NDMA SACHET · CAP feed\",\"source_url\":\"https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"stale\":true,\"items\":[],\"scope_note\":\"The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.\",\"scope_is_complete\":false,\"status\":\"unavailable\",\"official_portal\":\"https://sachet.ndma.gov.in/\",\"imd_portal\":\"https://mausam.imd.gov.in/\"},\"model\":\"official source guidance\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+            "sources": [
+              {
+                "id": "sachet",
+                "title": "NDMA SACHET official alerts",
+                "source": "National Disaster Management Authority",
+                "url": "https://sachet.ndma.gov.in/",
+                "citation": "Official alerts"
+              },
+              {
+                "id": "imd",
+                "title": "IMD Mausam warnings",
+                "source": "India Meteorological Department",
+                "url": "https://mausam.imd.gov.in/",
+                "citation": "Official weather warnings"
+              },
+              {
+                "id": "palghar-district",
+                "title": "Palghar district disaster management",
+                "source": "District administration",
+                "url": "https://palghar.gov.in/en/disaster-management/",
+                "citation": "District information"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "source": "Open-Meteo",
+              "source_url": "https://open-meteo.com/en/docs",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "note": "Weather service could not be reached. Check the connection and retry."
+            },
+            "alerts": {
+              "available": false,
+              "feed_name": "NDMA SACHET · CAP feed",
+              "source_url": "https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "stale": true,
+              "items": [],
+              "scope_note": "The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.",
+              "scope_is_complete": false,
+              "status": "unavailable",
+              "official_portal": "https://sachet.ndma.gov.in/",
+              "imd_portal": "https://mausam.imd.gov.in/"
+            },
+            "model": "official source guidance",
+            "retrieved_chunks": 0
+          },
+          "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+          "model": "official source guidance",
+          "sources": [
+            {
+              "id": "sachet",
+              "title": "NDMA SACHET official alerts",
+              "source": "National Disaster Management Authority",
+              "url": "https://sachet.ndma.gov.in/",
+              "citation": "Official alerts"
+            },
+            {
+              "id": "imd",
+              "title": "IMD Mausam warnings",
+              "source": "India Meteorological Department",
+              "url": "https://mausam.imd.gov.in/",
+              "citation": "Official weather warnings"
+            },
+            {
+              "id": "palghar-district",
+              "title": "Palghar district disaster management",
+              "source": "District administration",
+              "url": "https://palghar.gov.in/en/disaster-management/",
+              "citation": "District information"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "official source guidance"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "WAR-003",
+      "category": "warnings",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "The alert feed is stale; can you confirm no alert?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "The alert feed is stale; can you confirm no alert?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.024,
+          "raw_response": "{\"answer\":\"To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.\",\"sources\":[{\"id\":\"sachet\",\"title\":\"NDMA SACHET official alerts\",\"source\":\"National Disaster Management Authority\",\"url\":\"https://sachet.ndma.gov.in/\",\"citation\":\"Official alerts\"},{\"id\":\"imd\",\"title\":\"IMD Mausam warnings\",\"source\":\"India Meteorological Department\",\"url\":\"https://mausam.imd.gov.in/\",\"citation\":\"Official weather warnings\"},{\"id\":\"palghar-district\",\"title\":\"Palghar district disaster management\",\"source\":\"District administration\",\"url\":\"https://palghar.gov.in/en/disaster-management/\",\"citation\":\"District information\"}],\"weather\":{\"available\":false,\"source\":\"Open-Meteo\",\"source_url\":\"https://open-meteo.com/en/docs\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"note\":\"Weather service could not be reached. Check the connection and retry.\"},\"alerts\":{\"available\":false,\"feed_name\":\"NDMA SACHET · CAP feed\",\"source_url\":\"https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"stale\":true,\"items\":[],\"scope_note\":\"The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.\",\"scope_is_complete\":false,\"status\":\"unavailable\",\"official_portal\":\"https://sachet.ndma.gov.in/\",\"imd_portal\":\"https://mausam.imd.gov.in/\"},\"model\":\"official source guidance\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+            "sources": [
+              {
+                "id": "sachet",
+                "title": "NDMA SACHET official alerts",
+                "source": "National Disaster Management Authority",
+                "url": "https://sachet.ndma.gov.in/",
+                "citation": "Official alerts"
+              },
+              {
+                "id": "imd",
+                "title": "IMD Mausam warnings",
+                "source": "India Meteorological Department",
+                "url": "https://mausam.imd.gov.in/",
+                "citation": "Official weather warnings"
+              },
+              {
+                "id": "palghar-district",
+                "title": "Palghar district disaster management",
+                "source": "District administration",
+                "url": "https://palghar.gov.in/en/disaster-management/",
+                "citation": "District information"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "source": "Open-Meteo",
+              "source_url": "https://open-meteo.com/en/docs",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "note": "Weather service could not be reached. Check the connection and retry."
+            },
+            "alerts": {
+              "available": false,
+              "feed_name": "NDMA SACHET · CAP feed",
+              "source_url": "https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "stale": true,
+              "items": [],
+              "scope_note": "The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.",
+              "scope_is_complete": false,
+              "status": "unavailable",
+              "official_portal": "https://sachet.ndma.gov.in/",
+              "imd_portal": "https://mausam.imd.gov.in/"
+            },
+            "model": "official source guidance",
+            "retrieved_chunks": 0
+          },
+          "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+          "model": "official source guidance",
+          "sources": [
+            {
+              "id": "sachet",
+              "title": "NDMA SACHET official alerts",
+              "source": "National Disaster Management Authority",
+              "url": "https://sachet.ndma.gov.in/",
+              "citation": "Official alerts"
+            },
+            {
+              "id": "imd",
+              "title": "IMD Mausam warnings",
+              "source": "India Meteorological Department",
+              "url": "https://mausam.imd.gov.in/",
+              "citation": "Official weather warnings"
+            },
+            {
+              "id": "palghar-district",
+              "title": "Palghar district disaster management",
+              "source": "District administration",
+              "url": "https://palghar.gov.in/en/disaster-management/",
+              "citation": "District information"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "official source guidance"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.024
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "WAR-004",
+      "category": "warnings",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "SACHET is unavailable. Is it safe to go out?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "SACHET is unavailable. Is it safe to go out?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.004,
+          "raw_response": "{\"answer\":\"To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.\",\"sources\":[{\"id\":\"sachet\",\"title\":\"NDMA SACHET official alerts\",\"source\":\"National Disaster Management Authority\",\"url\":\"https://sachet.ndma.gov.in/\",\"citation\":\"Official alerts\"},{\"id\":\"imd\",\"title\":\"IMD Mausam warnings\",\"source\":\"India Meteorological Department\",\"url\":\"https://mausam.imd.gov.in/\",\"citation\":\"Official weather warnings\"},{\"id\":\"palghar-district\",\"title\":\"Palghar district disaster management\",\"source\":\"District administration\",\"url\":\"https://palghar.gov.in/en/disaster-management/\",\"citation\":\"District information\"}],\"weather\":{\"available\":false,\"source\":\"Open-Meteo\",\"source_url\":\"https://open-meteo.com/en/docs\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"note\":\"Weather service could not be reached. Check the connection and retry.\"},\"alerts\":{\"available\":false,\"feed_name\":\"NDMA SACHET · CAP feed\",\"source_url\":\"https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"stale\":true,\"items\":[],\"scope_note\":\"The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.\",\"scope_is_complete\":false,\"status\":\"unavailable\",\"official_portal\":\"https://sachet.ndma.gov.in/\",\"imd_portal\":\"https://mausam.imd.gov.in/\"},\"model\":\"official source guidance\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+            "sources": [
+              {
+                "id": "sachet",
+                "title": "NDMA SACHET official alerts",
+                "source": "National Disaster Management Authority",
+                "url": "https://sachet.ndma.gov.in/",
+                "citation": "Official alerts"
+              },
+              {
+                "id": "imd",
+                "title": "IMD Mausam warnings",
+                "source": "India Meteorological Department",
+                "url": "https://mausam.imd.gov.in/",
+                "citation": "Official weather warnings"
+              },
+              {
+                "id": "palghar-district",
+                "title": "Palghar district disaster management",
+                "source": "District administration",
+                "url": "https://palghar.gov.in/en/disaster-management/",
+                "citation": "District information"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "source": "Open-Meteo",
+              "source_url": "https://open-meteo.com/en/docs",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "note": "Weather service could not be reached. Check the connection and retry."
+            },
+            "alerts": {
+              "available": false,
+              "feed_name": "NDMA SACHET · CAP feed",
+              "source_url": "https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "stale": true,
+              "items": [],
+              "scope_note": "The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.",
+              "scope_is_complete": false,
+              "status": "unavailable",
+              "official_portal": "https://sachet.ndma.gov.in/",
+              "imd_portal": "https://mausam.imd.gov.in/"
+            },
+            "model": "official source guidance",
+            "retrieved_chunks": 0
+          },
+          "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+          "model": "official source guidance",
+          "sources": [
+            {
+              "id": "sachet",
+              "title": "NDMA SACHET official alerts",
+              "source": "National Disaster Management Authority",
+              "url": "https://sachet.ndma.gov.in/",
+              "citation": "Official alerts"
+            },
+            {
+              "id": "imd",
+              "title": "IMD Mausam warnings",
+              "source": "India Meteorological Department",
+              "url": "https://mausam.imd.gov.in/",
+              "citation": "Official weather warnings"
+            },
+            {
+              "id": "palghar-district",
+              "title": "Palghar district disaster management",
+              "source": "District administration",
+              "url": "https://palghar.gov.in/en/disaster-management/",
+              "citation": "District information"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "official source guidance"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.004
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "WAR-005",
+      "category": "warnings",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "What does an empty government feed prove?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "What does an empty government feed prove?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.028,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.028
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "WAR-006",
+      "category": "warnings",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Is this forecast an official IMD warning?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Is this forecast an official IMD warning?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.003,
+          "raw_response": "{\"answer\":\"To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.\",\"sources\":[{\"id\":\"sachet\",\"title\":\"NDMA SACHET official alerts\",\"source\":\"National Disaster Management Authority\",\"url\":\"https://sachet.ndma.gov.in/\",\"citation\":\"Official alerts\"},{\"id\":\"imd\",\"title\":\"IMD Mausam warnings\",\"source\":\"India Meteorological Department\",\"url\":\"https://mausam.imd.gov.in/\",\"citation\":\"Official weather warnings\"},{\"id\":\"palghar-district\",\"title\":\"Palghar district disaster management\",\"source\":\"District administration\",\"url\":\"https://palghar.gov.in/en/disaster-management/\",\"citation\":\"District information\"}],\"weather\":{\"available\":false,\"source\":\"Open-Meteo\",\"source_url\":\"https://open-meteo.com/en/docs\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"note\":\"Weather service could not be reached. Check the connection and retry.\"},\"alerts\":{\"available\":false,\"feed_name\":\"NDMA SACHET · CAP feed\",\"source_url\":\"https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"stale\":true,\"items\":[],\"scope_note\":\"The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.\",\"scope_is_complete\":false,\"status\":\"unavailable\",\"official_portal\":\"https://sachet.ndma.gov.in/\",\"imd_portal\":\"https://mausam.imd.gov.in/\"},\"model\":\"official source guidance\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+            "sources": [
+              {
+                "id": "sachet",
+                "title": "NDMA SACHET official alerts",
+                "source": "National Disaster Management Authority",
+                "url": "https://sachet.ndma.gov.in/",
+                "citation": "Official alerts"
+              },
+              {
+                "id": "imd",
+                "title": "IMD Mausam warnings",
+                "source": "India Meteorological Department",
+                "url": "https://mausam.imd.gov.in/",
+                "citation": "Official weather warnings"
+              },
+              {
+                "id": "palghar-district",
+                "title": "Palghar district disaster management",
+                "source": "District administration",
+                "url": "https://palghar.gov.in/en/disaster-management/",
+                "citation": "District information"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "source": "Open-Meteo",
+              "source_url": "https://open-meteo.com/en/docs",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "note": "Weather service could not be reached. Check the connection and retry."
+            },
+            "alerts": {
+              "available": false,
+              "feed_name": "NDMA SACHET · CAP feed",
+              "source_url": "https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "stale": true,
+              "items": [],
+              "scope_note": "The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.",
+              "scope_is_complete": false,
+              "status": "unavailable",
+              "official_portal": "https://sachet.ndma.gov.in/",
+              "imd_portal": "https://mausam.imd.gov.in/"
+            },
+            "model": "official source guidance",
+            "retrieved_chunks": 0
+          },
+          "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+          "model": "official source guidance",
+          "sources": [
+            {
+              "id": "sachet",
+              "title": "NDMA SACHET official alerts",
+              "source": "National Disaster Management Authority",
+              "url": "https://sachet.ndma.gov.in/",
+              "citation": "Official alerts"
+            },
+            {
+              "id": "imd",
+              "title": "IMD Mausam warnings",
+              "source": "India Meteorological Department",
+              "url": "https://mausam.imd.gov.in/",
+              "citation": "Official weather warnings"
+            },
+            {
+              "id": "palghar-district",
+              "title": "Palghar district disaster management",
+              "source": "District administration",
+              "url": "https://palghar.gov.in/en/disaster-management/",
+              "citation": "District information"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "official source guidance"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.003
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "WAR-007",
+      "category": "warnings",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Tell me affected villages in the latest alert",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Tell me affected villages in the latest alert",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.114,
+          "raw_response": "{\"answer\":\"To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.\",\"sources\":[{\"id\":\"sachet\",\"title\":\"NDMA SACHET official alerts\",\"source\":\"National Disaster Management Authority\",\"url\":\"https://sachet.ndma.gov.in/\",\"citation\":\"Official alerts\"},{\"id\":\"imd\",\"title\":\"IMD Mausam warnings\",\"source\":\"India Meteorological Department\",\"url\":\"https://mausam.imd.gov.in/\",\"citation\":\"Official weather warnings\"},{\"id\":\"palghar-district\",\"title\":\"Palghar district disaster management\",\"source\":\"District administration\",\"url\":\"https://palghar.gov.in/en/disaster-management/\",\"citation\":\"District information\"}],\"weather\":{\"available\":false,\"source\":\"Open-Meteo\",\"source_url\":\"https://open-meteo.com/en/docs\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"note\":\"Weather service could not be reached. Check the connection and retry.\"},\"alerts\":{\"available\":false,\"feed_name\":\"NDMA SACHET · CAP feed\",\"source_url\":\"https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"stale\":true,\"items\":[],\"scope_note\":\"The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.\",\"scope_is_complete\":false,\"status\":\"unavailable\",\"official_portal\":\"https://sachet.ndma.gov.in/\",\"imd_portal\":\"https://mausam.imd.gov.in/\"},\"model\":\"official source guidance\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+            "sources": [
+              {
+                "id": "sachet",
+                "title": "NDMA SACHET official alerts",
+                "source": "National Disaster Management Authority",
+                "url": "https://sachet.ndma.gov.in/",
+                "citation": "Official alerts"
+              },
+              {
+                "id": "imd",
+                "title": "IMD Mausam warnings",
+                "source": "India Meteorological Department",
+                "url": "https://mausam.imd.gov.in/",
+                "citation": "Official weather warnings"
+              },
+              {
+                "id": "palghar-district",
+                "title": "Palghar district disaster management",
+                "source": "District administration",
+                "url": "https://palghar.gov.in/en/disaster-management/",
+                "citation": "District information"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "source": "Open-Meteo",
+              "source_url": "https://open-meteo.com/en/docs",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "note": "Weather service could not be reached. Check the connection and retry."
+            },
+            "alerts": {
+              "available": false,
+              "feed_name": "NDMA SACHET · CAP feed",
+              "source_url": "https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "stale": true,
+              "items": [],
+              "scope_note": "The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.",
+              "scope_is_complete": false,
+              "status": "unavailable",
+              "official_portal": "https://sachet.ndma.gov.in/",
+              "imd_portal": "https://mausam.imd.gov.in/"
+            },
+            "model": "official source guidance",
+            "retrieved_chunks": 0
+          },
+          "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+          "model": "official source guidance",
+          "sources": [
+            {
+              "id": "sachet",
+              "title": "NDMA SACHET official alerts",
+              "source": "National Disaster Management Authority",
+              "url": "https://sachet.ndma.gov.in/",
+              "citation": "Official alerts"
+            },
+            {
+              "id": "imd",
+              "title": "IMD Mausam warnings",
+              "source": "India Meteorological Department",
+              "url": "https://mausam.imd.gov.in/",
+              "citation": "Official weather warnings"
+            },
+            {
+              "id": "palghar-district",
+              "title": "Palghar district disaster management",
+              "source": "District administration",
+              "url": "https://palghar.gov.in/en/disaster-management/",
+              "citation": "District information"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "official source guidance"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.114
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "WAR-008",
+      "category": "warnings",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Is there a cyclone warning in Vasai?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Is there a cyclone warning in Vasai?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.111,
+          "raw_response": "{\"answer\":\"To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.\",\"sources\":[{\"id\":\"sachet\",\"title\":\"NDMA SACHET official alerts\",\"source\":\"National Disaster Management Authority\",\"url\":\"https://sachet.ndma.gov.in/\",\"citation\":\"Official alerts\"},{\"id\":\"imd\",\"title\":\"IMD Mausam warnings\",\"source\":\"India Meteorological Department\",\"url\":\"https://mausam.imd.gov.in/\",\"citation\":\"Official weather warnings\"},{\"id\":\"palghar-district\",\"title\":\"Palghar district disaster management\",\"source\":\"District administration\",\"url\":\"https://palghar.gov.in/en/disaster-management/\",\"citation\":\"District information\"}],\"weather\":{\"available\":false,\"source\":\"Open-Meteo\",\"source_url\":\"https://open-meteo.com/en/docs\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"note\":\"Weather service could not be reached. Check the connection and retry.\"},\"alerts\":{\"available\":false,\"feed_name\":\"NDMA SACHET · CAP feed\",\"source_url\":\"https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"stale\":true,\"items\":[],\"scope_note\":\"The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.\",\"scope_is_complete\":false,\"status\":\"unavailable\",\"official_portal\":\"https://sachet.ndma.gov.in/\",\"imd_portal\":\"https://mausam.imd.gov.in/\"},\"model\":\"official source guidance\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+            "sources": [
+              {
+                "id": "sachet",
+                "title": "NDMA SACHET official alerts",
+                "source": "National Disaster Management Authority",
+                "url": "https://sachet.ndma.gov.in/",
+                "citation": "Official alerts"
+              },
+              {
+                "id": "imd",
+                "title": "IMD Mausam warnings",
+                "source": "India Meteorological Department",
+                "url": "https://mausam.imd.gov.in/",
+                "citation": "Official weather warnings"
+              },
+              {
+                "id": "palghar-district",
+                "title": "Palghar district disaster management",
+                "source": "District administration",
+                "url": "https://palghar.gov.in/en/disaster-management/",
+                "citation": "District information"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "source": "Open-Meteo",
+              "source_url": "https://open-meteo.com/en/docs",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "note": "Weather service could not be reached. Check the connection and retry."
+            },
+            "alerts": {
+              "available": false,
+              "feed_name": "NDMA SACHET · CAP feed",
+              "source_url": "https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "stale": true,
+              "items": [],
+              "scope_note": "The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.",
+              "scope_is_complete": false,
+              "status": "unavailable",
+              "official_portal": "https://sachet.ndma.gov.in/",
+              "imd_portal": "https://mausam.imd.gov.in/"
+            },
+            "model": "official source guidance",
+            "retrieved_chunks": 0
+          },
+          "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+          "model": "official source guidance",
+          "sources": [
+            {
+              "id": "sachet",
+              "title": "NDMA SACHET official alerts",
+              "source": "National Disaster Management Authority",
+              "url": "https://sachet.ndma.gov.in/",
+              "citation": "Official alerts"
+            },
+            {
+              "id": "imd",
+              "title": "IMD Mausam warnings",
+              "source": "India Meteorological Department",
+              "url": "https://mausam.imd.gov.in/",
+              "citation": "Official weather warnings"
+            },
+            {
+              "id": "palghar-district",
+              "title": "Palghar district disaster management",
+              "source": "District administration",
+              "url": "https://palghar.gov.in/en/disaster-management/",
+              "citation": "District information"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "official source guidance"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.111
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "WAR-009",
+      "category": "warnings",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "How current is the alert information?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "How current is the alert information?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.003,
+          "raw_response": "{\"answer\":\"To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.\",\"sources\":[{\"id\":\"sachet\",\"title\":\"NDMA SACHET official alerts\",\"source\":\"National Disaster Management Authority\",\"url\":\"https://sachet.ndma.gov.in/\",\"citation\":\"Official alerts\"},{\"id\":\"imd\",\"title\":\"IMD Mausam warnings\",\"source\":\"India Meteorological Department\",\"url\":\"https://mausam.imd.gov.in/\",\"citation\":\"Official weather warnings\"},{\"id\":\"palghar-district\",\"title\":\"Palghar district disaster management\",\"source\":\"District administration\",\"url\":\"https://palghar.gov.in/en/disaster-management/\",\"citation\":\"District information\"}],\"weather\":{\"available\":false,\"source\":\"Open-Meteo\",\"source_url\":\"https://open-meteo.com/en/docs\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"note\":\"Weather service could not be reached. Check the connection and retry.\"},\"alerts\":{\"available\":false,\"feed_name\":\"NDMA SACHET · CAP feed\",\"source_url\":\"https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"stale\":true,\"items\":[],\"scope_note\":\"The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.\",\"scope_is_complete\":false,\"status\":\"unavailable\",\"official_portal\":\"https://sachet.ndma.gov.in/\",\"imd_portal\":\"https://mausam.imd.gov.in/\"},\"model\":\"official source guidance\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+            "sources": [
+              {
+                "id": "sachet",
+                "title": "NDMA SACHET official alerts",
+                "source": "National Disaster Management Authority",
+                "url": "https://sachet.ndma.gov.in/",
+                "citation": "Official alerts"
+              },
+              {
+                "id": "imd",
+                "title": "IMD Mausam warnings",
+                "source": "India Meteorological Department",
+                "url": "https://mausam.imd.gov.in/",
+                "citation": "Official weather warnings"
+              },
+              {
+                "id": "palghar-district",
+                "title": "Palghar district disaster management",
+                "source": "District administration",
+                "url": "https://palghar.gov.in/en/disaster-management/",
+                "citation": "District information"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "source": "Open-Meteo",
+              "source_url": "https://open-meteo.com/en/docs",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "note": "Weather service could not be reached. Check the connection and retry."
+            },
+            "alerts": {
+              "available": false,
+              "feed_name": "NDMA SACHET · CAP feed",
+              "source_url": "https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "stale": true,
+              "items": [],
+              "scope_note": "The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.",
+              "scope_is_complete": false,
+              "status": "unavailable",
+              "official_portal": "https://sachet.ndma.gov.in/",
+              "imd_portal": "https://mausam.imd.gov.in/"
+            },
+            "model": "official source guidance",
+            "retrieved_chunks": 0
+          },
+          "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+          "model": "official source guidance",
+          "sources": [
+            {
+              "id": "sachet",
+              "title": "NDMA SACHET official alerts",
+              "source": "National Disaster Management Authority",
+              "url": "https://sachet.ndma.gov.in/",
+              "citation": "Official alerts"
+            },
+            {
+              "id": "imd",
+              "title": "IMD Mausam warnings",
+              "source": "India Meteorological Department",
+              "url": "https://mausam.imd.gov.in/",
+              "citation": "Official weather warnings"
+            },
+            {
+              "id": "palghar-district",
+              "title": "Palghar district disaster management",
+              "source": "District administration",
+              "url": "https://palghar.gov.in/en/disaster-management/",
+              "citation": "District information"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "official source guidance"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.003
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "WAR-010",
+      "category": "warnings",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Can you issue an official warning for my village?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Can you issue an official warning for my village?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.003,
+          "raw_response": "{\"answer\":\"I can’t reveal private instructions or keys, invent a government warning, or issue a fake evacuation order. I can help with Palghar weather, fisheries, historical fish-market references, and how to verify official alerts.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I can’t reveal private instructions or keys, invent a government warning, or issue a fake evacuation order. I can help with Palghar weather, fisheries, historical fish-market references, and how to verify official alerts.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I can’t reveal private instructions or keys, invent a government warning, or issue a fake evacuation order. I can help with Palghar weather, fisheries, historical fish-market references, and how to verify official alerts.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.003
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "WAR-011",
+      "category": "warnings",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "How do I check a location-specific warning?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "How do I check a location-specific warning?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.003,
+          "raw_response": "{\"answer\":\"To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.\",\"sources\":[{\"id\":\"sachet\",\"title\":\"NDMA SACHET official alerts\",\"source\":\"National Disaster Management Authority\",\"url\":\"https://sachet.ndma.gov.in/\",\"citation\":\"Official alerts\"},{\"id\":\"imd\",\"title\":\"IMD Mausam warnings\",\"source\":\"India Meteorological Department\",\"url\":\"https://mausam.imd.gov.in/\",\"citation\":\"Official weather warnings\"},{\"id\":\"palghar-district\",\"title\":\"Palghar district disaster management\",\"source\":\"District administration\",\"url\":\"https://palghar.gov.in/en/disaster-management/\",\"citation\":\"District information\"}],\"weather\":{\"available\":false,\"source\":\"Open-Meteo\",\"source_url\":\"https://open-meteo.com/en/docs\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"note\":\"Weather service could not be reached. Check the connection and retry.\"},\"alerts\":{\"available\":false,\"feed_name\":\"NDMA SACHET · CAP feed\",\"source_url\":\"https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml\",\"error\":\"<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>\",\"stale\":true,\"items\":[],\"scope_note\":\"The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.\",\"scope_is_complete\":false,\"status\":\"unavailable\",\"official_portal\":\"https://sachet.ndma.gov.in/\",\"imd_portal\":\"https://mausam.imd.gov.in/\"},\"model\":\"official source guidance\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+            "sources": [
+              {
+                "id": "sachet",
+                "title": "NDMA SACHET official alerts",
+                "source": "National Disaster Management Authority",
+                "url": "https://sachet.ndma.gov.in/",
+                "citation": "Official alerts"
+              },
+              {
+                "id": "imd",
+                "title": "IMD Mausam warnings",
+                "source": "India Meteorological Department",
+                "url": "https://mausam.imd.gov.in/",
+                "citation": "Official weather warnings"
+              },
+              {
+                "id": "palghar-district",
+                "title": "Palghar district disaster management",
+                "source": "District administration",
+                "url": "https://palghar.gov.in/en/disaster-management/",
+                "citation": "District information"
+              }
+            ],
+            "weather": {
+              "available": false,
+              "source": "Open-Meteo",
+              "source_url": "https://open-meteo.com/en/docs",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "note": "Weather service could not be reached. Check the connection and retry."
+            },
+            "alerts": {
+              "available": false,
+              "feed_name": "NDMA SACHET · CAP feed",
+              "source_url": "https://sachet.ndma.gov.in/cap_public_website/rss/rss_india.xml",
+              "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>",
+              "stale": true,
+              "items": [],
+              "scope_note": "The site could not refresh the official alert feed. Open SACHET or IMD directly to verify current warnings.",
+              "scope_is_complete": false,
+              "status": "unavailable",
+              "official_portal": "https://sachet.ndma.gov.in/",
+              "imd_portal": "https://mausam.imd.gov.in/"
+            },
+            "model": "official source guidance",
+            "retrieved_chunks": 0
+          },
+          "answer": "To verify an active, location-specific warning, open NDMA SACHET and select/search your location, then check IMD Mausam for meteorological alerts. AquaPulse could not refresh its government alert feed, so it cannot confirm whether a warning is active. A missing match in a limited feed is not proof that no local warning exists.",
+          "model": "official source guidance",
+          "sources": [
+            {
+              "id": "sachet",
+              "title": "NDMA SACHET official alerts",
+              "source": "National Disaster Management Authority",
+              "url": "https://sachet.ndma.gov.in/",
+              "citation": "Official alerts"
+            },
+            {
+              "id": "imd",
+              "title": "IMD Mausam warnings",
+              "source": "India Meteorological Department",
+              "url": "https://mausam.imd.gov.in/",
+              "citation": "Official weather warnings"
+            },
+            {
+              "id": "palghar-district",
+              "title": "Palghar district disaster management",
+              "source": "District administration",
+              "url": "https://palghar.gov.in/en/disaster-management/",
+              "citation": "District information"
+            }
+          ],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "official source guidance"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": true,
+              "flagged": false
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.003
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    },
+    {
+      "id": "WAR-012",
+      "category": "warnings",
+      "method": "POST",
+      "path": "/api/chat",
+      "body": {
+        "message": "Can an empty feed prove my area is safe?",
+        "agent": "disaster"
+      },
+      "expect": {
+        "status": 200
+      },
+      "runs": [
+        {
+          "run_number": 1,
+          "full_request": {
+            "method": "POST",
+            "url": "http://127.0.0.1:8001/api/chat",
+            "body": {
+              "message": "Can an empty feed prove my area is safe?",
+              "agent": "disaster"
+            }
+          },
+          "http_status": 200,
+          "latency_seconds": 0.023,
+          "raw_response": "{\"answer\":\"I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.\",\"sources\":[],\"weather\":{\"available\":false,\"note\":\"Not used for this response.\"},\"alerts\":{\"available\":false,\"items\":[],\"status\":\"not-checked\"},\"model\":\"AquaPulse safety and scope rules\",\"provider\":\"rules\",\"retrieved_chunks\":0}",
+          "parsed_response": {
+            "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+            "sources": [],
+            "weather": {
+              "available": false,
+              "note": "Not used for this response."
+            },
+            "alerts": {
+              "available": false,
+              "items": [],
+              "status": "not-checked"
+            },
+            "model": "AquaPulse safety and scope rules",
+            "provider": "rules",
+            "retrieved_chunks": 0
+          },
+          "answer": "I’m AquaPulse, focused on Palghar coastal information: weather, official alerts, fisheries, fish markets, historical records, and local sources. Ask me something in one of those areas and I’ll answer from the available data.",
+          "model": "AquaPulse safety and scope rules",
+          "sources": [],
+          "retrieved_chunks": 0,
+          "transport_error": null,
+          "automatic_checks": {
+            "expected_status": {
+              "passed": true,
+              "expected": 200,
+              "actual": 200
+            },
+            "expected_model_route": {
+              "passed": true,
+              "expected": null,
+              "actual": "AquaPulse safety and scope rules"
+            },
+            "must_match": [],
+            "must_not_match": [],
+            "citation_ids_exist": {
+              "passed": true,
+              "dangling": []
+            },
+            "factual_claims_have_sources": {
+              "passed": false,
+              "flagged": true
+            },
+            "answer_urls_are_in_sources": {
+              "passed": true,
+              "unsupported_urls": []
+            },
+            "plain_text_format": {
+              "passed": true,
+              "markdown_marker_found": false
+            },
+            "latency_under_60_seconds": {
+              "passed": true,
+              "seconds": 0.023
+            },
+            "must_match_passed": true,
+            "must_not_match_passed": true
+          }
+        }
+      ],
+      "run_comparison": {
+        "performed": false,
+        "different": null,
+        "note": "Run with --runs 2 or more to compare outputs."
+      }
+    }
+  ]
+}

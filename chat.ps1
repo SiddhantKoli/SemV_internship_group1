@@ -1,7 +1,7 @@
 ﻿param(
     [int]$Port = 0,
-    [ValidateSet('weather', 'disaster', 'fisheries', 'markets', 'environment')]
-    [string]$Agent = 'disaster',
+    [ValidateSet('ask', 'weather', 'disaster', 'fisheries', 'markets', 'environment')]
+    [string]$Agent = 'ask',
     [string]$Location = 'Palghar'
 )
 
@@ -32,7 +32,7 @@ if (-not $health.assistant.available) {
 
 $history = [System.Collections.Generic.List[object]]::new()
 $lastWeather = $null
-$agentNames = @{ weather = 'Weather'; disaster = 'Disaster'; fisheries = 'Fisheries'; markets = 'Fish markets'; environment = 'Environment' }
+$agentNames = @{ ask = 'AquaPulse'; weather = 'Weather'; disaster = 'Disaster'; fisheries = 'Fisheries'; markets = 'Fish markets'; environment = 'Environment' }
 $lastAutoAgent = $Agent
 
 function Get-WeatherContext {
@@ -83,7 +83,7 @@ function Get-WeatherContext {
 
 Write-Host "AquaPulse terminal chat · $($health.assistant.chat_model) · $baseUrl" -ForegroundColor Cyan
 Write-Host "Agent: $($agentNames[$Agent]) · Location: $Location"
-Write-Host 'Type a message and press Enter. Commands: /agent weather|disaster|fisheries|markets|environment, /location <name>, /clear, /help, /exit' -ForegroundColor DarkGray
+Write-Host 'Type a message and press Enter. AquaPulse routes questions automatically. Commands: /agent ask|weather|disaster|fisheries|markets|environment, /location <name>, /clear, /help, /exit' -ForegroundColor DarkGray
 Write-Host ''
 
 while ($true) {
@@ -94,6 +94,7 @@ while ($true) {
     if ($line -match '^/exit$') { break }
     if ($line -match '^/help$') {
         Write-Host 'Commands:'
+        Write-Host '  /agent ask            Use common chat with automatic topic routing'
         Write-Host '  /agent weather        Use the current-conditions and forecast assistant'
         Write-Host '  /agent disaster       Use the disaster information assistant'
         Write-Host '  /agent fisheries      Use the fisheries information assistant'
@@ -111,7 +112,7 @@ while ($true) {
         Write-Host 'Conversation context cleared.' -ForegroundColor DarkGray
         continue
     }
-    if ($line -match '^/agent\s+(weather|disaster|fisheries|markets|environment)$') {
+    if ($line -match '^/agent\s+(ask|weather|disaster|fisheries|markets|environment)$') {
         $Agent = $Matches[1]
         $history.Clear()
         $lastWeather = $null

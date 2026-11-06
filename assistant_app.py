@@ -859,6 +859,30 @@ def chat_pipeline(
 
     # 10. Handle Current Weather Directly with Open-Meteo Grounding
     if agent == "weather":
+        # Check if asked for marine / sea-surface parameters not present in standard weather API
+        if bool(re.search(r"\b(?:sea[- ]surface\s+temp(?:erature)?|sst|water\s+temp(?:erature)?|ocean\s+temp(?:erature)?|marine\s+model|wave\s+height|tide\s+height)\b", clean_question, re.I)):
+            answer_text = (
+                "AquaPulse does not have a live marine model feed for sea-surface temperature (SST) or ocean wave/tide heights. "
+                "The Open-Meteo integration provides atmospheric weather guidance (2-meter air temperature, humidity, wind, and precipitation). "
+                "For verified sea-surface temperature maps and ocean state forecasts for the Maharashtra coast, please consult INCOIS (https://www.incois.gov.in/)."
+            )
+            if length_notice:
+                answer_text = f"{length_notice}\n\n{answer_text}"
+            return {
+                "answer": answer_text,
+                "sources": [
+                    {"id": "incois", "title": "INCOIS Ocean Information", "source": "Indian National Centre for Ocean Information Services", "url": "https://www.incois.gov.in/", "citation": "Ocean Portal"},
+                    {"id": "open-meteo", "title": "Open-Meteo Weather API", "source": "Atmospheric Model Guidance", "url": "https://open-meteo.com/en/docs", "citation": "Weather Model"}
+                ],
+                "weather": weather,
+                "alerts": alerts,
+                "model": "marine-unsupported-parameter",
+                "provider": provider_override or CHAT_PROVIDER,
+                "retrieved_chunks": 0,
+                "agent": "weather",
+                "latency": round(time.time() - start_time, 3),
+            }
+
         is_forecast = bool(re.search(r"\b(?:forecast|outlook|tomorrow|next\s+\d+\s+days?)\b", clean_question, re.I))
         place_name = (resolved_place or {}).get("name") or weather.get("location") or "Palghar"
         place_name = "".join(c for c in unicodedata.normalize("NFKD", place_name) if not unicodedata.combining(c))

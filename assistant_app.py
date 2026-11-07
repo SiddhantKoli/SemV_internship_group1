@@ -1055,6 +1055,8 @@ def chat_pipeline(
     # 10. Handle Current Weather Directly with Open-Meteo Grounding
     if agent == "weather":
         is_forecast = bool(re.search(r"\b(?:forecast|outlook|tomorrow|next\s+\d+\s+days?)\b", clean_question, re.I))
+        wants_seven_days = bool(re.search(r"\b(?:seven[- ]day|7[- ]day|next\s+(?:seven|7)\s+days?|weekly)\b", clean_question, re.I))
+        forecast_day_limit = 7 if wants_seven_days else 3
         place_name = (resolved_place or {}).get("name") or weather.get("location") or "Palghar"
         place_name = "".join(c for c in unicodedata.normalize("NFKD", place_name) if not unicodedata.combining(c))
         if not weather.get("available"):
@@ -1066,7 +1068,8 @@ def chat_pipeline(
         elif is_forecast:
             daily = weather.get("daily", {})
             forecast_lines = []
-            for index, day in enumerate((daily.get("time") or [])[:3]):
+            available_days = (daily.get("time") or [])[:forecast_day_limit]
+            for index, day in enumerate(available_days):
                 try:
                     label = datetime.strptime(day, "%Y-%m-%d").strftime("%d %b")
                 except ValueError:
@@ -1084,8 +1087,9 @@ def chat_pipeline(
                 if values:
                     forecast_lines.append(f"{label}: {', '.join(values)}")
             forecast_summary = "; ".join(forecast_lines) if forecast_lines else "daily forecast data unavailable"
+            period = "the next seven days" if wants_seven_days else "the next three days"
             answer_text = (
-                f"Open-Meteo forecast guidance for the {place_name} forecast point over the next three days: {forecast_summary}. "
+                f"Open-Meteo forecast guidance for the {place_name} forecast point over {period}: {forecast_summary}. "
                 "This model forecast is guidance, not an official government alert or flood prediction. Check IMD Mausam (https://mausam.imd.gov.in/) for official alerts."
             )
             sources = [{"id": "open-meteo", "title": "Open-Meteo Forecast", "source": "Model guidance", "url": "https://open-meteo.com/en/docs", "citation": "Forecast Model"}]

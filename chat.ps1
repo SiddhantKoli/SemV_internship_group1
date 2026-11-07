@@ -136,7 +136,7 @@ while ($true) {
     }
 
     $weatherMatch = [regex]::Match($line, '(?i)\b(?:in|near|around|for|at|of)\s+(?<place>[A-Za-z][A-Za-z .''-]*?)(?=\s+(?:rn|right now|currently|now|today|tomorrow|weather|wheather|temperature|temprature|temp|forecast)\b|[?.!,]|$)')
-    $weatherQuestion = $line -match '(?i)\b(wh?eather|temperature|temprature|temp|humidity|wind|rain(?:fall)?)\b'
+    $weatherQuestion = $line -match '(?i)\b(wh?eather|temperature|temprature|temp|humidity|wind|rain(?:fall)?|forecast|outlook|weekly|precipitation)\b'
     $weatherPlace = if ($weatherMatch.Success) { $weatherMatch.Groups['place'].Value.Trim() } else { $Location }
     if ($weatherPlace -match '^chichani$') { $weatherPlace = 'Chinchani' }
     $marketQuestion = $line -match '(?i)\b(price|prices|market|markets|rate|rates|cost|auction|mackerel|mackrel|pomfret|prawn|shrimp|crab|sardine|surmai)\b'
@@ -176,14 +176,19 @@ while ($true) {
             if ($line -match '(?i)\b(forecast|outlook|tomorrow|next\s+\d+\s+days?)\b') {
                 $daily = $lastWeather.daily
                 $forecastLines = @()
-                for ($dayIndex = 0; $dayIndex -lt [Math]::Min(3, @($daily.time).Count); $dayIndex++) {
+                $wantsSevenDays = $line -match '(?i)\b(seven[- ]day|7[- ]day|next\s+(?:seven|7)\s+days?|weekly)\b'
+                $forecastDayLimit = if ($wantsSevenDays) { 7 } else { 3 }
+                for ($dayIndex = 0; $dayIndex -lt [Math]::Min($forecastDayLimit, @($daily.time).Count); $dayIndex++) {
                     $parts = @()
                     if ($null -ne $daily.temperature_2m_max[$dayIndex]) { $parts += "high $($daily.temperature_2m_max[$dayIndex])°C" }
                     if ($null -ne $daily.temperature_2m_min[$dayIndex]) { $parts += "low $($daily.temperature_2m_min[$dayIndex])°C" }
                     if ($null -ne $daily.precipitation_probability_max[$dayIndex]) { $parts += "rain chance $($daily.precipitation_probability_max[$dayIndex])%" }
                     if ($parts.Count -gt 0) { $forecastLines += "$($daily.time[$dayIndex]): $($parts -join ', ')" }
                 }
-                if ($forecastLines.Count -gt 0) { $answer += " Next days: $($forecastLines -join '; ')." }
+                if ($forecastLines.Count -gt 0) {
+                    $period = if ($wantsSevenDays) { 'Next seven days' } else { 'Next days' }
+                    $answer += " $period`: $($forecastLines -join '; ')."
+                }
             }
         } else {
             $answer = "I couldn't retrieve weather for $weatherPlace. $($lastWeather.note)"

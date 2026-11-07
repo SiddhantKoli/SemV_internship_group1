@@ -85,7 +85,7 @@ async function weatherFromBrowser(place = null) {
       current:'temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m,wind_gusts_10m,wind_direction_10m,surface_pressure',
       hourly:'precipitation,precipitation_probability,wind_speed_10m,wind_gusts_10m,temperature_2m',
       daily:'precipitation_sum,precipitation_probability_max,wind_speed_10m_max,wind_gusts_10m_max,temperature_2m_max,temperature_2m_min,weather_code',
-      forecast_days:'3',timezone:'Asia/Kolkata'
+      forecast_days:'7',timezone:'Asia/Kolkata'
     });
     const response = await fetch(`https://api.open-meteo.com/v1/forecast?${params}`);
     if (!response.ok) throw new Error(`Forecast service returned ${response.status}`);
@@ -265,7 +265,7 @@ function renderWeather(data) {
     marineState.textContent = 'Marine forecast is temporarily unavailable. General weather data may still be shown above.';
   }
   const daily = data.daily || {};
-  let forecast = (daily.time || []).slice(0,3).map((date,index)=>({
+  let forecast = (daily.time || []).slice(0,7).map((date,index)=>({
     date,rain:daily.precipitation_sum?.[index] ?? null,chance:daily.precipitation_probability_max?.[index] ?? null,
     high:daily.temperature_2m_max?.[index] ?? null,low:daily.temperature_2m_min?.[index] ?? null,wind:daily.wind_speed_10m_max?.[index] ?? null
   }));
@@ -288,7 +288,7 @@ function renderWeather(data) {
       if (Number.isFinite(temp)) { day.high=Math.max(day.high ?? -Infinity,temp); day.low=Math.min(day.low ?? Infinity,temp); }
       if (Number.isFinite(wind)) day.wind=Math.max(day.wind ?? 0,wind);
     });
-    forecast=[...buckets.values()].slice(0,3).map(day=>({...day,rain:day.hasRain?day.rain:null}));
+    forecast=[...buckets.values()].slice(0,7).map(day=>({...day,rain:day.hasRain?day.rain:null}));
   }
   const rows = $('#forecastRows');
   rows.replaceChildren();

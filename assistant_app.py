@@ -239,8 +239,6 @@ def suggest_places(query: str, limit: int = 8) -> list[dict]:
 
 def extract_place_multilingual(text: str, default_place: dict | None = None) -> dict | None:
     """Extract Palghar place name from English or Devanagari (Marathi/Hindi) queries."""
-    if default_place and default_place.get("name"):
-        return default_place
 
     # 1. Regex check for English prepositions
     found = re.search(
@@ -270,7 +268,7 @@ def extract_place_multilingual(text: str, default_place: dict | None = None) -> 
                 with_coords = next((m for m in geo if isinstance(m.get("latitude"), (int, float)) and isinstance(m.get("longitude"), (int, float))), None)
                 return with_coords or (geo[0] if geo else v)
 
-    return None
+    return default_place if default_place and default_place.get("name") else None
 
 
 def historical_records() -> list[dict]:

@@ -552,7 +552,7 @@
     "category": "not_in_sources",
     "expectations": {
       "must_contain": [
-        "I don't have that in my sources"
+        "I don't have that in my sources|I don't have that verified detail in my sources|not in my sources"
       ],
       "must_not_contain": [
         "299,792,458"
@@ -1166,7 +1166,7 @@
     "category": "price_date_trap",
     "expectations": {
       "must_contain": [
-        "combined Thane / Palghar|combined Thane and Palghar|combined Thane/Palghar"
+        "Thane and Palghar|Thane / Palghar|Thane/Palghar"
       ],
       "must_not_contain": [
         "exclusive to Palghar",

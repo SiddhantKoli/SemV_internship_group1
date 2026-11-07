@@ -72,12 +72,14 @@ def run_single_query(
     model: str | None = None,
     provider: str = "local",
     history: list[dict] | None = None,
+    location: str = "Palghar",
 ) -> int:
     """Execute a single query through the shared pipeline and format the output."""
     payload = {
         "message": question,
         "agent": agent,
         "history": history or [],
+        "location": {"name": location, "district": "Palghar"},
     }
 
     try:
@@ -137,14 +139,16 @@ def interactive_mode(
     verbose: bool = False,
     model: str | None = None,
     provider: str = "local",
+    location: str = "Palghar",
 ) -> int:
     """Run interactive REPL loop."""
     current_agent = agent or "ask"
+    current_location = location
     history: list[dict] = []
 
     print("AquaPulse Coastal Information Assistant — Interactive Mode")
     print(f"Agent: {current_agent} | Provider: {provider} | Model: {model or 'default'}")
-    print("Commands: /agent {weather,disaster,fisheries,fish-markets,ask,records}, /clear, /exit\n")
+    print("Commands: /agent {weather,disaster,fisheries,fish-markets,environment,ask,records,sources}, /location <Palghar locality>, /clear, /exit\n")
 
     while True:
         try:
@@ -162,20 +166,26 @@ def interactive_mode(
             history.clear()
             print("Conversation context cleared.")
             continue
+        if line.startswith("/location ") and line[len("/location "):].strip():
+            current_location = line[len("/location "):].strip()
+            history.clear()
+            print(f"Location set to {current_location}. Context cleared.")
+            continue
         if line.startswith("/agent"):
             parts = line.split(maxsplit=1)
-            if len(parts) > 1 and parts[1].strip() in ("weather", "disaster", "fisheries", "fish-markets", "markets", "ask", "records"):
+            if len(parts) > 1 and parts[1].strip() in ("weather", "disaster", "fisheries", "fish-markets", "markets", "environment", "ask", "records", "sources"):
                 current_agent = "fish-markets" if parts[1].strip() == "markets" else parts[1].strip()
                 history.clear()
                 print(f"Switched to {current_agent}. Context cleared.")
             else:
-                print("Available agents: weather, disaster, fisheries, fish-markets, ask, records")
+                print("Available agents: weather, disaster, fisheries, fish-markets, environment, ask, records, sources")
             continue
 
         payload = {
             "message": line,
             "agent": current_agent,
             "history": history,
+            "location": {"name": current_location, "district": "Palghar"},
         }
 
         try:
@@ -220,7 +230,7 @@ def main() -> int:
     )
     parser.add_argument(
         "--agent",
-        choices=["weather", "disaster", "fisheries", "fish-markets", "markets", "ask", "records"],
+        choices=["weather", "disaster", "fisheries", "fish-markets", "markets", "environment", "ask", "records", "sources"],
         default=None,
         help="Specialized agent to handle the question (default: auto-detected or 'ask').",
     )
@@ -228,6 +238,12 @@ def main() -> int:
         "--interactive",
         action="store_true",
         help="Start an interactive session.",
+    )
+    parser.add_argument(
+        "--location",
+        type=str,
+        default="Palghar",
+        help="Palghar district locality used as display context for location-aware data (default: Palghar).",
     )
     parser.add_argument(
         "--json",
@@ -271,6 +287,7 @@ def main() -> int:
             verbose=args.verbose,
             model=args.model,
             provider=args.provider,
+            location=args.location,
         )
 
     # Determine question from argument or non-blocking stdin
@@ -301,6 +318,7 @@ def main() -> int:
         verbose=args.verbose,
         model=args.model,
         provider=args.provider,
+        location=args.location,
     )
 
 

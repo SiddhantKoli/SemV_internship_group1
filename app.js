@@ -483,6 +483,8 @@ async function loadDashboard(force = false) {
     $('#fisheriesModelChip').textContent = agentModelLabel;
     $('#marketsModelChip').textContent = agentModelLabel;
     $('#environmentModelChip').textContent = agentModelLabel;
+    $('#weatherModelChip').textContent = agentModelLabel;
+    $('#disasterModelChip').textContent = agentModelLabel;
     if (health.status === 'fulfilled' && health.value.assistant?.available) {
       status.className = 'assistant-status ok';
       const isGemini = health.value.assistant.provider === 'gemini';
@@ -837,9 +839,13 @@ function connectAgentQuestion(formId, inputId, answerId, agent) {
     }
   });
 }
+connectAgentQuestion('weatherAskForm','weatherQuestion','weatherAnswer','weather');
+connectAgentQuestion('disasterAskForm','disasterQuestion','disasterAnswer','disaster');
 connectAgentQuestion('fisheriesAskForm','fisheriesQuestion','fisheriesAnswer','fisheries');
 connectAgentQuestion('marketsAskForm','marketsQuestion','marketsAnswer','markets');
 connectAgentQuestion('environmentAskForm','environmentQuestion','environmentAnswer','environment');
+connectAgentQuestion('recordsAskForm','recordsQuestion','recordsAnswer','records');
+connectAgentQuestion('sourcesAskForm','sourcesQuestion','sourcesAnswer','sources');
 
 function activateTabFromHash() {
   const targetId = decodeURIComponent(location.hash.slice(1));

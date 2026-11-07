@@ -38,7 +38,8 @@ By default, the server listens at `http://127.0.0.1:8765`. Configure the port or
 AquaPulse includes a command-line interface that reuses the exact same grounded processing pipeline as the web application.
 
 ```bash
-# Ask a specific agent
+# Ask a specific agent with a selected Palghar locality
+python cli.py --agent environment --location Boisar "What is this here?"
 python cli.py --agent disaster "What is the official control room contact for Palghar?"
 
 # Query via piped stdin
@@ -47,8 +48,8 @@ echo "What is the coastline length of Palghar district?" | python cli.py --agent
 # Output machine-readable JSON (answer, sources, agent, retrieved_chunks, latency)
 python cli.py --agent fish-markets --json "What was the boatside price of pomfret in 2022-23?"
 
-# Interactive REPL mode
-python cli.py --interactive
+# Interactive REPL mode (switch agent with /agent; change locality with /location)
+python cli.py --interactive --agent ask --location Palghar
 
 # Specify custom top-k and verbose diagnostics
 python cli.py --agent ask --top-k 5 --verbose "Explain the Konkan Disaster Mitigation Project"
@@ -56,7 +57,8 @@ python cli.py --agent ask --top-k 5 --verbose "Explain the Konkan Disaster Mitig
 
 ### CLI Arguments
 - `question`: Positional argument. When omitted, the CLI reads from stdin (with non-blocking detection to avoid hanging in non-interactive environments).
-- `--agent {weather, disaster, fisheries, fish-markets, ask, records}`: Selects specialized agent domain.
+- `--agent {weather, disaster, fisheries, fish-markets, environment, ask, records, sources}`: Selects specialized agent domain.
+- `--location <Palghar locality>`: Adds selected location as context for synthetic section explainers; it is not a local observation.
 - `--json`: Outputs machine-readable JSON format.
 - `--interactive`: Enters interactive terminal conversation.
 - `--top-k <int>`: Sets the number of retrieved RAG chunks (default: 4).
@@ -147,7 +149,7 @@ AquaPulse is hardened against prompt injection, hallucinations, jailbreaks, and 
 - **Chat Model & Retrieval:** Local Ollama running `llama3.2:3b` with `mxbai-embed-large` embeddings for semantic search over `knowledge/`.
 - **Weather Context:** Open-Meteo live API provides temperature, precipitation, humidity, and wind guidance.
 - **Environment:** Searchable notes cite the MPCB 2015–2016 Dahanu/Tarapur sampling report, NCCR 1990–2016 shoreline assessment, and 2023 mangrove assessment. The Environment agent also fetches wave height, wave period, and sea-surface temperature from the no-key Open-Meteo Marine API. These are model estimates at a sea grid point, not buoy readings, pollution tests, beach safety results, or official warnings. The original government PDFs are linked from each note, not bundled into the repo.
-- **Synthetic example cases:** `assets/synthetic-answers.json` contains 500 generated cases (100 per Weather, Disaster, Fisheries, Fish Markets, and Environment). Ask for a synthetic/demo example to retrieve one. The answer citation labels it `SYNTHETIC`; real evidence is labeled `REAL SOURCE`. Synthetic cases are kept out of the factual RAG corpus.
+- **Synthetic example cases:** `assets/synthetic-answers.json` contains 900 generated cases: 500 explicit examples plus 400 section explainers across Weather, Disaster, Fisheries, Fish Markets, and Environment. Ask a section assistant “What is this here?” or ask what a specific panel/chart means. The citation is labeled `SYNTHETIC`. Any selected locality from the Palghar village directory is display context only; no locality-specific observation is claimed. These cases remain outside factual RAG.
 - **Official Warning Check:** Live RSS integration with NDMA SACHET Maharashtra and All-India CAP feeds.
 - **Past Records Archive:** Source-linked archive in `historical-records.json` of IMD rainfall observations and district notices.
 - **Village Directory:** 1,009 listed Palghar revenue villages in `palghar-villages.json`.

@@ -1,6 +1,6 @@
 ﻿param(
     [int]$Port = 0,
-    [ValidateSet('ask', 'weather', 'disaster', 'fisheries', 'markets', 'environment')]
+    [ValidateSet('ask', 'weather', 'disaster', 'fisheries', 'markets', 'environment', 'records', 'sources')]
     [string]$Agent = 'ask',
     [string]$Location = 'Palghar'
 )
@@ -32,7 +32,7 @@ if (-not $health.assistant.available) {
 
 $history = [System.Collections.Generic.List[object]]::new()
 $lastWeather = $null
-$agentNames = @{ ask = 'AquaPulse'; weather = 'Weather'; disaster = 'Disaster'; fisheries = 'Fisheries'; markets = 'Fish markets'; environment = 'Environment' }
+$agentNames = @{ ask = 'AquaPulse'; weather = 'Weather'; disaster = 'Disaster'; fisheries = 'Fisheries'; markets = 'Fish markets'; environment = 'Environment'; records = 'Past records'; sources = 'Sources' }
 $lastAutoAgent = $Agent
 
 function Get-WeatherContext {
@@ -83,7 +83,7 @@ function Get-WeatherContext {
 
 Write-Host "AquaPulse terminal chat · $($health.assistant.chat_model) · $baseUrl" -ForegroundColor Cyan
 Write-Host "Agent: $($agentNames[$Agent]) · Location: $Location"
-Write-Host 'Type a message and press Enter. AquaPulse routes questions automatically. Commands: /agent ask|weather|disaster|fisheries|markets|environment, /location <name>, /clear, /help, /exit' -ForegroundColor DarkGray
+Write-Host 'Type a message and press Enter. AquaPulse routes questions automatically. Commands: /agent ask|weather|disaster|fisheries|markets|environment|records|sources, /location <name>, /clear, /help, /exit' -ForegroundColor DarkGray
 Write-Host ''
 
 while ($true) {
@@ -100,6 +100,8 @@ while ($true) {
         Write-Host '  /agent fisheries      Use the fisheries information assistant'
         Write-Host '  /agent markets        Use the fish-market assistant'
         Write-Host '  /agent environment    Use the Palghar coastal environment assistant'
+        Write-Host '  /agent records        Ask about dated Palghar archive records'
+        Write-Host '  /agent sources        Ask about the linked source library'
         Write-Host '  /location Palghar     Set the place context'
         Write-Host '  /clear                Clear conversation context'
         Write-Host '  /exit                 End the chat'
@@ -112,7 +114,7 @@ while ($true) {
         Write-Host 'Conversation context cleared.' -ForegroundColor DarkGray
         continue
     }
-    if ($line -match '^/agent\s+(ask|weather|disaster|fisheries|markets|environment)$') {
+    if ($line -match '^/agent\s+(ask|weather|disaster|fisheries|markets|environment|records|sources)$') {
         $Agent = $Matches[1]
         $history.Clear()
         $lastWeather = $null
@@ -141,11 +143,15 @@ while ($true) {
     $fisheriesQuestion = $line -match '(?i)\b(fish|fisher|fisheries|fishing|pfz|catch|landing centre|landing center|closed[- ]season|fishing ban)\b'
     $environmentQuestion = $line -match '(?i)\b(environment|pollution|contamination|water quality|water pollution|shoreline|erosion|mangroves?|chlorophyll|ocean colou?r|sea surface temperature|sea temperature|ocean temperature|water temperature|coastal habitat|marine litter|oil spill|effluent|sewage|beach|bathing|swimming|wave(?:s)?(?: height| period)?|swell|tide height|ocean currents?|marine conditions|sea conditions)\b'
     $disasterQuestion = $line -match '(?i)\b(alert|warning|flood|cyclone|storm|high tide|disaster(?:s)?|evacuat|surge|coastal hazard|incident reports?)\b'
+    $recordsQuestion = $line -match '(?i)\b(past records?|historical records?|archive section)\b'
+    $sourcesQuestion = $line -match '(?i)\b(sources? section|source library|citation library|reference library)\b'
     if ($environmentQuestion) { $requestAgent = 'environment' }
     elseif ($weatherQuestion) { $requestAgent = 'weather' }
     elseif ($marketQuestion) { $requestAgent = 'markets' }
     elseif ($fisheriesQuestion) { $requestAgent = 'fisheries' }
     elseif ($disasterQuestion) { $requestAgent = 'disaster' }
+    elseif ($recordsQuestion) { $requestAgent = 'records' }
+    elseif ($sourcesQuestion) { $requestAgent = 'sources' }
     elseif ($history.Count -gt 0) { $requestAgent = $lastAutoAgent }
     else { $requestAgent = $Agent }
     $lastAutoAgent = $requestAgent
@@ -155,7 +161,7 @@ while ($true) {
         location = @{ name = $weatherPlace; district = 'Palghar' }
         history = @($history.ToArray())
     }
-    if ($weatherQuestion) {
+    if ($weatherQuestion -and -not $environmentQuestion) {
         Write-Host "Checking current forecast data for $weatherPlace…" -ForegroundColor DarkGray
         $lastWeather = Get-WeatherContext -PlaceName $weatherPlace
         $payloadObject.weather = $lastWeather
@@ -237,6 +243,7 @@ while ($true) {
             Write-Host "`nSources:" -ForegroundColor DarkGray
             foreach ($source in $result.sources) {
                 if ($source.url) { Write-Host "  [$($source.citation)] $($source.title) — $($source.url)" -ForegroundColor DarkGray }
+                elseif ($source.provenance -eq 'synthetic' -or $source.citation -eq 'SYNTHETIC') { Write-Host "  [SYNTHETIC] $($source.title)" -ForegroundColor Yellow }
             }
         }
         $history.Add(@{ role = 'user'; content = $line })

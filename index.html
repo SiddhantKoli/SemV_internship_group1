@@ -136,6 +136,7 @@
               <p class="source-note">Model forecasts support awareness; they are not official warnings, navigation advice, or flood predictions. Sources: <a href="https://open-meteo.com/en/docs" target="_blank" rel="noreferrer">weather forecast ↗</a> · <a href="https://open-meteo.com/en/docs/marine-weather-api" target="_blank" rel="noreferrer">marine forecast ↗</a></p>
             </div>
           </section>
+          <section class="panel agent-question-panel" aria-labelledby="weatherAskTitle"><div class="panel-head"><div><p class="eyebrow">WEATHER ASSISTANT</p><h2 id="weatherAskTitle">Ask about this section</h2></div><span class="model-chip" id="weatherModelChip">Checking model…</span></div><div class="agent-answer" id="weatherAnswer" role="status" aria-live="polite">Ask “What is this here?” or ask what a weather panel, forecast point, or chart means. Section explainers are marked SYNTHETIC.</div><form class="agent-question-form" id="weatherAskForm"><label class="visually-hidden" for="weatherQuestion">Ask about the weather section</label><input id="weatherQuestion" type="text" maxlength="1000" placeholder="What is this here?" required><button type="submit">Ask</button></form></section>
         </section>
 
         <section class="tab-view" id="tab-fisheries" role="tabpanel" aria-labelledby="tabLinkFisheries" hidden>
@@ -239,6 +240,7 @@
             </div>
             <div class="official-links"><a href="https://sachet.ndma.gov.in/" target="_blank" rel="noreferrer">NDMA SACHET ↗</a><a href="https://mausam.imd.gov.in/" target="_blank" rel="noreferrer">IMD Mausam ↗</a></div>
           </section>
+          <section class="panel agent-question-panel" aria-labelledby="disasterAskTitle"><div class="panel-head"><div><p class="eyebrow">DISASTER ASSISTANT</p><h2 id="disasterAskTitle">Ask about this section</h2></div><span class="model-chip" id="disasterModelChip">Checking model…</span></div><div class="agent-answer" id="disasterAnswer" role="status" aria-live="polite">Ask “What is this here?” or ask what an alert card, feed status, or location match means. Section explainers are marked SYNTHETIC.</div><form class="agent-question-form" id="disasterAskForm"><label class="visually-hidden" for="disasterQuestion">Ask about the disaster section</label><input id="disasterQuestion" type="text" maxlength="1000" placeholder="What is this here?" required><button type="submit">Ask</button></form></section>
         </section>
 
         <section class="tab-view" id="tab-history" role="tabpanel" aria-labelledby="tabLinkHistory" hidden>
@@ -249,15 +251,17 @@
             <div id="historyResults" class="history-results" aria-live="polite"><span class="muted">Loading records…</span></div>
             <p class="history-disclaimer">Historical reports are not current warnings. Rainfall at a reporting station does not confirm flooding or danger in nearby villages.</p>
           </section>
+          <section class="panel agent-question-panel" aria-labelledby="recordsAskTitle"><div class="panel-head"><div><p class="eyebrow">PAST RECORDS ASSISTANT</p><h2 id="recordsAskTitle">Ask about this archive</h2></div><span class="model-chip">SOURCE-CHECKED</span></div><div class="agent-answer" id="recordsAnswer" role="status" aria-live="polite">Ask what this archive includes or ask for a dated record by place.</div><form class="agent-question-form" id="recordsAskForm"><label class="visually-hidden" for="recordsQuestion">Ask about past records</label><input id="recordsQuestion" type="text" maxlength="1000" placeholder="What is this here?" required><button type="submit">Ask</button></form></section>
         </section>
 
         <section class="tab-view" id="tab-sources" role="tabpanel" aria-labelledby="tabLinkSources" hidden>
           <section class="panel library-panel" id="libraryPanel" aria-labelledby="libraryTitle">
             <div class="panel-head"><div><p class="eyebrow">RETRIEVAL LIBRARY</p><h2 id="libraryTitle">Reference sources</h2></div><span class="doc-count" id="docCount">—</span></div>
-            <p class="library-copy">Answers cite their provenance as REAL SOURCE or SYNTHETIC. Real documents, forecast feeds, and government alerts support real-world answers. The same Ask flow can also retrieve 500 generated demonstration cases when you explicitly ask for a synthetic or demo example; these are fictional and cannot establish real conditions.</p>
+            <p class="library-copy">Answers cite their provenance as REAL SOURCE or SYNTHETIC. The library includes 500 explicit demo cases and 400 section explainers across Weather, Official alerts, Fisheries, Fish markets, and Environment. Ask “What is this here?” from a section assistant to see an explainer. Its selected Palghar locality is display context only; it does not imply a local measurement or report.</p>
             <div id="sourceList" class="source-list"><span class="muted">Loading sources…</span></div>
             <button id="reindexButton" class="reindex-button" type="button">Refresh document index</button>
             <div class="library-meta" id="indexStatus">Local document retrieval · source links included in answers</div>
+            <section class="agent-question-panel" aria-labelledby="sourcesAskTitle"><div class="panel-head"><div><p class="eyebrow">SOURCES ASSISTANT</p><h2 id="sourcesAskTitle">Ask about this library</h2></div><span class="model-chip">REFERENCE GUIDE</span></div><div class="agent-answer" id="sourcesAnswer" role="status" aria-live="polite">Ask what this source list is or how citations are used.</div><form class="agent-question-form" id="sourcesAskForm"><label class="visually-hidden" for="sourcesQuestion">Ask about data sources</label><input id="sourcesQuestion" type="text" maxlength="1000" placeholder="What is this here?" required><button type="submit">Ask</button></form></section>
           </section>
         </section>
       </div>

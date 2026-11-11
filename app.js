@@ -765,7 +765,16 @@ function activateTab(link, {writeHash=true, focus=false}={}) {
     item.tabIndex = selected ? 0 : -1;
   });
   const targetId = link ? link.getAttribute('aria-controls') : 'tab-home';
-  tabPanels.forEach((panel) => { panel.hidden = panel.id !== targetId; });
+  tabPanels.forEach((panel) => {
+    const isTarget = panel.id === targetId;
+    if (isTarget) {
+      panel.removeAttribute('hidden');
+      panel.style.display = 'block';
+    } else {
+      panel.setAttribute('hidden', '');
+      panel.style.display = 'none';
+    }
+  });
   
   // Highlight topbar icons
   const headerHome = document.getElementById('headerHomeBtn');
@@ -921,7 +930,7 @@ document.querySelectorAll('.loc-chip-btn').forEach((btn) => {
   btn.addEventListener('click', async () => {
     const placeName = btn.dataset.place;
     try {
-      const data = await api(/api/places/suggest?q=);
+      const data = await api(`/api/places/suggest?q=${encodeURIComponent(placeName)}`);
       const exact = (data.results || []).find(p => p.name.toLowerCase() === placeName.toLowerCase()) || (data.results || [])[0];
       if (exact) {
         choosePlace(exact);
@@ -956,9 +965,9 @@ if (headerAskBtn) headerAskBtn.addEventListener('click', () => {
 if (headerLogoutBtn) headerLogoutBtn.addEventListener('click', () => {
   selectedPlace = null;
   updateLocationBadge();
-  #weatherTitle.textContent = 'Palghar conditions';
-  #placeCoverage.textContent = 'Palghar district · all 1,009 listed revenue villages';
-  #clearPlace.hidden = true;
+  $('#weatherTitle').textContent = 'Palghar conditions';
+  $('#placeCoverage').textContent = 'Palghar district · all 1,009 listed revenue villages';
+  $('#clearPlace').hidden = true;
   loadDashboard(true);
   toast('Session reset to Palghar District overview.');
 });
@@ -970,7 +979,7 @@ const translations = {
     heroTitle: 'Welcome, Fisherman!',
     heroSub: 'Get the latest information about the sea and your fishing area.',
     cardWeather: 'Weather & Sea Conditions',
-    descWeather: 'Check today\'s weather, wind and sea status.',
+    descWeather: "Check today's weather, wind and sea status.",
     cardDisaster: 'Disaster Alerts',
     descDisaster: 'Get instant alerts for storms, high waves and more.',
     cardFisheries: 'Fishing Areas',
@@ -1079,3 +1088,31 @@ if (voiceBtn && ('webkitSpeechRecognition' in window || 'SpeechRecognition' in w
 } else if (voiceBtn) {
   voiceBtn.title = 'Voice input available in Chrome/Edge';
 }
+
+
+// Global Event Delegation for all Section Openers (Cards, Buttons, Back Links)
+document.addEventListener('click', (event) => {
+  const opener = event.target.closest('[data-open-section]');
+  if (opener) {
+    event.preventDefault();
+    const targetId = opener.dataset.openSection;
+    const link = sectionNavLinks.find((item) => item.getAttribute('aria-controls') === targetId);
+    if (link) {
+      activateTab(link);
+    } else {
+      const panel = document.getElementById(targetId);
+      if (panel) {
+        tabPanels.forEach(p => {
+          if (p.id === targetId) {
+            p.removeAttribute('hidden');
+            p.style.display = 'block';
+          } else {
+            p.setAttribute('hidden', '');
+            p.style.display = 'none';
+          }
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  }
+});

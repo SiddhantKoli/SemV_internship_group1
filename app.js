@@ -764,9 +764,18 @@ function activateTab(link, {writeHash=true, focus=false}={}) {
     item.setAttribute('aria-selected', String(selected));
     item.tabIndex = selected ? 0 : -1;
   });
-  tabPanels.forEach((panel) => { panel.hidden = panel.id !== link.getAttribute('aria-controls'); });
-  if (writeHash && location.hash !== link.hash) history.replaceState(null, '', link.hash);
-  if (focus) link.focus();
+  const targetId = link ? link.getAttribute('aria-controls') : 'tab-home';
+  tabPanels.forEach((panel) => { panel.hidden = panel.id !== targetId; });
+  
+  // Highlight topbar icons
+  const headerHome = document.getElementById('headerHomeBtn');
+  const headerAsk = document.getElementById('headerAskBtn');
+  if (headerHome) headerHome.classList.toggle('active', targetId === 'tab-home');
+  if (headerAsk) headerAsk.classList.toggle('active', targetId === 'tab-ask');
+
+  if (writeHash && location.hash !== link?.hash) history.replaceState(null, '', link?.hash || '#home');
+  if (focus && link) link.focus();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 sectionNavLinks.forEach((link, index) => {
   link.addEventListener('click', (event) => { event.preventDefault(); activateTab(link); });
@@ -782,10 +791,22 @@ sectionNavLinks.forEach((link, index) => {
   });
 });
 document.querySelectorAll('[data-open-section]').forEach((button) => {
-  button.addEventListener('click', () => {
-    const panel = document.getElementById(button.dataset.openSection);
-    const link = sectionNavLinks.find((item) => item.getAttribute('aria-controls') === panel?.id);
+  const trigger = () => {
+    const targetId = button.dataset.openSection;
+    const panel = document.getElementById(targetId);
+    const link = sectionNavLinks.find((item) => item.getAttribute('aria-controls') === targetId);
     if (link) activateTab(link);
+    else if (panel) {
+      tabPanels.forEach(p => p.hidden = p.id !== targetId);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+  button.addEventListener('click', trigger);
+  button.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      trigger();
+    }
   });
 });
 
@@ -892,3 +913,169 @@ loadDemoScenarios();
 
 loadDashboard();
 renderHistory();
+
+
+// Fisherman Portal Interactive Enhancements
+// 1. Quick locality chips
+document.querySelectorAll('.loc-chip-btn').forEach((btn) => {
+  btn.addEventListener('click', async () => {
+    const placeName = btn.dataset.place;
+    try {
+      const data = await api(/api/places/suggest?q=);
+      const exact = (data.results || []).find(p => p.name.toLowerCase() === placeName.toLowerCase()) || (data.results || [])[0];
+      if (exact) {
+        choosePlace(exact);
+      } else {
+        choosePlace({ name: placeName, taluka: placeName, district: 'Palghar' });
+      }
+    } catch {
+      choosePlace({ name: placeName, taluka: placeName, district: 'Palghar' });
+    }
+  });
+});
+
+// 2. Topbar navigation
+const headerHomeBtn = document.getElementById('headerHomeBtn');
+const brandHomeLink = document.getElementById('brandHomeLink');
+const headerAskBtn = document.getElementById('headerAskBtn');
+const headerLogoutBtn = document.getElementById('headerLogoutBtn');
+
+if (headerHomeBtn) headerHomeBtn.addEventListener('click', () => {
+  const homeTab = sectionNavLinks.find(l => l.getAttribute('aria-controls') === 'tab-home');
+  if (homeTab) activateTab(homeTab);
+});
+if (brandHomeLink) brandHomeLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  const homeTab = sectionNavLinks.find(l => l.getAttribute('aria-controls') === 'tab-home');
+  if (homeTab) activateTab(homeTab);
+});
+if (headerAskBtn) headerAskBtn.addEventListener('click', () => {
+  const askTab = sectionNavLinks.find(l => l.getAttribute('aria-controls') === 'tab-ask');
+  if (askTab) activateTab(askTab);
+});
+if (headerLogoutBtn) headerLogoutBtn.addEventListener('click', () => {
+  selectedPlace = null;
+  updateLocationBadge();
+  #weatherTitle.textContent = 'Palghar conditions';
+  #placeCoverage.textContent = 'Palghar district · all 1,009 listed revenue villages';
+  #clearPlace.hidden = true;
+  loadDashboard(true);
+  toast('Session reset to Palghar District overview.');
+});
+
+// 3. Language Switcher (English <-> Marathi)
+let currentLang = 'en';
+const translations = {
+  en: {
+    heroTitle: 'Welcome, Fisherman!',
+    heroSub: 'Get the latest information about the sea and your fishing area.',
+    cardWeather: 'Weather & Sea Conditions',
+    descWeather: 'Check today\'s weather, wind and sea status.',
+    cardDisaster: 'Disaster Alerts',
+    descDisaster: 'Get instant alerts for storms, high waves and more.',
+    cardFisheries: 'Fishing Areas',
+    descFisheries: 'Find the best fishing zones near you.',
+    cardMarkets: 'Fish Market Prices',
+    descMarkets: 'Know the latest prices for your catch.',
+    askAqua: 'Ask AquaPulse',
+    home: 'Home',
+    logout: 'Logout',
+    langBtn: 'मराठी'
+  },
+  mr: {
+    heroTitle: 'मच्छीमार बांधवांचे स्वागत आहे!',
+    heroSub: 'समुद्र आणि तुमच्या मासेमारी क्षेत्राची ताजी माहिती येथे मिळवा.',
+    cardWeather: 'हवामान आणि समुद्राची स्थिती',
+    descWeather: 'आजचे हवामान, वारे आणि समुद्राच्या उसळीची स्थिती तपासा.',
+    cardDisaster: 'आपत्ती आणि वादळाचा इशारा',
+    descDisaster: 'वादळ, उंच लाटा आणि आपत्कालीन इशारे त्वरित मिळवा.',
+    cardFisheries: 'मासेमारी क्षेत्रे (PFZ)',
+    descFisheries: 'तुमच्या जवळचे संभाव्य मासेमारी क्षेत्र शोधा.',
+    cardMarkets: 'मत्स्य बाजार भाव',
+    descMarkets: 'तुमच्या मासळीचे अधिकृत लिलाव व घाऊक दर जाणून घ्या.',
+    askAqua: 'ॲक्वापल्सला विचारा',
+    home: 'मुख्य पान',
+    logout: 'रीसेट',
+    langBtn: 'English'
+  }
+};
+
+const langToggleBtn = document.getElementById('langToggleBtn');
+if (langToggleBtn) {
+  langToggleBtn.addEventListener('click', () => {
+    currentLang = currentLang === 'en' ? 'mr' : 'en';
+    const t = translations[currentLang];
+    
+    const hTitle = document.getElementById('heroTitle');
+    const hSub = document.getElementById('heroSubtitle');
+    const cWeather = document.getElementById('cardTitleWeather');
+    const dWeather = document.getElementById('cardDescWeather');
+    const cDisaster = document.getElementById('cardTitleDisaster');
+    const dDisaster = document.getElementById('cardDescDisaster');
+    const cFisheries = document.getElementById('cardTitleFisheries');
+    const dFisheries = document.getElementById('cardDescFisheries');
+    const cMarkets = document.getElementById('cardTitleMarkets');
+    const dMarkets = document.getElementById('cardDescMarkets');
+    const lAsk = document.getElementById('labelAskAqua');
+    const lHome = document.getElementById('labelHome');
+    const lLogout = document.getElementById('labelLogout');
+    
+    if (hTitle) hTitle.textContent = t.heroTitle;
+    if (hSub) hSub.textContent = t.heroSub;
+    if (cWeather) cWeather.textContent = t.cardWeather;
+    if (dWeather) dWeather.textContent = t.descWeather;
+    if (cDisaster) cDisaster.textContent = t.cardDisaster;
+    if (dDisaster) dDisaster.textContent = t.descDisaster;
+    if (cFisheries) cFisheries.textContent = t.cardFisheries;
+    if (dFisheries) dFisheries.textContent = t.descFisheries;
+    if (cMarkets) cMarkets.textContent = t.cardMarkets;
+    if (dMarkets) dMarkets.textContent = t.descMarkets;
+    if (lAsk) lAsk.textContent = t.askAqua;
+    if (lHome) lHome.textContent = t.home;
+    if (lLogout) lLogout.textContent = t.logout;
+    
+    langToggleBtn.querySelector('.lang-indicator').textContent = t.langBtn;
+    toast(currentLang === 'mr' ? 'भाषा: मराठी सक्रिय केली.' : 'Language: English activated.');
+  });
+}
+
+// 4. Voice Speech-to-Text Input for Fishermen
+const voiceBtn = document.getElementById('voiceInputBtn');
+if (voiceBtn && ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const recognition = new SpeechRecognition();
+  recognition.continuous = false;
+  recognition.interimResults = false;
+  
+  voiceBtn.addEventListener('click', () => {
+    if (voiceBtn.classList.contains('recording')) {
+      recognition.stop();
+      voiceBtn.classList.remove('recording');
+    } else {
+      recognition.lang = currentLang === 'mr' ? 'mr-IN' : 'en-IN';
+      recognition.start();
+      voiceBtn.classList.add('recording');
+      toast(currentLang === 'mr' ? 'ऐकत आहे... कृपया बोला' : 'Listening… Speak your question');
+    }
+  });
+  
+  recognition.onresult = (event) => {
+    const text = event.results[0][0].transcript;
+    const input = document.getElementById('questionInput');
+    if (input) {
+      input.value = text;
+      input.focus();
+    }
+    voiceBtn.classList.remove('recording');
+    toast('Captured: ' + text);
+  };
+  recognition.onerror = () => {
+    voiceBtn.classList.remove('recording');
+    toast('Could not recognize voice. Please try again or type.');
+  };
+  recognition.onend = () => {
+    voiceBtn.classList.remove('recording');
+  };
+} else if (voiceBtn) {
+  voiceBtn.title = 'Voice input available in Chrome/Edge';
+}
